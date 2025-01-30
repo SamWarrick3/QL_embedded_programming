@@ -18,7 +18,7 @@ The unique approach of this course is to step down to the machine level frequent
 If you are looking for a practical, hands-on, well-structured, and in-depth course explaining the **essential concepts in embedded programming**, this *free* course is right for you.
 
 
-## Relevance
+### Relevance
 The course started already in 2013, so a legitimate quesion is: "Is it still relevant?" The answer is YES, perhaps even more so than in 2013, for two main reasons:
 
 #### Fundamental Concepts
