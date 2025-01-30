@@ -6,7 +6,7 @@ Please refer to both sites for their licensing of thier products.
 
 For a quick overview of the course please read the following excerpt from the course README.md file (the full file is provided on the main branch under quantum_leaps_readme.md)
 
-# ---------------------------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------
 ## Excerpt From Modern Embedded Systems Programming Course README.md
 Welcome to the ["Modern Embedded Systems Programming" video course](https://www.youtube.com/playlist?list=PLPW8O6W-1chwyTzI3BHwBLbGQoPFxPAPM).
 
@@ -45,4 +45,4 @@ This course focuses on the **essential and fundamental concepts** in embedded pr
 
 #### ARM Cortex-M Architecture
 This course focuses on the prevalent [<b>ARM Cortex-M</b>](https://www.state-machine.com/course/ARM-Cortex-M_for_beginners.pdf) architecture, which over the past decade became unquesionably dominat in the embedded MCU market. Familiarity with ARM Cortex-M is the most sought after skill that employers are looking for.
-# ---------------------------------------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------
