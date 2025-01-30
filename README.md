@@ -6,8 +6,8 @@ Please refer to both sites for their licensing of thier products.
 
 For a quick overview of the course please read the following excerpt from the course README.md file (the full file is provided on the main branch under quantum_leaps_readme.md)
 
-# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-# Modern Embedded Systems Programming Course
+# ----------------------------------------------------
+## Modern Embedded Systems Programming Course
 Welcome to the ["Modern Embedded Systems Programming" video course](https://www.youtube.com/playlist?list=PLPW8O6W-1chwyTzI3BHwBLbGQoPFxPAPM).
 
 In this course, you'll learn how to program embedded microcontrollers the modern way, from the basics all the way to the contemporary modern embedded programming practice.
@@ -17,10 +17,10 @@ The unique approach of this course is to step down to the machine level frequent
 If you are looking for a practical, hands-on, well-structured, and in-depth course explaining the **essential concepts in embedded programming**, this *free* course is right for you.
 
 
-# Relevance
+## Relevance
 The course started already in 2013, so a legitimate quesion is: "Is it still relevant?" The answer is YES, perhaps even more so than in 2013, for two main reasons:
 
-### Fundamental Concepts
+#### Fundamental Concepts
 This course focuses on the **essential and fundamental concepts** in embedded programming, which never go out of style. All presetned concepts are covered in-depth, and include:
 - Binary representations (two's complement), hexadecimal notation
 - Flow of control, status register, branch instructions
@@ -43,6 +43,6 @@ This course focuses on the **essential and fundamental concepts** in embedded pr
 - Software tracing
 - Assertions and Design by Contract
 
-### ARM Cortex-M Architecture
+#### ARM Cortex-M Architecture
 This course focuses on the prevalent [<b>ARM Cortex-M</b>](https://www.state-machine.com/course/ARM-Cortex-M_for_beginners.pdf) architecture, which over the past decade became unquesionably dominat in the embedded MCU market. Familiarity with ARM Cortex-M is the most sought after skill that employers are looking for.
-# -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# ----------------------------------------------------
