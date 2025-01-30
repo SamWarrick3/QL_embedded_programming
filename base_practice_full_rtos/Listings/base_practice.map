@@ -1,0 +1,2097 @@
+Component: Arm Compiler for Embedded 6.22 Tool: armlink [5ee90200]
+
+==============================================================================
+
+Section Cross References
+
+    bsp.o(.ARM.exidx.text.assert_failed) refers to bsp.o(.text.assert_failed) for [Anonymous Symbol]
+    bsp.o(.text.SysTick_Handler) refers to qf_time.o(.text.QTimeEvt_tick_) for QTimeEvt_tick_
+    bsp.o(.text.SysTick_Handler) refers to qxk.o(.text.QXK_sched_) for QXK_sched_
+    bsp.o(.ARM.exidx.text.SysTick_Handler) refers to bsp.o(.text.SysTick_Handler) for [Anonymous Symbol]
+    bsp.o(.text.EXTI4_15_IRQHandler) refers to qxk_sema.o(.text.QXSemaphore_signal) for QXSemaphore_signal
+    bsp.o(.text.EXTI4_15_IRQHandler) refers to qxk.o(.text.QXK_sched_) for QXK_sched_
+    bsp.o(.text.EXTI4_15_IRQHandler) refers to main.o(.bss.B1_sema) for B1_sema
+    bsp.o(.ARM.exidx.text.EXTI4_15_IRQHandler) refers to bsp.o(.text.EXTI4_15_IRQHandler) for [Anonymous Symbol]
+    bsp.o(.ARM.exidx.text.BSP_init) refers to bsp.o(.text.BSP_init) for [Anonymous Symbol]
+    bsp.o(.text.BSP_tickCtr) refers to bsp.o(.bss.l_tickCtr) for [Anonymous Symbol]
+    bsp.o(.ARM.exidx.text.BSP_tickCtr) refers to bsp.o(.text.BSP_tickCtr) for [Anonymous Symbol]
+    bsp.o(.text.BSP_delay) refers to bsp.o(.text.BSP_tickCtr) for BSP_tickCtr
+    bsp.o(.ARM.exidx.text.BSP_delay) refers to bsp.o(.text.BSP_delay) for [Anonymous Symbol]
+    bsp.o(.ARM.exidx.text.BSP_greenLedOn) refers to bsp.o(.text.BSP_greenLedOn) for [Anonymous Symbol]
+    bsp.o(.ARM.exidx.text.BSP_greenLedOff) refers to bsp.o(.text.BSP_greenLedOff) for [Anonymous Symbol]
+    bsp.o(.ARM.exidx.text.BSP_blueLedOn) refers to bsp.o(.text.BSP_blueLedOn) for [Anonymous Symbol]
+    bsp.o(.ARM.exidx.text.BSP_blueLedOff) refers to bsp.o(.text.BSP_blueLedOff) for [Anonymous Symbol]
+    bsp.o(.text.QF_onStartup) refers to system_stm32c0xx.o(.text.SystemCoreClockUpdate) for SystemCoreClockUpdate
+    bsp.o(.text.QF_onStartup) refers to aeabi_sdiv.o(.text) for __aeabi_uidiv
+    bsp.o(.text.QF_onStartup) refers to bsp.o(.text.SysTick_Config) for SysTick_Config
+    bsp.o(.text.QF_onStartup) refers to bsp.o(.text.__NVIC_SetPriority) for __NVIC_SetPriority
+    bsp.o(.text.QF_onStartup) refers to bsp.o(.text.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    bsp.o(.text.QF_onStartup) refers to system_stm32c0xx.o(.data.SystemCoreClock) for SystemCoreClock
+    bsp.o(.ARM.exidx.text.QF_onStartup) refers to bsp.o(.text.QF_onStartup) for [Anonymous Symbol]
+    bsp.o(.text.SysTick_Config) refers to bsp.o(.text.__NVIC_SetPriority) for __NVIC_SetPriority
+    bsp.o(.ARM.exidx.text.SysTick_Config) refers to bsp.o(.text.SysTick_Config) for [Anonymous Symbol]
+    bsp.o(.ARM.exidx.text.__NVIC_SetPriority) refers to bsp.o(.text.__NVIC_SetPriority) for [Anonymous Symbol]
+    bsp.o(.ARM.exidx.text.__NVIC_EnableIRQ) refers to bsp.o(.text.__NVIC_EnableIRQ) for [Anonymous Symbol]
+    bsp.o(.ARM.exidx.text.QF_onCleanup) refers to bsp.o(.text.QF_onCleanup) for [Anonymous Symbol]
+    bsp.o(.ARM.exidx.text.QXK_onIdle) refers to bsp.o(.text.QXK_onIdle) for [Anonymous Symbol]
+    bsp.o(.text.Q_onError) refers to bsp.o(.text.__NVIC_SystemReset) for __NVIC_SystemReset
+    bsp.o(.ARM.exidx.text.Q_onError) refers to bsp.o(.text.Q_onError) for [Anonymous Symbol]
+    bsp.o(.ARM.exidx.text.__NVIC_SystemReset) refers to bsp.o(.text.__NVIC_SystemReset) for [Anonymous Symbol]
+    shape.o(.text.Shape_ctor) refers to shape.o(.rodata.Shape_ctor.vtable) for [Anonymous Symbol]
+    shape.o(.ARM.exidx.text.Shape_ctor) refers to shape.o(.text.Shape_ctor) for [Anonymous Symbol]
+    shape.o(.ARM.exidx.text.Shape_draw) refers to shape.o(.text.Shape_draw) for [Anonymous Symbol]
+    shape.o(.ARM.exidx.text.Shape_area) refers to shape.o(.text.Shape_area) for [Anonymous Symbol]
+    shape.o(.ARM.exidx.text.Shape_moveBy) refers to shape.o(.text.Shape_moveBy) for [Anonymous Symbol]
+    shape.o(.ARM.exidx.text.Shape_distanceTo) refers to shape.o(.text.Shape_distanceTo) for [Anonymous Symbol]
+    shape.o(.text.drawGraph) refers to shape.o(.text.Shape_draw_vcall) for Shape_draw_vcall
+    shape.o(.ARM.exidx.text.drawGraph) refers to shape.o(.text.drawGraph) for [Anonymous Symbol]
+    shape.o(.ARM.exidx.text.Shape_draw_vcall) refers to shape.o(.text.Shape_draw_vcall) for [Anonymous Symbol]
+    shape.o(.rodata.Shape_ctor.vtable) refers to shape.o(.text.Shape_draw) for Shape_draw
+    shape.o(.rodata.Shape_ctor.vtable) refers to shape.o(.text.Shape_area) for Shape_area
+    main.o(.text.main_blinky1) refers to bsp.o(.text.BSP_greenLedOn) for BSP_greenLedOn
+    main.o(.text.main_blinky1) refers to bsp.o(.text.BSP_greenLedOff) for BSP_greenLedOff
+    main.o(.text.main_blinky1) refers to qxk_xthr.o(.text.QXThread_delay) for QXThread_delay
+    main.o(.ARM.exidx.text.main_blinky1) refers to main.o(.text.main_blinky1) for [Anonymous Symbol]
+    main.o(.text.main_blinky2) refers to qxk_sema.o(.text.QXSemaphore_wait) for QXSemaphore_wait
+    main.o(.text.main_blinky2) refers to bsp.o(.text.BSP_greenLedOn) for BSP_greenLedOn
+    main.o(.text.main_blinky2) refers to bsp.o(.text.BSP_greenLedOff) for BSP_greenLedOff
+    main.o(.text.main_blinky2) refers to main.o(.bss.B1_sema) for B1_sema
+    main.o(.ARM.exidx.text.main_blinky2) refers to main.o(.text.main_blinky2) for [Anonymous Symbol]
+    main.o(.text.main_blinky3) refers to bsp.o(.text.BSP_greenLedOn) for BSP_greenLedOn
+    main.o(.text.main_blinky3) refers to bsp.o(.text.BSP_greenLedOff) for BSP_greenLedOff
+    main.o(.text.main_blinky3) refers to qxk_xthr.o(.text.QXThread_delay) for QXThread_delay
+    main.o(.ARM.exidx.text.main_blinky3) refers to main.o(.text.main_blinky3) for [Anonymous Symbol]
+    main.o(.text.main) refers to h1_alloc.o(.text) for malloc
+    main.o(.text.main) refers to shape.o(.text.Shape_ctor) for Shape_ctor
+    main.o(.text.main) refers to rectangle.o(.text.Rectangle_ctor) for Rectangle_ctor
+    main.o(.text.main) refers to shape.o(.text.drawGraph) for drawGraph
+    main.o(.text.main) refers to shape.o(.text.Shape_moveBy) for Shape_moveBy
+    main.o(.text.main) refers to rectangle.o(.text.Rectangle_draw) for Rectangle_draw
+    main.o(.text.main) refers to rectangle.o(.text.Rectangle_area) for Rectangle_area
+    main.o(.text.main) refers to shape.o(.text.Shape_distanceTo) for Shape_distanceTo
+    main.o(.text.main) refers to bsp.o(.text.Q_onError) for Q_onError
+    main.o(.text.main) refers to h1_free.o(.text) for free
+    main.o(.text.main) refers to bsp.o(.text.BSP_init) for BSP_init
+    main.o(.text.main) refers to qxk.o(.text.QF_init) for QF_init
+    main.o(.text.main) refers to qxk_sema.o(.text.QXSemaphore_init) for QXSemaphore_init
+    main.o(.text.main) refers to qxk_xthr.o(.text.QXThread_ctor) for QXThread_ctor
+    main.o(.text.main) refers to qxk.o(.text.QActive_start_) for QActive_start_
+    main.o(.text.main) refers to qxk.o(.text.QF_run) for QF_run
+    main.o(.text.main) refers to main.o(.bss.s1) for s1
+    main.o(.text.main) refers to main.o(.bss.r1) for r1
+    main.o(.text.main) refers to main.o(.bss.a) for a
+    main.o(.text.main) refers to main.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    main.o(.text.main) refers to main.o(.bss.B1_sema) for B1_sema
+    main.o(.text.main) refers to main.o(.bss.blinky1) for blinky1
+    main.o(.text.main) refers to main.o(.text.main_blinky1) for main_blinky1
+    main.o(.text.main) refers to main.o(.bss.stack_blinky1) for stack_blinky1
+    main.o(.text.main) refers to main.o(.bss.blinky2) for blinky2
+    main.o(.text.main) refers to main.o(.text.main_blinky2) for main_blinky2
+    main.o(.text.main) refers to main.o(.bss.stack_blinky2) for stack_blinky2
+    main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
+    rectangle.o(.text.Rectangle_ctor) refers to shape.o(.text.Shape_ctor) for Shape_ctor
+    rectangle.o(.text.Rectangle_ctor) refers to rectangle.o(.rodata.Rectangle_ctor.vtable) for [Anonymous Symbol]
+    rectangle.o(.ARM.exidx.text.Rectangle_ctor) refers to rectangle.o(.text.Rectangle_ctor) for [Anonymous Symbol]
+    rectangle.o(.ARM.exidx.text.Rectangle_draw) refers to rectangle.o(.text.Rectangle_draw) for [Anonymous Symbol]
+    rectangle.o(.ARM.exidx.text.Rectangle_area) refers to rectangle.o(.text.Rectangle_area) for [Anonymous Symbol]
+    rectangle.o(.rodata.Rectangle_ctor.vtable) refers to rectangle.o(.text.Rectangle_draw) for Rectangle_draw
+    rectangle.o(.rodata.Rectangle_ctor.vtable) refers to rectangle.o(.text.Rectangle_area) for Rectangle_area
+    qf_act.o(.ARM.exidx.text.QF_bzero_) refers to qf_act.o(.text.QF_bzero_) for [Anonymous Symbol]
+    qf_actq.o(.text.QActive_post_) refers to qf_actq.o(.text.QEvt_verify_) for QEvt_verify_
+    qf_actq.o(.text.QActive_post_) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_actq.o(.text.QActive_post_) refers to qf_actq.o(.text.QEvt_getPoolId_) for QEvt_getPoolId_
+    qf_actq.o(.text.QActive_post_) refers to qf_actq.o(.text.QEvt_refCtr_inc_) for QEvt_refCtr_inc_
+    qf_actq.o(.text.QActive_post_) refers to qxk_xthr.o(.text.QXThread_teDisarm_) for QXThread_teDisarm_
+    qf_actq.o(.text.QActive_post_) refers to qf_actq.o(.text.QPSet_insert) for QPSet_insert
+    qf_actq.o(.text.QActive_post_) refers to qf_actq.o(.text.QPSet_update_) for QPSet_update_
+    qf_actq.o(.text.QActive_post_) refers to qxk.o(.text.QXK_sched_) for QXK_sched_
+    qf_actq.o(.text.QActive_post_) refers to qxk.o(.text.QXK_activate_) for QXK_activate_
+    qf_actq.o(.text.QActive_post_) refers to qf_dyn.o(.text.QF_gc) for QF_gc
+    qf_actq.o(.text.QActive_post_) refers to qf_actq.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_actq.o(.text.QActive_post_) refers to qxk.o(.bss.QXK_priv_) for QXK_priv_
+    qf_actq.o(.ARM.exidx.text.QActive_post_) refers to qf_actq.o(.text.QActive_post_) for [Anonymous Symbol]
+    qf_actq.o(.ARM.exidx.text.QEvt_verify_) refers to qf_actq.o(.text.QEvt_verify_) for [Anonymous Symbol]
+    qf_actq.o(.ARM.exidx.text.QEvt_getPoolId_) refers to qf_actq.o(.text.QEvt_getPoolId_) for [Anonymous Symbol]
+    qf_actq.o(.ARM.exidx.text.QEvt_refCtr_inc_) refers to qf_actq.o(.text.QEvt_refCtr_inc_) for [Anonymous Symbol]
+    qf_actq.o(.ARM.exidx.text.QPSet_insert) refers to qf_actq.o(.text.QPSet_insert) for [Anonymous Symbol]
+    qf_actq.o(.ARM.exidx.text.QPSet_update_) refers to qf_actq.o(.text.QPSet_update_) for [Anonymous Symbol]
+    qf_actq.o(.text.QActive_postLIFO_) refers to qf_actq.o(.text.QEvt_verify_) for QEvt_verify_
+    qf_actq.o(.text.QActive_postLIFO_) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_actq.o(.text.QActive_postLIFO_) refers to qf_actq.o(.text.QEvt_getPoolId_) for QEvt_getPoolId_
+    qf_actq.o(.text.QActive_postLIFO_) refers to qf_actq.o(.text.QEvt_refCtr_inc_) for QEvt_refCtr_inc_
+    qf_actq.o(.text.QActive_postLIFO_) refers to qf_actq.o(.text.QPSet_insert) for QPSet_insert
+    qf_actq.o(.text.QActive_postLIFO_) refers to qf_actq.o(.text.QPSet_update_) for QPSet_update_
+    qf_actq.o(.text.QActive_postLIFO_) refers to qxk.o(.text.QXK_sched_) for QXK_sched_
+    qf_actq.o(.text.QActive_postLIFO_) refers to qxk.o(.text.QXK_activate_) for QXK_activate_
+    qf_actq.o(.text.QActive_postLIFO_) refers to qf_actq.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_actq.o(.text.QActive_postLIFO_) refers to qxk.o(.bss.QXK_priv_) for QXK_priv_
+    qf_actq.o(.ARM.exidx.text.QActive_postLIFO_) refers to qf_actq.o(.text.QActive_postLIFO_) for [Anonymous Symbol]
+    qf_actq.o(.text.QActive_get_) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_actq.o(.text.QActive_get_) refers to qf_actq.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_actq.o(.ARM.exidx.text.QActive_get_) refers to qf_actq.o(.text.QActive_get_) for [Anonymous Symbol]
+    qf_actq.o(.text.QF_getQueueMin) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_actq.o(.text.QF_getQueueMin) refers to qf_act.o(.bss.QActive_registry_) for QActive_registry_
+    qf_actq.o(.text.QF_getQueueMin) refers to qf_actq.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_actq.o(.ARM.exidx.text.QF_getQueueMin) refers to qf_actq.o(.text.QF_getQueueMin) for [Anonymous Symbol]
+    qf_actq.o(.text.QTicker_ctor) refers to qf_qact.o(.text.QActive_ctor) for QActive_ctor
+    qf_actq.o(.text.QTicker_ctor) refers to qf_actq.o(.rodata.QTicker_ctor.vtable) for [Anonymous Symbol]
+    qf_actq.o(.ARM.exidx.text.QTicker_ctor) refers to qf_actq.o(.text.QTicker_ctor) for [Anonymous Symbol]
+    qf_actq.o(.ARM.exidx.text.QTicker_init_) refers to qf_actq.o(.text.QTicker_init_) for [Anonymous Symbol]
+    qf_actq.o(.text.QTicker_dispatch_) refers to qf_time.o(.text.QTimeEvt_tick_) for QTimeEvt_tick_
+    qf_actq.o(.ARM.exidx.text.QTicker_dispatch_) refers to qf_actq.o(.text.QTicker_dispatch_) for [Anonymous Symbol]
+    qf_actq.o(.text.QTicker_trig_) refers to qf_actq.o(.text.QPSet_insert) for QPSet_insert
+    qf_actq.o(.text.QTicker_trig_) refers to qf_actq.o(.text.QPSet_update_) for QPSet_update_
+    qf_actq.o(.text.QTicker_trig_) refers to qxk.o(.text.QXK_sched_) for QXK_sched_
+    qf_actq.o(.text.QTicker_trig_) refers to qxk.o(.text.QXK_activate_) for QXK_activate_
+    qf_actq.o(.text.QTicker_trig_) refers to qf_actq.o(.rodata.QTicker_trig_.tickEvt) for [Anonymous Symbol]
+    qf_actq.o(.text.QTicker_trig_) refers to qxk.o(.bss.QXK_priv_) for QXK_priv_
+    qf_actq.o(.ARM.exidx.text.QTicker_trig_) refers to qf_actq.o(.text.QTicker_trig_) for [Anonymous Symbol]
+    qf_actq.o(.rodata.QTicker_ctor.vtable) refers to qf_actq.o(.text.QTicker_init_) for QTicker_init_
+    qf_actq.o(.rodata.QTicker_ctor.vtable) refers to qf_actq.o(.text.QTicker_dispatch_) for QTicker_dispatch_
+    qf_defer.o(.text.QActive_defer) refers to qf_qeq.o(.text.QEQueue_post) for QEQueue_post
+    qf_defer.o(.ARM.exidx.text.QActive_defer) refers to qf_defer.o(.text.QActive_defer) for [Anonymous Symbol]
+    qf_defer.o(.text.QActive_recall) refers to qf_qeq.o(.text.QEQueue_get) for QEQueue_get
+    qf_defer.o(.text.QActive_recall) refers to qf_actq.o(.text.QActive_postLIFO_) for QActive_postLIFO_
+    qf_defer.o(.text.QActive_recall) refers to qf_defer.o(.text.QEvt_getPoolId_) for QEvt_getPoolId_
+    qf_defer.o(.text.QActive_recall) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_defer.o(.text.QActive_recall) refers to qf_defer.o(.text.QEvt_refCtr_dec_) for QEvt_refCtr_dec_
+    qf_defer.o(.text.QActive_recall) refers to qf_defer.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_defer.o(.ARM.exidx.text.QActive_recall) refers to qf_defer.o(.text.QActive_recall) for [Anonymous Symbol]
+    qf_defer.o(.ARM.exidx.text.QEvt_getPoolId_) refers to qf_defer.o(.text.QEvt_getPoolId_) for [Anonymous Symbol]
+    qf_defer.o(.ARM.exidx.text.QEvt_refCtr_dec_) refers to qf_defer.o(.text.QEvt_refCtr_dec_) for [Anonymous Symbol]
+    qf_defer.o(.text.QActive_flushDeferred) refers to qf_qeq.o(.text.QEQueue_get) for QEQueue_get
+    qf_defer.o(.text.QActive_flushDeferred) refers to qf_dyn.o(.text.QF_gc) for QF_gc
+    qf_defer.o(.ARM.exidx.text.QActive_flushDeferred) refers to qf_defer.o(.text.QActive_flushDeferred) for [Anonymous Symbol]
+    qf_dyn.o(.text.QF_poolInit) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_dyn.o(.text.QF_poolInit) refers to qf_mem.o(.text.QMPool_init) for QMPool_init
+    qf_dyn.o(.text.QF_poolInit) refers to qf_act.o(.bss.QF_priv_) for QF_priv_
+    qf_dyn.o(.text.QF_poolInit) refers to qf_dyn.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_dyn.o(.ARM.exidx.text.QF_poolInit) refers to qf_dyn.o(.text.QF_poolInit) for [Anonymous Symbol]
+    qf_dyn.o(.text.QF_poolGetMaxBlockSize) refers to qf_act.o(.bss.QF_priv_) for QF_priv_
+    qf_dyn.o(.ARM.exidx.text.QF_poolGetMaxBlockSize) refers to qf_dyn.o(.text.QF_poolGetMaxBlockSize) for [Anonymous Symbol]
+    qf_dyn.o(.text.QF_getPoolMin) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_dyn.o(.text.QF_getPoolMin) refers to qf_act.o(.bss.QF_priv_) for QF_priv_
+    qf_dyn.o(.text.QF_getPoolMin) refers to qf_dyn.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_dyn.o(.ARM.exidx.text.QF_getPoolMin) refers to qf_dyn.o(.text.QF_getPoolMin) for [Anonymous Symbol]
+    qf_dyn.o(.text.QF_newX_) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_dyn.o(.text.QF_newX_) refers to qf_mem.o(.text.QMPool_get) for QMPool_get
+    qf_dyn.o(.text.QF_newX_) refers to qf_act.o(.bss.QF_priv_) for QF_priv_
+    qf_dyn.o(.text.QF_newX_) refers to qf_dyn.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_dyn.o(.ARM.exidx.text.QF_newX_) refers to qf_dyn.o(.text.QF_newX_) for [Anonymous Symbol]
+    qf_dyn.o(.text.QF_gc) refers to qf_dyn.o(.text.QEvt_verify_) for QEvt_verify_
+    qf_dyn.o(.text.QF_gc) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_dyn.o(.text.QF_gc) refers to qf_dyn.o(.text.QEvt_getPoolId_) for QEvt_getPoolId_
+    qf_dyn.o(.text.QF_gc) refers to qf_dyn.o(.text.QEvt_refCtr_dec_) for QEvt_refCtr_dec_
+    qf_dyn.o(.text.QF_gc) refers to qf_mem.o(.text.QMPool_put) for QMPool_put
+    qf_dyn.o(.text.QF_gc) refers to qf_dyn.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_dyn.o(.text.QF_gc) refers to qf_act.o(.bss.QF_priv_) for QF_priv_
+    qf_dyn.o(.ARM.exidx.text.QF_gc) refers to qf_dyn.o(.text.QF_gc) for [Anonymous Symbol]
+    qf_dyn.o(.ARM.exidx.text.QEvt_verify_) refers to qf_dyn.o(.text.QEvt_verify_) for [Anonymous Symbol]
+    qf_dyn.o(.ARM.exidx.text.QEvt_getPoolId_) refers to qf_dyn.o(.text.QEvt_getPoolId_) for [Anonymous Symbol]
+    qf_dyn.o(.ARM.exidx.text.QEvt_refCtr_dec_) refers to qf_dyn.o(.text.QEvt_refCtr_dec_) for [Anonymous Symbol]
+    qf_dyn.o(.text.QF_newRef_) refers to qf_dyn.o(.text.QEvt_verify_) for QEvt_verify_
+    qf_dyn.o(.text.QF_newRef_) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_dyn.o(.text.QF_newRef_) refers to qf_dyn.o(.text.QEvt_getPoolId_) for QEvt_getPoolId_
+    qf_dyn.o(.text.QF_newRef_) refers to qf_dyn.o(.text.QEvt_refCtr_inc_) for QEvt_refCtr_inc_
+    qf_dyn.o(.text.QF_newRef_) refers to qf_dyn.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_dyn.o(.ARM.exidx.text.QF_newRef_) refers to qf_dyn.o(.text.QF_newRef_) for [Anonymous Symbol]
+    qf_dyn.o(.ARM.exidx.text.QEvt_refCtr_inc_) refers to qf_dyn.o(.text.QEvt_refCtr_inc_) for [Anonymous Symbol]
+    qf_dyn.o(.text.QF_deleteRef_) refers to qf_dyn.o(.text.QEvt_verify_) for QEvt_verify_
+    qf_dyn.o(.text.QF_deleteRef_) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_dyn.o(.text.QF_deleteRef_) refers to qf_dyn.o(.text.QF_gc) for QF_gc
+    qf_dyn.o(.text.QF_deleteRef_) refers to qf_dyn.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_dyn.o(.ARM.exidx.text.QF_deleteRef_) refers to qf_dyn.o(.text.QF_deleteRef_) for [Anonymous Symbol]
+    qf_mem.o(.text.QMPool_init) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_mem.o(.text.QMPool_init) refers to qf_mem.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_mem.o(.ARM.exidx.text.QMPool_init) refers to qf_mem.o(.text.QMPool_init) for [Anonymous Symbol]
+    qf_mem.o(.text.QMPool_get) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_mem.o(.text.QMPool_get) refers to qf_mem.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_mem.o(.ARM.exidx.text.QMPool_get) refers to qf_mem.o(.text.QMPool_get) for [Anonymous Symbol]
+    qf_mem.o(.text.QMPool_put) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_mem.o(.text.QMPool_put) refers to qf_mem.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_mem.o(.ARM.exidx.text.QMPool_put) refers to qf_mem.o(.text.QMPool_put) for [Anonymous Symbol]
+    qf_ps.o(.text.QActive_psInit) refers to qf_ps.o(.text.QPSet_setEmpty) for QPSet_setEmpty
+    qf_ps.o(.text.QActive_psInit) refers to qf_ps.o(.text.QPSet_update_) for QPSet_update_
+    qf_ps.o(.text.QActive_psInit) refers to qf_ps.o(.bss.QActive_subscrList_) for QActive_subscrList_
+    qf_ps.o(.text.QActive_psInit) refers to qf_ps.o(.bss.QActive_maxPubSignal_) for QActive_maxPubSignal_
+    qf_ps.o(.ARM.exidx.text.QActive_psInit) refers to qf_ps.o(.text.QActive_psInit) for [Anonymous Symbol]
+    qf_ps.o(.ARM.exidx.text.QPSet_setEmpty) refers to qf_ps.o(.text.QPSet_setEmpty) for [Anonymous Symbol]
+    qf_ps.o(.ARM.exidx.text.QPSet_update_) refers to qf_ps.o(.text.QPSet_update_) for [Anonymous Symbol]
+    qf_ps.o(.text.QActive_publish_) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_ps.o(.text.QActive_publish_) refers to qf_ps.o(.text.QPSet_verify_) for QPSet_verify_
+    qf_ps.o(.text.QActive_publish_) refers to qf_ps.o(.text.QEvt_getPoolId_) for QEvt_getPoolId_
+    qf_ps.o(.text.QActive_publish_) refers to qf_ps.o(.text.QEvt_refCtr_inc_) for QEvt_refCtr_inc_
+    qf_ps.o(.text.QActive_publish_) refers to qf_ps.o(.text.QPSet_notEmpty) for QPSet_notEmpty
+    qf_ps.o(.text.QActive_publish_) refers to qf_ps.o(.text.QPSet_findMax) for QPSet_findMax
+    qf_ps.o(.text.QActive_publish_) refers to qxk.o(.text.QXK_schedLock) for QXK_schedLock
+    qf_ps.o(.text.QActive_publish_) refers to qf_actq.o(.text.QActive_post_) for QActive_post_
+    qf_ps.o(.text.QActive_publish_) refers to qf_ps.o(.text.QPSet_remove) for QPSet_remove
+    qf_ps.o(.text.QActive_publish_) refers to qxk.o(.text.QXK_schedUnlock) for QXK_schedUnlock
+    qf_ps.o(.text.QActive_publish_) refers to qf_dyn.o(.text.QF_gc) for QF_gc
+    qf_ps.o(.text.QActive_publish_) refers to qf_ps.o(.bss.QActive_maxPubSignal_) for QActive_maxPubSignal_
+    qf_ps.o(.text.QActive_publish_) refers to qf_ps.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_ps.o(.text.QActive_publish_) refers to qf_ps.o(.bss.QActive_subscrList_) for QActive_subscrList_
+    qf_ps.o(.text.QActive_publish_) refers to qf_act.o(.bss.QActive_registry_) for QActive_registry_
+    qf_ps.o(.ARM.exidx.text.QActive_publish_) refers to qf_ps.o(.text.QActive_publish_) for [Anonymous Symbol]
+    qf_ps.o(.ARM.exidx.text.QPSet_verify_) refers to qf_ps.o(.text.QPSet_verify_) for [Anonymous Symbol]
+    qf_ps.o(.ARM.exidx.text.QEvt_getPoolId_) refers to qf_ps.o(.text.QEvt_getPoolId_) for [Anonymous Symbol]
+    qf_ps.o(.ARM.exidx.text.QEvt_refCtr_inc_) refers to qf_ps.o(.text.QEvt_refCtr_inc_) for [Anonymous Symbol]
+    qf_ps.o(.ARM.exidx.text.QPSet_notEmpty) refers to qf_ps.o(.text.QPSet_notEmpty) for [Anonymous Symbol]
+    qf_ps.o(.text.QPSet_findMax) refers to qxk_port.o(.text.QF_qlog2) for QF_qlog2
+    qf_ps.o(.ARM.exidx.text.QPSet_findMax) refers to qf_ps.o(.text.QPSet_findMax) for [Anonymous Symbol]
+    qf_ps.o(.ARM.exidx.text.QPSet_remove) refers to qf_ps.o(.text.QPSet_remove) for [Anonymous Symbol]
+    qf_ps.o(.text.QActive_subscribe) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_ps.o(.text.QActive_subscribe) refers to qf_ps.o(.text.QPSet_verify_) for QPSet_verify_
+    qf_ps.o(.text.QActive_subscribe) refers to qf_ps.o(.text.QPSet_insert) for QPSet_insert
+    qf_ps.o(.text.QActive_subscribe) refers to qf_ps.o(.text.QPSet_update_) for QPSet_update_
+    qf_ps.o(.text.QActive_subscribe) refers to qf_ps.o(.bss.QActive_maxPubSignal_) for QActive_maxPubSignal_
+    qf_ps.o(.text.QActive_subscribe) refers to qf_act.o(.bss.QActive_registry_) for QActive_registry_
+    qf_ps.o(.text.QActive_subscribe) refers to qf_ps.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_ps.o(.text.QActive_subscribe) refers to qf_ps.o(.bss.QActive_subscrList_) for QActive_subscrList_
+    qf_ps.o(.ARM.exidx.text.QActive_subscribe) refers to qf_ps.o(.text.QActive_subscribe) for [Anonymous Symbol]
+    qf_ps.o(.ARM.exidx.text.QPSet_insert) refers to qf_ps.o(.text.QPSet_insert) for [Anonymous Symbol]
+    qf_ps.o(.text.QActive_unsubscribe) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_ps.o(.text.QActive_unsubscribe) refers to qf_ps.o(.text.QPSet_verify_) for QPSet_verify_
+    qf_ps.o(.text.QActive_unsubscribe) refers to qf_ps.o(.text.QPSet_remove) for QPSet_remove
+    qf_ps.o(.text.QActive_unsubscribe) refers to qf_ps.o(.text.QPSet_update_) for QPSet_update_
+    qf_ps.o(.text.QActive_unsubscribe) refers to qf_ps.o(.bss.QActive_maxPubSignal_) for QActive_maxPubSignal_
+    qf_ps.o(.text.QActive_unsubscribe) refers to qf_act.o(.bss.QActive_registry_) for QActive_registry_
+    qf_ps.o(.text.QActive_unsubscribe) refers to qf_ps.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_ps.o(.text.QActive_unsubscribe) refers to qf_ps.o(.bss.QActive_subscrList_) for QActive_subscrList_
+    qf_ps.o(.ARM.exidx.text.QActive_unsubscribe) refers to qf_ps.o(.text.QActive_unsubscribe) for [Anonymous Symbol]
+    qf_ps.o(.text.QActive_unsubscribeAll) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_ps.o(.text.QActive_unsubscribeAll) refers to qf_ps.o(.text.QPSet_hasElement) for QPSet_hasElement
+    qf_ps.o(.text.QActive_unsubscribeAll) refers to qf_ps.o(.text.QPSet_remove) for QPSet_remove
+    qf_ps.o(.text.QActive_unsubscribeAll) refers to qf_ps.o(.text.QPSet_update_) for QPSet_update_
+    qf_ps.o(.text.QActive_unsubscribeAll) refers to qf_act.o(.bss.QActive_registry_) for QActive_registry_
+    qf_ps.o(.text.QActive_unsubscribeAll) refers to qf_ps.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_ps.o(.text.QActive_unsubscribeAll) refers to qf_ps.o(.bss.QActive_maxPubSignal_) for QActive_maxPubSignal_
+    qf_ps.o(.text.QActive_unsubscribeAll) refers to qf_ps.o(.bss.QActive_subscrList_) for QActive_subscrList_
+    qf_ps.o(.ARM.exidx.text.QActive_unsubscribeAll) refers to qf_ps.o(.text.QActive_unsubscribeAll) for [Anonymous Symbol]
+    qf_ps.o(.ARM.exidx.text.QPSet_hasElement) refers to qf_ps.o(.text.QPSet_hasElement) for [Anonymous Symbol]
+    qf_qact.o(.text.QActive_ctor) refers to qf_act.o(.text.QF_bzero_) for QF_bzero_
+    qf_qact.o(.text.QActive_ctor) refers to qep_hsm.o(.text.QHsm_ctor) for QHsm_ctor
+    qf_qact.o(.text.QActive_ctor) refers to qf_qact.o(.rodata.QActive_ctor.vtable) for [Anonymous Symbol]
+    qf_qact.o(.ARM.exidx.text.QActive_ctor) refers to qf_qact.o(.text.QActive_ctor) for [Anonymous Symbol]
+    qf_qact.o(.text.QActive_register_) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_qact.o(.text.QActive_register_) refers to qf_act.o(.bss.QActive_registry_) for QActive_registry_
+    qf_qact.o(.text.QActive_register_) refers to qf_qact.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_qact.o(.ARM.exidx.text.QActive_register_) refers to qf_qact.o(.text.QActive_register_) for [Anonymous Symbol]
+    qf_qact.o(.text.QActive_unregister_) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_qact.o(.text.QActive_unregister_) refers to qf_act.o(.bss.QActive_registry_) for QActive_registry_
+    qf_qact.o(.text.QActive_unregister_) refers to qf_qact.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_qact.o(.ARM.exidx.text.QActive_unregister_) refers to qf_qact.o(.text.QActive_unregister_) for [Anonymous Symbol]
+    qf_qact.o(.rodata.QActive_ctor.vtable) refers to qep_hsm.o(.text.QHsm_init_) for QHsm_init_
+    qf_qact.o(.rodata.QActive_ctor.vtable) refers to qep_hsm.o(.text.QHsm_dispatch_) for QHsm_dispatch_
+    qf_qeq.o(.ARM.exidx.text.QEQueue_init) refers to qf_qeq.o(.text.QEQueue_init) for [Anonymous Symbol]
+    qf_qeq.o(.text.QEQueue_post) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_qeq.o(.text.QEQueue_post) refers to qf_qeq.o(.text.QEvt_getPoolId_) for QEvt_getPoolId_
+    qf_qeq.o(.text.QEQueue_post) refers to qf_qeq.o(.text.QEvt_refCtr_inc_) for QEvt_refCtr_inc_
+    qf_qeq.o(.text.QEQueue_post) refers to qf_qeq.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_qeq.o(.ARM.exidx.text.QEQueue_post) refers to qf_qeq.o(.text.QEQueue_post) for [Anonymous Symbol]
+    qf_qeq.o(.ARM.exidx.text.QEvt_getPoolId_) refers to qf_qeq.o(.text.QEvt_getPoolId_) for [Anonymous Symbol]
+    qf_qeq.o(.ARM.exidx.text.QEvt_refCtr_inc_) refers to qf_qeq.o(.text.QEvt_refCtr_inc_) for [Anonymous Symbol]
+    qf_qeq.o(.text.QEQueue_postLIFO) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_qeq.o(.text.QEQueue_postLIFO) refers to qf_qeq.o(.text.QEvt_getPoolId_) for QEvt_getPoolId_
+    qf_qeq.o(.text.QEQueue_postLIFO) refers to qf_qeq.o(.text.QEvt_refCtr_inc_) for QEvt_refCtr_inc_
+    qf_qeq.o(.text.QEQueue_postLIFO) refers to qf_qeq.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_qeq.o(.ARM.exidx.text.QEQueue_postLIFO) refers to qf_qeq.o(.text.QEQueue_postLIFO) for [Anonymous Symbol]
+    qf_qeq.o(.text.QEQueue_get) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_qeq.o(.text.QEQueue_get) refers to qf_qeq.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_qeq.o(.ARM.exidx.text.QEQueue_get) refers to qf_qeq.o(.text.QEQueue_get) for [Anonymous Symbol]
+    qf_time.o(.text.QTimeEvt_ctorX) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_time.o(.text.QTimeEvt_ctorX) refers to qf_time.o(.text.QEvt_ctor) for QEvt_ctor
+    qf_time.o(.text.QTimeEvt_ctorX) refers to qf_time.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_time.o(.ARM.exidx.text.QTimeEvt_ctorX) refers to qf_time.o(.text.QTimeEvt_ctorX) for [Anonymous Symbol]
+    qf_time.o(.ARM.exidx.text.QEvt_ctor) refers to qf_time.o(.text.QEvt_ctor) for [Anonymous Symbol]
+    qf_time.o(.text.QTimeEvt_armX) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_time.o(.text.QTimeEvt_armX) refers to qf_time.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_time.o(.text.QTimeEvt_armX) refers to qf_time.o(.bss.QTimeEvt_timeEvtHead_) for QTimeEvt_timeEvtHead_
+    qf_time.o(.ARM.exidx.text.QTimeEvt_armX) refers to qf_time.o(.text.QTimeEvt_armX) for [Anonymous Symbol]
+    qf_time.o(.ARM.exidx.text.QTimeEvt_disarm) refers to qf_time.o(.text.QTimeEvt_disarm) for [Anonymous Symbol]
+    qf_time.o(.text.QTimeEvt_rearm) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_time.o(.text.QTimeEvt_rearm) refers to qf_time.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_time.o(.text.QTimeEvt_rearm) refers to qf_time.o(.bss.QTimeEvt_timeEvtHead_) for QTimeEvt_timeEvtHead_
+    qf_time.o(.ARM.exidx.text.QTimeEvt_rearm) refers to qf_time.o(.text.QTimeEvt_rearm) for [Anonymous Symbol]
+    qf_time.o(.ARM.exidx.text.QTimeEvt_wasDisarmed) refers to qf_time.o(.text.QTimeEvt_wasDisarmed) for [Anonymous Symbol]
+    qf_time.o(.ARM.exidx.text.QTimeEvt_currCtr) refers to qf_time.o(.text.QTimeEvt_currCtr) for [Anonymous Symbol]
+    qf_time.o(.text.QTimeEvt_tick_) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_time.o(.text.QTimeEvt_tick_) refers to qxk_xthr.o(.text.QXThread_timeout_) for QXThread_timeout_
+    qf_time.o(.text.QTimeEvt_tick_) refers to qf_actq.o(.text.QActive_post_) for QActive_post_
+    qf_time.o(.text.QTimeEvt_tick_) refers to qf_time.o(.bss.QTimeEvt_timeEvtHead_) for QTimeEvt_timeEvtHead_
+    qf_time.o(.text.QTimeEvt_tick_) refers to qf_time.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_time.o(.ARM.exidx.text.QTimeEvt_tick_) refers to qf_time.o(.text.QTimeEvt_tick_) for [Anonymous Symbol]
+    qf_time.o(.text.QTimeEvt_noActive) refers to bsp.o(.text.Q_onError) for Q_onError
+    qf_time.o(.text.QTimeEvt_noActive) refers to qf_time.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qf_time.o(.text.QTimeEvt_noActive) refers to qf_time.o(.bss.QTimeEvt_timeEvtHead_) for QTimeEvt_timeEvtHead_
+    qf_time.o(.ARM.exidx.text.QTimeEvt_noActive) refers to qf_time.o(.text.QTimeEvt_noActive) for [Anonymous Symbol]
+    qxk.o(.text.QXK_schedLock) refers to bsp.o(.text.Q_onError) for Q_onError
+    qxk.o(.text.QXK_schedLock) refers to qxk.o(.bss.QXK_priv_) for QXK_priv_
+    qxk.o(.text.QXK_schedLock) refers to qxk.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qxk.o(.ARM.exidx.text.QXK_schedLock) refers to qxk.o(.text.QXK_schedLock) for [Anonymous Symbol]
+    qxk.o(.text.QXK_schedUnlock) refers to bsp.o(.text.Q_onError) for Q_onError
+    qxk.o(.text.QXK_schedUnlock) refers to qxk.o(.text.QXK_sched_) for QXK_sched_
+    qxk.o(.text.QXK_schedUnlock) refers to qxk.o(.text.QXK_activate_) for QXK_activate_
+    qxk.o(.text.QXK_schedUnlock) refers to qxk.o(.bss.QXK_priv_) for QXK_priv_
+    qxk.o(.text.QXK_schedUnlock) refers to qxk.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qxk.o(.ARM.exidx.text.QXK_schedUnlock) refers to qxk.o(.text.QXK_schedUnlock) for [Anonymous Symbol]
+    qxk.o(.text.QXK_sched_) refers to qxk.o(.text.QPSet_verify_) for QPSet_verify_
+    qxk.o(.text.QXK_sched_) refers to bsp.o(.text.Q_onError) for Q_onError
+    qxk.o(.text.QXK_sched_) refers to qxk.o(.text.QPSet_isEmpty) for QPSet_isEmpty
+    qxk.o(.text.QXK_sched_) refers to qxk.o(.text.QPSet_findMax) for QPSet_findMax
+    qxk.o(.text.QXK_sched_) refers to qxk.o(.text.QPSet_hasElement) for QPSet_hasElement
+    qxk.o(.text.QXK_sched_) refers to qxk.o(.bss.QXK_priv_) for QXK_priv_
+    qxk.o(.text.QXK_sched_) refers to qxk.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qxk.o(.text.QXK_sched_) refers to qf_act.o(.bss.QActive_registry_) for QActive_registry_
+    qxk.o(.ARM.exidx.text.QXK_sched_) refers to qxk.o(.text.QXK_sched_) for [Anonymous Symbol]
+    qxk.o(.text.QXK_activate_) refers to bsp.o(.text.Q_onError) for Q_onError
+    qxk.o(.text.QXK_activate_) refers to qf_actq.o(.text.QActive_get_) for QActive_get_
+    qxk.o(.text.QXK_activate_) refers to qf_dyn.o(.text.QF_gc) for QF_gc
+    qxk.o(.text.QXK_activate_) refers to qxk.o(.text.QPSet_verify_) for QPSet_verify_
+    qxk.o(.text.QXK_activate_) refers to qxk.o(.text.QPSet_remove) for QPSet_remove
+    qxk.o(.text.QXK_activate_) refers to qxk.o(.text.QPSet_update_) for QPSet_update_
+    qxk.o(.text.QXK_activate_) refers to qxk.o(.text.QPSet_isEmpty) for QPSet_isEmpty
+    qxk.o(.text.QXK_activate_) refers to qxk.o(.text.QPSet_findMax) for QPSet_findMax
+    qxk.o(.text.QXK_activate_) refers to qxk.o(.text.QPSet_hasElement) for QPSet_hasElement
+    qxk.o(.text.QXK_activate_) refers to qxk.o(.bss.QXK_priv_) for QXK_priv_
+    qxk.o(.text.QXK_activate_) refers to qxk.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qxk.o(.text.QXK_activate_) refers to qf_act.o(.bss.QActive_registry_) for QActive_registry_
+    qxk.o(.ARM.exidx.text.QXK_activate_) refers to qxk.o(.text.QXK_activate_) for [Anonymous Symbol]
+    qxk.o(.text.QXK_current) refers to bsp.o(.text.Q_onError) for Q_onError
+    qxk.o(.text.QXK_current) refers to qxk.o(.bss.QXK_priv_) for QXK_priv_
+    qxk.o(.text.QXK_current) refers to qxk.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qxk.o(.text.QXK_current) refers to qf_act.o(.bss.QActive_registry_) for QActive_registry_
+    qxk.o(.ARM.exidx.text.QXK_current) refers to qxk.o(.text.QXK_current) for [Anonymous Symbol]
+    qxk.o(.ARM.exidx.text.QPSet_verify_) refers to qxk.o(.text.QPSet_verify_) for [Anonymous Symbol]
+    qxk.o(.ARM.exidx.text.QPSet_isEmpty) refers to qxk.o(.text.QPSet_isEmpty) for [Anonymous Symbol]
+    qxk.o(.text.QPSet_findMax) refers to qxk_port.o(.text.QF_qlog2) for QF_qlog2
+    qxk.o(.ARM.exidx.text.QPSet_findMax) refers to qxk.o(.text.QPSet_findMax) for [Anonymous Symbol]
+    qxk.o(.ARM.exidx.text.QPSet_hasElement) refers to qxk.o(.text.QPSet_hasElement) for [Anonymous Symbol]
+    qxk.o(.ARM.exidx.text.QPSet_remove) refers to qxk.o(.text.QPSet_remove) for [Anonymous Symbol]
+    qxk.o(.ARM.exidx.text.QPSet_update_) refers to qxk.o(.text.QPSet_update_) for [Anonymous Symbol]
+    qxk.o(.text.QXK_contextSw_) refers to qxk.o(.bss.QXK_priv_) for QXK_priv_
+    qxk.o(.ARM.exidx.text.QXK_contextSw_) refers to qxk.o(.text.QXK_contextSw_) for [Anonymous Symbol]
+    qxk.o(.text.QXK_threadExit_) refers to bsp.o(.text.Q_onError) for Q_onError
+    qxk.o(.text.QXK_threadExit_) refers to qxk.o(.text.QPSet_remove) for QPSet_remove
+    qxk.o(.text.QXK_threadExit_) refers to qxk.o(.text.QPSet_update_) for QPSet_update_
+    qxk.o(.text.QXK_threadExit_) refers to qxk.o(.text.QXK_sched_) for QXK_sched_
+    qxk.o(.text.QXK_threadExit_) refers to qxk.o(.bss.QXK_priv_) for QXK_priv_
+    qxk.o(.text.QXK_threadExit_) refers to qxk.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qxk.o(.text.QXK_threadExit_) refers to qf_act.o(.bss.QActive_registry_) for QActive_registry_
+    qxk.o(.ARM.exidx.text.QXK_threadExit_) refers to qxk.o(.text.QXK_threadExit_) for [Anonymous Symbol]
+    qxk.o(.text.QF_init) refers to qf_act.o(.text.QF_bzero_) for QF_bzero_
+    qxk.o(.text.QF_init) refers to qxk.o(.text.QPSet_update_) for QPSet_update_
+    qxk.o(.text.QF_init) refers to qxk_port.o(.text.QXK_init) for QXK_init
+    qxk.o(.text.QF_init) refers to qf_act.o(.bss.QF_priv_) for QF_priv_
+    qxk.o(.text.QF_init) refers to qxk.o(.bss.QXK_priv_) for QXK_priv_
+    qxk.o(.text.QF_init) refers to qf_time.o(.bss.QTimeEvt_timeEvtHead_) for QTimeEvt_timeEvtHead_
+    qxk.o(.text.QF_init) refers to qf_act.o(.bss.QActive_registry_) for QActive_registry_
+    qxk.o(.text.QF_init) refers to qxk.o(.rodata.QF_init.idle_ao) for [Anonymous Symbol]
+    qxk.o(.ARM.exidx.text.QF_init) refers to qxk.o(.text.QF_init) for [Anonymous Symbol]
+    qxk.o(.text.QF_stop) refers to bsp.o(.text.QF_onCleanup) for QF_onCleanup
+    qxk.o(.ARM.exidx.text.QF_stop) refers to qxk.o(.text.QF_stop) for [Anonymous Symbol]
+    qxk.o(.text.QF_run) refers to bsp.o(.text.QF_onStartup) for QF_onStartup
+    qxk.o(.text.QF_run) refers to qxk.o(.text.QXK_sched_) for QXK_sched_
+    qxk.o(.text.QF_run) refers to qxk.o(.text.QXK_activate_) for QXK_activate_
+    qxk.o(.text.QF_run) refers to bsp.o(.text.QXK_onIdle) for QXK_onIdle
+    qxk.o(.text.QF_run) refers to qxk.o(.bss.QXK_priv_) for QXK_priv_
+    qxk.o(.ARM.exidx.text.QF_run) refers to qxk.o(.text.QF_run) for [Anonymous Symbol]
+    qxk.o(.text.QActive_start_) refers to bsp.o(.text.Q_onError) for Q_onError
+    qxk.o(.text.QActive_start_) refers to qf_qact.o(.text.QActive_register_) for QActive_register_
+    qxk.o(.text.QActive_start_) refers to qf_qeq.o(.text.QEQueue_init) for QEQueue_init
+    qxk.o(.text.QActive_start_) refers to qxk.o(.text.QXK_sched_) for QXK_sched_
+    qxk.o(.text.QActive_start_) refers to qxk.o(.text.QXK_activate_) for QXK_activate_
+    qxk.o(.text.QActive_start_) refers to qxk_port.o(.text.QXThread_stackInit_) for QXThread_stackInit_
+    qxk.o(.text.QActive_start_) refers to qxk.o(.text.QPSet_insert) for QPSet_insert
+    qxk.o(.text.QActive_start_) refers to qxk.o(.text.QPSet_update_) for QPSet_update_
+    qxk.o(.text.QActive_start_) refers to qxk.o(.bss.QXK_priv_) for QXK_priv_
+    qxk.o(.text.QActive_start_) refers to qxk.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qxk.o(.ARM.exidx.text.QActive_start_) refers to qxk.o(.text.QActive_start_) for [Anonymous Symbol]
+    qxk.o(.ARM.exidx.text.QPSet_insert) refers to qxk.o(.text.QPSet_insert) for [Anonymous Symbol]
+    qxk_mutex.o(.text.QXMutex_init) refers to bsp.o(.text.Q_onError) for Q_onError
+    qxk_mutex.o(.text.QXMutex_init) refers to qf_qact.o(.text.QActive_register_) for QActive_register_
+    qxk_mutex.o(.text.QXMutex_init) refers to qxk_mutex.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qxk_mutex.o(.ARM.exidx.text.QXMutex_init) refers to qxk_mutex.o(.text.QXMutex_init) for [Anonymous Symbol]
+    qxk_mutex.o(.text.QXMutex_lock) refers to bsp.o(.text.Q_onError) for Q_onError
+    qxk_mutex.o(.text.QXMutex_lock) refers to qxk_mutex.o(.text.QPSet_remove) for QPSet_remove
+    qxk_mutex.o(.text.QXMutex_lock) refers to qxk_mutex.o(.text.QPSet_insert) for QPSet_insert
+    qxk_mutex.o(.text.QXMutex_lock) refers to qxk_mutex.o(.text.QPSet_update_) for QPSet_update_
+    qxk_mutex.o(.text.QXMutex_lock) refers to qxk_xthr.o(.text.QXThread_teArm_) for QXThread_teArm_
+    qxk_mutex.o(.text.QXMutex_lock) refers to qxk.o(.text.QXK_sched_) for QXK_sched_
+    qxk_mutex.o(.text.QXMutex_lock) refers to qxk_mutex.o(.text.QPSet_hasElement) for QPSet_hasElement
+    qxk_mutex.o(.text.QXMutex_lock) refers to qxk.o(.bss.QXK_priv_) for QXK_priv_
+    qxk_mutex.o(.text.QXMutex_lock) refers to qxk_mutex.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qxk_mutex.o(.text.QXMutex_lock) refers to qf_act.o(.bss.QActive_registry_) for QActive_registry_
+    qxk_mutex.o(.ARM.exidx.text.QXMutex_lock) refers to qxk_mutex.o(.text.QXMutex_lock) for [Anonymous Symbol]
+    qxk_mutex.o(.ARM.exidx.text.QPSet_remove) refers to qxk_mutex.o(.text.QPSet_remove) for [Anonymous Symbol]
+    qxk_mutex.o(.ARM.exidx.text.QPSet_insert) refers to qxk_mutex.o(.text.QPSet_insert) for [Anonymous Symbol]
+    qxk_mutex.o(.ARM.exidx.text.QPSet_update_) refers to qxk_mutex.o(.text.QPSet_update_) for [Anonymous Symbol]
+    qxk_mutex.o(.ARM.exidx.text.QPSet_hasElement) refers to qxk_mutex.o(.text.QPSet_hasElement) for [Anonymous Symbol]
+    qxk_mutex.o(.text.QXMutex_tryLock) refers to bsp.o(.text.Q_onError) for Q_onError
+    qxk_mutex.o(.text.QXMutex_tryLock) refers to qxk_mutex.o(.text.QPSet_remove) for QPSet_remove
+    qxk_mutex.o(.text.QXMutex_tryLock) refers to qxk_mutex.o(.text.QPSet_insert) for QPSet_insert
+    qxk_mutex.o(.text.QXMutex_tryLock) refers to qxk_mutex.o(.text.QPSet_update_) for QPSet_update_
+    qxk_mutex.o(.text.QXMutex_tryLock) refers to qxk.o(.bss.QXK_priv_) for QXK_priv_
+    qxk_mutex.o(.text.QXMutex_tryLock) refers to qf_act.o(.bss.QActive_registry_) for QActive_registry_
+    qxk_mutex.o(.text.QXMutex_tryLock) refers to qxk_mutex.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qxk_mutex.o(.ARM.exidx.text.QXMutex_tryLock) refers to qxk_mutex.o(.text.QXMutex_tryLock) for [Anonymous Symbol]
+    qxk_mutex.o(.text.QXMutex_unlock) refers to bsp.o(.text.Q_onError) for Q_onError
+    qxk_mutex.o(.text.QXMutex_unlock) refers to qxk_mutex.o(.text.QPSet_remove) for QPSet_remove
+    qxk_mutex.o(.text.QXMutex_unlock) refers to qxk_mutex.o(.text.QPSet_insert) for QPSet_insert
+    qxk_mutex.o(.text.QXMutex_unlock) refers to qxk_mutex.o(.text.QPSet_update_) for QPSet_update_
+    qxk_mutex.o(.text.QXMutex_unlock) refers to qxk_mutex.o(.text.QPSet_notEmpty) for QPSet_notEmpty
+    qxk_mutex.o(.text.QXMutex_unlock) refers to qxk_mutex.o(.text.QPSet_findMax) for QPSet_findMax
+    qxk_mutex.o(.text.QXMutex_unlock) refers to qxk_xthr.o(.text.QXThread_teDisarm_) for QXThread_teDisarm_
+    qxk_mutex.o(.text.QXMutex_unlock) refers to qxk.o(.text.QXK_sched_) for QXK_sched_
+    qxk_mutex.o(.text.QXMutex_unlock) refers to qxk.o(.text.QXK_activate_) for QXK_activate_
+    qxk_mutex.o(.text.QXMutex_unlock) refers to qxk.o(.bss.QXK_priv_) for QXK_priv_
+    qxk_mutex.o(.text.QXMutex_unlock) refers to qf_act.o(.bss.QActive_registry_) for QActive_registry_
+    qxk_mutex.o(.text.QXMutex_unlock) refers to qxk_mutex.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qxk_mutex.o(.ARM.exidx.text.QXMutex_unlock) refers to qxk_mutex.o(.text.QXMutex_unlock) for [Anonymous Symbol]
+    qxk_mutex.o(.ARM.exidx.text.QPSet_notEmpty) refers to qxk_mutex.o(.text.QPSet_notEmpty) for [Anonymous Symbol]
+    qxk_mutex.o(.text.QPSet_findMax) refers to qxk_port.o(.text.QF_qlog2) for QF_qlog2
+    qxk_mutex.o(.ARM.exidx.text.QPSet_findMax) refers to qxk_mutex.o(.text.QPSet_findMax) for [Anonymous Symbol]
+    qxk_sema.o(.text.QXSemaphore_init) refers to bsp.o(.text.Q_onError) for Q_onError
+    qxk_sema.o(.text.QXSemaphore_init) refers to qxk_sema.o(.text.QPSet_setEmpty) for QPSet_setEmpty
+    qxk_sema.o(.text.QXSemaphore_init) refers to qxk_sema.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qxk_sema.o(.ARM.exidx.text.QXSemaphore_init) refers to qxk_sema.o(.text.QXSemaphore_init) for [Anonymous Symbol]
+    qxk_sema.o(.ARM.exidx.text.QPSet_setEmpty) refers to qxk_sema.o(.text.QPSet_setEmpty) for [Anonymous Symbol]
+    qxk_sema.o(.text.QXSemaphore_wait) refers to bsp.o(.text.Q_onError) for Q_onError
+    qxk_sema.o(.text.QXSemaphore_wait) refers to qxk_sema.o(.text.QPSet_remove) for QPSet_remove
+    qxk_sema.o(.text.QXSemaphore_wait) refers to qxk_sema.o(.text.QPSet_update_) for QPSet_update_
+    qxk_sema.o(.text.QXSemaphore_wait) refers to qxk_sema.o(.text.QPSet_insert) for QPSet_insert
+    qxk_sema.o(.text.QXSemaphore_wait) refers to qxk_xthr.o(.text.QXThread_teArm_) for QXThread_teArm_
+    qxk_sema.o(.text.QXSemaphore_wait) refers to qxk.o(.text.QXK_sched_) for QXK_sched_
+    qxk_sema.o(.text.QXSemaphore_wait) refers to qxk_sema.o(.text.QPSet_hasElement) for QPSet_hasElement
+    qxk_sema.o(.text.QXSemaphore_wait) refers to qxk.o(.bss.QXK_priv_) for QXK_priv_
+    qxk_sema.o(.text.QXSemaphore_wait) refers to qxk_sema.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qxk_sema.o(.ARM.exidx.text.QXSemaphore_wait) refers to qxk_sema.o(.text.QXSemaphore_wait) for [Anonymous Symbol]
+    qxk_sema.o(.ARM.exidx.text.QPSet_remove) refers to qxk_sema.o(.text.QPSet_remove) for [Anonymous Symbol]
+    qxk_sema.o(.ARM.exidx.text.QPSet_update_) refers to qxk_sema.o(.text.QPSet_update_) for [Anonymous Symbol]
+    qxk_sema.o(.ARM.exidx.text.QPSet_insert) refers to qxk_sema.o(.text.QPSet_insert) for [Anonymous Symbol]
+    qxk_sema.o(.ARM.exidx.text.QPSet_hasElement) refers to qxk_sema.o(.text.QPSet_hasElement) for [Anonymous Symbol]
+    qxk_sema.o(.text.QXSemaphore_tryWait) refers to bsp.o(.text.Q_onError) for Q_onError
+    qxk_sema.o(.text.QXSemaphore_tryWait) refers to qxk_sema.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qxk_sema.o(.ARM.exidx.text.QXSemaphore_tryWait) refers to qxk_sema.o(.text.QXSemaphore_tryWait) for [Anonymous Symbol]
+    qxk_sema.o(.text.QXSemaphore_signal) refers to bsp.o(.text.Q_onError) for Q_onError
+    qxk_sema.o(.text.QXSemaphore_signal) refers to qxk_sema.o(.text.QPSet_notEmpty) for QPSet_notEmpty
+    qxk_sema.o(.text.QXSemaphore_signal) refers to qxk_sema.o(.text.QPSet_findMax) for QPSet_findMax
+    qxk_sema.o(.text.QXSemaphore_signal) refers to qxk_xthr.o(.text.QXThread_teDisarm_) for QXThread_teDisarm_
+    qxk_sema.o(.text.QXSemaphore_signal) refers to qxk_sema.o(.text.QPSet_insert) for QPSet_insert
+    qxk_sema.o(.text.QXSemaphore_signal) refers to qxk_sema.o(.text.QPSet_update_) for QPSet_update_
+    qxk_sema.o(.text.QXSemaphore_signal) refers to qxk_sema.o(.text.QPSet_remove) for QPSet_remove
+    qxk_sema.o(.text.QXSemaphore_signal) refers to qxk.o(.text.QXK_sched_) for QXK_sched_
+    qxk_sema.o(.text.QXSemaphore_signal) refers to qxk_sema.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qxk_sema.o(.text.QXSemaphore_signal) refers to qf_act.o(.bss.QActive_registry_) for QActive_registry_
+    qxk_sema.o(.text.QXSemaphore_signal) refers to qxk.o(.bss.QXK_priv_) for QXK_priv_
+    qxk_sema.o(.ARM.exidx.text.QXSemaphore_signal) refers to qxk_sema.o(.text.QXSemaphore_signal) for [Anonymous Symbol]
+    qxk_sema.o(.ARM.exidx.text.QPSet_notEmpty) refers to qxk_sema.o(.text.QPSet_notEmpty) for [Anonymous Symbol]
+    qxk_sema.o(.text.QPSet_findMax) refers to qxk_port.o(.text.QF_qlog2) for QF_qlog2
+    qxk_sema.o(.ARM.exidx.text.QPSet_findMax) refers to qxk_sema.o(.text.QPSet_findMax) for [Anonymous Symbol]
+    qxk_xthr.o(.text.QXThread_ctor) refers to qf_qact.o(.text.QActive_ctor) for QActive_ctor
+    qxk_xthr.o(.text.QXThread_ctor) refers to qf_time.o(.text.QTimeEvt_ctorX) for QTimeEvt_ctorX
+    qxk_xthr.o(.ARM.exidx.text.QXThread_ctor) refers to qxk_xthr.o(.text.QXThread_ctor) for [Anonymous Symbol]
+    qxk_xthr.o(.text.QXThread_delay) refers to bsp.o(.text.Q_onError) for Q_onError
+    qxk_xthr.o(.text.QXThread_delay) refers to qxk_xthr.o(.text.QXThread_teArm_) for QXThread_teArm_
+    qxk_xthr.o(.text.QXThread_delay) refers to qxk_xthr.o(.text.QXThread_block_) for QXThread_block_
+    qxk_xthr.o(.text.QXThread_delay) refers to qxk.o(.bss.QXK_priv_) for QXK_priv_
+    qxk_xthr.o(.text.QXThread_delay) refers to qxk_xthr.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qxk_xthr.o(.ARM.exidx.text.QXThread_delay) refers to qxk_xthr.o(.text.QXThread_delay) for [Anonymous Symbol]
+    qxk_xthr.o(.text.QXThread_teArm_) refers to bsp.o(.text.Q_onError) for Q_onError
+    qxk_xthr.o(.text.QXThread_teArm_) refers to qxk_xthr.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qxk_xthr.o(.text.QXThread_teArm_) refers to qf_time.o(.bss.QTimeEvt_timeEvtHead_) for QTimeEvt_timeEvtHead_
+    qxk_xthr.o(.ARM.exidx.text.QXThread_teArm_) refers to qxk_xthr.o(.text.QXThread_teArm_) for [Anonymous Symbol]
+    qxk_xthr.o(.text.QXThread_block_) refers to bsp.o(.text.Q_onError) for Q_onError
+    qxk_xthr.o(.text.QXThread_block_) refers to qxk_xthr.o(.text.QPSet_remove) for QPSet_remove
+    qxk_xthr.o(.text.QXThread_block_) refers to qxk_xthr.o(.text.QPSet_update_) for QPSet_update_
+    qxk_xthr.o(.text.QXThread_block_) refers to qxk.o(.text.QXK_sched_) for QXK_sched_
+    qxk_xthr.o(.text.QXThread_block_) refers to qxk.o(.bss.QXK_priv_) for QXK_priv_
+    qxk_xthr.o(.text.QXThread_block_) refers to qxk_xthr.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qxk_xthr.o(.ARM.exidx.text.QXThread_block_) refers to qxk_xthr.o(.text.QXThread_block_) for [Anonymous Symbol]
+    qxk_xthr.o(.text.QXThread_delayCancel) refers to qxk_xthr.o(.text.QXThread_teDisarm_) for QXThread_teDisarm_
+    qxk_xthr.o(.text.QXThread_delayCancel) refers to qxk_xthr.o(.text.QXThread_unblock_) for QXThread_unblock_
+    qxk_xthr.o(.ARM.exidx.text.QXThread_delayCancel) refers to qxk_xthr.o(.text.QXThread_delayCancel) for [Anonymous Symbol]
+    qxk_xthr.o(.ARM.exidx.text.QXThread_teDisarm_) refers to qxk_xthr.o(.text.QXThread_teDisarm_) for [Anonymous Symbol]
+    qxk_xthr.o(.text.QXThread_unblock_) refers to qxk_xthr.o(.text.QPSet_insert) for QPSet_insert
+    qxk_xthr.o(.text.QXThread_unblock_) refers to qxk_xthr.o(.text.QPSet_update_) for QPSet_update_
+    qxk_xthr.o(.text.QXThread_unblock_) refers to qxk.o(.text.QXK_sched_) for QXK_sched_
+    qxk_xthr.o(.text.QXThread_unblock_) refers to qxk.o(.bss.QXK_priv_) for QXK_priv_
+    qxk_xthr.o(.text.QXThread_unblock_) refers to qf_act.o(.bss.QActive_registry_) for QActive_registry_
+    qxk_xthr.o(.ARM.exidx.text.QXThread_unblock_) refers to qxk_xthr.o(.text.QXThread_unblock_) for [Anonymous Symbol]
+    qxk_xthr.o(.text.QXThread_queueGet) refers to bsp.o(.text.Q_onError) for Q_onError
+    qxk_xthr.o(.text.QXThread_queueGet) refers to qxk_xthr.o(.text.QXThread_teArm_) for QXThread_teArm_
+    qxk_xthr.o(.text.QXThread_queueGet) refers to qxk_xthr.o(.text.QPSet_remove) for QPSet_remove
+    qxk_xthr.o(.text.QXThread_queueGet) refers to qxk_xthr.o(.text.QPSet_update_) for QPSet_update_
+    qxk_xthr.o(.text.QXThread_queueGet) refers to qxk.o(.text.QXK_sched_) for QXK_sched_
+    qxk_xthr.o(.text.QXThread_queueGet) refers to qxk.o(.bss.QXK_priv_) for QXK_priv_
+    qxk_xthr.o(.text.QXThread_queueGet) refers to qxk_xthr.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qxk_xthr.o(.ARM.exidx.text.QXThread_queueGet) refers to qxk_xthr.o(.text.QXThread_queueGet) for [Anonymous Symbol]
+    qxk_xthr.o(.ARM.exidx.text.QPSet_remove) refers to qxk_xthr.o(.text.QPSet_remove) for [Anonymous Symbol]
+    qxk_xthr.o(.ARM.exidx.text.QPSet_update_) refers to qxk_xthr.o(.text.QPSet_update_) for [Anonymous Symbol]
+    qxk_xthr.o(.ARM.exidx.text.QPSet_insert) refers to qxk_xthr.o(.text.QPSet_insert) for [Anonymous Symbol]
+    qxk_xthr.o(.text.QXThread_timeout_) refers to qxk_xthr.o(.text.QXThread_unblock_) for QXThread_unblock_
+    qxk_xthr.o(.ARM.exidx.text.QXThread_timeout_) refers to qxk_xthr.o(.text.QXThread_timeout_) for [Anonymous Symbol]
+    qep_hsm.o(.text.QHsm_ctor) refers to qep_hsm.o(.rodata.QHsm_ctor.vtable) for [Anonymous Symbol]
+    qep_hsm.o(.text.QHsm_ctor) refers to qep_hsm.o(.text.QHsm_top) for QHsm_top
+    qep_hsm.o(.ARM.exidx.text.QHsm_ctor) refers to qep_hsm.o(.text.QHsm_ctor) for [Anonymous Symbol]
+    qep_hsm.o(.text.QHsm_init_) refers to bsp.o(.text.Q_onError) for Q_onError
+    qep_hsm.o(.text.QHsm_init_) refers to qep_hsm.o(.text.QHsm_top) for QHsm_top
+    qep_hsm.o(.text.QHsm_init_) refers to qep_hsm.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qep_hsm.o(.text.QHsm_init_) refers to qep_hsm.o(.rodata.QEvt_reserved_) for QEvt_reserved_
+    qep_hsm.o(.ARM.exidx.text.QHsm_init_) refers to qep_hsm.o(.text.QHsm_init_) for [Anonymous Symbol]
+    qep_hsm.o(.text.QHsm_dispatch_) refers to bsp.o(.text.Q_onError) for Q_onError
+    qep_hsm.o(.text.QHsm_dispatch_) refers to qep_hsm.o(.text.QEvt_verify_) for QEvt_verify_
+    qep_hsm.o(.text.QHsm_dispatch_) refers to qep_hsm.o(.text.QHsm_tran_) for QHsm_tran_
+    qep_hsm.o(.text.QHsm_dispatch_) refers to qep_hsm.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qep_hsm.o(.text.QHsm_dispatch_) refers to qep_hsm.o(.rodata.QEvt_reserved_) for QEvt_reserved_
+    qep_hsm.o(.ARM.exidx.text.QHsm_dispatch_) refers to qep_hsm.o(.text.QHsm_dispatch_) for [Anonymous Symbol]
+    qep_hsm.o(.ARM.exidx.text.QHsm_top) refers to qep_hsm.o(.text.QHsm_top) for [Anonymous Symbol]
+    qep_hsm.o(.ARM.exidx.text.QEvt_verify_) refers to qep_hsm.o(.text.QEvt_verify_) for [Anonymous Symbol]
+    qep_hsm.o(.text.QHsm_tran_) refers to bsp.o(.text.Q_onError) for Q_onError
+    qep_hsm.o(.text.QHsm_tran_) refers to qep_hsm.o(.rodata.QEvt_reserved_) for QEvt_reserved_
+    qep_hsm.o(.text.QHsm_tran_) refers to qep_hsm.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qep_hsm.o(.ARM.exidx.text.QHsm_tran_) refers to qep_hsm.o(.text.QHsm_tran_) for [Anonymous Symbol]
+    qep_hsm.o(.text.QHsm_isIn) refers to bsp.o(.text.Q_onError) for Q_onError
+    qep_hsm.o(.text.QHsm_isIn) refers to qep_hsm.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qep_hsm.o(.text.QHsm_isIn) refers to qep_hsm.o(.rodata.QEvt_reserved_) for QEvt_reserved_
+    qep_hsm.o(.ARM.exidx.text.QHsm_isIn) refers to qep_hsm.o(.text.QHsm_isIn) for [Anonymous Symbol]
+    qep_hsm.o(.text.QHsm_childState) refers to bsp.o(.text.Q_onError) for Q_onError
+    qep_hsm.o(.text.QHsm_childState) refers to qep_hsm.o(.rodata.QEvt_reserved_) for QEvt_reserved_
+    qep_hsm.o(.text.QHsm_childState) refers to qep_hsm.o(.rodata.Q_this_module_) for [Anonymous Symbol]
+    qep_hsm.o(.ARM.exidx.text.QHsm_childState) refers to qep_hsm.o(.text.QHsm_childState) for [Anonymous Symbol]
+    qep_hsm.o(.rodata.QHsm_ctor.vtable) refers to qep_hsm.o(.text.QHsm_init_) for QHsm_init_
+    qep_hsm.o(.rodata.QHsm_ctor.vtable) refers to qep_hsm.o(.text.QHsm_dispatch_) for QHsm_dispatch_
+    qxk_port.o(.text.QXThread_stackInit_) refers to qxk.o(.text.QXK_threadExit_) for QXK_threadExit_
+    qxk_port.o(.ARM.exidx.text.QXThread_stackInit_) refers to qxk_port.o(.text.QXThread_stackInit_) for [Anonymous Symbol]
+    qxk_port.o(.ARM.exidx.text.QXK_init) refers to qxk_port.o(.text.QXK_init) for [Anonymous Symbol]
+    qxk_port.o(.text.PendSV_Handler) refers to qxk.o(.bss.QXK_priv_) for QXK_priv_
+    qxk_port.o(.text.PendSV_Handler) refers to qxk.o(.text.QXK_activate_) for QXK_activate_
+    qxk_port.o(.text.PendSV_Handler) refers to qxk_port.o(.text.QXK_thread_ret) for QXK_thread_ret
+    qxk_port.o(.ARM.exidx.text.PendSV_Handler) refers to qxk_port.o(.text.PendSV_Handler) for [Anonymous Symbol]
+    qxk_port.o(.ARM.exidx.text.QXK_thread_ret) refers to qxk_port.o(.text.QXK_thread_ret) for [Anonymous Symbol]
+    qxk_port.o(.ARM.exidx.text.NMI_Handler) refers to qxk_port.o(.text.NMI_Handler) for [Anonymous Symbol]
+    qxk_port.o(.ARM.exidx.text.QF_qlog2) refers to qxk_port.o(.text.QF_qlog2) for [Anonymous Symbol]
+    startup_stm32c031xx.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32c031xx.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32c031xx.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32c031xx.o(RESET) refers to startup_stm32c031xx.o(STACK) for __initial_sp
+    startup_stm32c031xx.o(RESET) refers to startup_stm32c031xx.o(.text) for Reset_Handler
+    startup_stm32c031xx.o(RESET) refers to qxk_port.o(.text.NMI_Handler) for NMI_Handler
+    startup_stm32c031xx.o(RESET) refers to qxk_port.o(.text.PendSV_Handler) for PendSV_Handler
+    startup_stm32c031xx.o(RESET) refers to bsp.o(.text.SysTick_Handler) for SysTick_Handler
+    startup_stm32c031xx.o(RESET) refers to bsp.o(.text.EXTI4_15_IRQHandler) for EXTI4_15_IRQHandler
+    startup_stm32c031xx.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32c031xx.o(.text) refers to system_stm32c0xx.o(.text.SystemInit) for SystemInit
+    startup_stm32c031xx.o(.text) refers to __main.o(!!!main) for __main
+    startup_stm32c031xx.o(.text) refers to startup_stm32c031xx.o(STACK) for __initial_sp
+    startup_stm32c031xx.o(.text) refers to bsp.o(.text.assert_failed) for assert_failed
+    startup_stm32c031xx.o(.text) refers to startup_stm32c031xx.o(HEAP) for Heap_Mem
+    system_stm32c0xx.o(.ARM.exidx.text.SystemInit) refers to system_stm32c0xx.o(.text.SystemInit) for [Anonymous Symbol]
+    system_stm32c0xx.o(.text.SystemCoreClockUpdate) refers to aeabi_sdiv.o(.text) for __aeabi_uidiv
+    system_stm32c0xx.o(.text.SystemCoreClockUpdate) refers to system_stm32c0xx.o(.data.SystemCoreClock) for SystemCoreClock
+    system_stm32c0xx.o(.text.SystemCoreClockUpdate) refers to system_stm32c0xx.o(.rodata.AHBPrescTable) for AHBPrescTable
+    system_stm32c0xx.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to system_stm32c0xx.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
+    malloc.o(.text) refers (Special) to hguard.o(.text) for __heap$guard
+    malloc.o(.text) refers (Special) to init_alloc.o(.text) for _init_alloc
+    malloc.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    free.o(.text) refers (Special) to hguard.o(.text) for __heap$guard
+    free.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    h1_alloc.o(.text) refers (Special) to h1_init.o(.text) for __Heap_Initialize
+    h1_alloc.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    h1_alloc.o(.text) refers to init_alloc.o(.text) for __Heap_Full
+    h1_free.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    h1_alloc_threads.o(.text) refers (Special) to h1_init.o(.text) for __Heap_Initialize
+    h1_alloc_threads.o(.text) refers to init_alloc.o(.text) for __Heap_Full
+    h1_alloc_threads.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    h1_free_threads.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2.o(i._FDIterate) refers to heap2.o(.conststring) for .conststring
+    heap2.o(i.__Heap_ProvideMemory$realtime) refers to fdtree.o(i._FDTree_Delete) for _FDTree_Delete
+    heap2.o(i.__Heap_ProvideMemory$realtime) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2.o(i.__Heap_Stats$realtime) refers to heap2.o(i._Heap2_StatsIterate) for _Heap2_StatsIterate
+    heap2.o(i.__Heap_Stats$realtime) refers to aeabi_sdiv.o(.text) for __aeabi_uidivmod
+    heap2.o(i.__Heap_Valid$realtime) refers to heap2.o(i._FDIterate) for _FDIterate
+    heap2.o(i.__Heap_Valid$realtime) refers to heap2.o(.conststring) for .conststring
+    heap2.o(i.free$realtime) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2.o(i.free$realtime) refers to fdtree.o(i._FDTree_Delete) for _FDTree_Delete
+    heap2.o(i.free$realtime) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2.o(i.malloc$realtime) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2.o(i.malloc$realtime) refers to fdtree.o(i._FDTree_FindFirst) for _FDTree_FindFirst
+    heap2.o(i.malloc$realtime) refers to init_alloc.o(.text) for __Heap_Full
+    heap2.o(i.malloc$realtime) refers to fdtree.o(i._FDTree_RemoveNode) for _FDTree_RemoveNode
+    heap2.o(i.malloc$realtime) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2.o(i.posix_memalign$realtime) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2.o(i.posix_memalign$realtime) refers to fdtree.o(i._FDTree_FindFirst) for _FDTree_FindFirst
+    heap2.o(i.posix_memalign$realtime) refers to init_alloc.o(.text) for __Heap_Full
+    heap2.o(i.posix_memalign$realtime) refers to fdtree.o(i._FDTree_RemoveNode) for _FDTree_RemoveNode
+    heap2.o(i.posix_memalign$realtime) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2.o(i.realloc$realtime) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2.o(i.realloc$realtime) refers to h1_free.o(.text) for free
+    heap2.o(i.realloc$realtime) refers to h1_alloc.o(.text) for malloc
+    heap2.o(i.realloc$realtime) refers to fdtree.o(i._FDTree_Delete) for _FDTree_Delete
+    heap2.o(i.realloc$realtime) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2.o(i.realloc$realtime) refers to rt_memcpy.o(.emb_text) for __aeabi_memcpy4
+    heap2_threads.o(i._FDIterate) refers to heap2_threads.o(.conststring) for .conststring
+    heap2_threads.o(i.__Heap_ProvideMemory$realtime$concurrent) refers to fdtree.o(i._FDTree_Delete) for _FDTree_Delete
+    heap2_threads.o(i.__Heap_ProvideMemory$realtime$concurrent) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2_threads.o(i.__Heap_Stats$realtime$concurrent) refers to heap2_threads.o(i._Heap2_StatsIterate) for _Heap2_StatsIterate
+    heap2_threads.o(i.__Heap_Stats$realtime$concurrent) refers to aeabi_sdiv.o(.text) for __aeabi_uidivmod
+    heap2_threads.o(i.__Heap_Valid$realtime$concurrent) refers to heap2_threads.o(i._FDIterate) for _FDIterate
+    heap2_threads.o(i.__Heap_Valid$realtime$concurrent) refers to heap2_threads.o(.conststring) for .conststring
+    heap2_threads.o(i.free$realtime$concurrent) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2_threads.o(i.free$realtime$concurrent) refers to fdtree.o(i._FDTree_Delete) for _FDTree_Delete
+    heap2_threads.o(i.free$realtime$concurrent) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2_threads.o(i.malloc$realtime$concurrent) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2_threads.o(i.malloc$realtime$concurrent) refers to fdtree.o(i._FDTree_FindFirst) for _FDTree_FindFirst
+    heap2_threads.o(i.malloc$realtime$concurrent) refers to init_alloc.o(.text) for __Heap_Full
+    heap2_threads.o(i.malloc$realtime$concurrent) refers to fdtree.o(i._FDTree_RemoveNode) for _FDTree_RemoveNode
+    heap2_threads.o(i.malloc$realtime$concurrent) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2_threads.o(i.posix_memalign$realtime$concurrent) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2_threads.o(i.posix_memalign$realtime$concurrent) refers to fdtree.o(i._FDTree_FindFirst) for _FDTree_FindFirst
+    heap2_threads.o(i.posix_memalign$realtime$concurrent) refers to init_alloc.o(.text) for __Heap_Full
+    heap2_threads.o(i.posix_memalign$realtime$concurrent) refers to fdtree.o(i._FDTree_RemoveNode) for _FDTree_RemoveNode
+    heap2_threads.o(i.posix_memalign$realtime$concurrent) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2_threads.o(i.realloc$realtime$concurrent) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    heap2_threads.o(i.realloc$realtime$concurrent) refers to h1_free.o(.text) for free
+    heap2_threads.o(i.realloc$realtime$concurrent) refers to h1_alloc.o(.text) for malloc
+    heap2_threads.o(i.realloc$realtime$concurrent) refers to fdtree.o(i._FDTree_Delete) for _FDTree_Delete
+    heap2_threads.o(i.realloc$realtime$concurrent) refers to fdtree.o(i._FDTree_Insert) for _FDTree_Insert
+    heap2_threads.o(i.realloc$realtime$concurrent) refers to rt_memcpy.o(.emb_text) for __aeabi_memcpy4
+    __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for __rt_entry_li
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for __rt_entry_main
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$0000000C) for __rt_entry_postli_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000009) for __rt_entry_postsh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry2.o(.ARM.Collect$$rtentry$$00000002) for __rt_entry_presh_1
+    __rtentry.o(.ARM.Collect$$rtentry$$00000000) refers (Special) to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for __rt_entry_sh
+    aeabi_idiv0_sigfpe.o(.text) refers to rt_div0.o(.text) for __rt_div0
+    rt_heap_descriptor.o(.text) refers to rt_heap_descriptor.o(.bss) for __rt_heap_descriptor_data
+    rt_heap_descriptor_intlibspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    init_alloc.o(.text) refers (Special) to hguard.o(.text) for __heap$guard
+    init_alloc.o(.text) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000007) for __rt_lib_init_heap_2
+    init_alloc.o(.text) refers (Special) to maybetermalloc1.o(.text) for _maybe_terminate_alloc
+    init_alloc.o(.text) refers to h1_extend.o(.text) for __Heap_ProvideMemory
+    init_alloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    init_alloc.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    init_alloc.o(.text) refers to h1_init.o(.text) for __Heap_Initialize
+    rt_memcpy.o(.text) refers to rt_memcpy.o(.emb_text) for __aeabi_memcpy4
+    _get_argv.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv.o(.text) refers to h1_alloc.o(.text) for malloc
+    _get_argv.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    libinit2.o(.ARM.Collect$$libinit$$00000007) refers (Weak) to init_alloc.o(.text) for _init_alloc
+    libinit2.o(.ARM.Collect$$libinit$$00000012) refers to libinit2.o(.ARM.Collect$$libinit$$00000011) for .ARM.Collect$$libinit$$00000011
+    libinit2.o(.ARM.Collect$$libinit$$00000014) refers to libinit2.o(.ARM.Collect$$libinit$$00000011) for .ARM.Collect$$libinit$$00000011
+    libinit2.o(.ARM.Collect$$libinit$$00000016) refers to libinit2.o(.ARM.Collect$$libinit$$00000011) for .ARM.Collect$$libinit$$00000011
+    libinit2.o(.ARM.Collect$$libinit$$00000018) refers to libinit2.o(.ARM.Collect$$libinit$$00000011) for .ARM.Collect$$libinit$$00000011
+    libinit2.o(.ARM.Collect$$libinit$$0000001A) refers to libinit2.o(.ARM.Collect$$libinit$$00000011) for .ARM.Collect$$libinit$$00000011
+    libinit2.o(.ARM.Collect$$libinit$$00000028) refers to argv_veneer.o(.text) for __ARM_argv_veneer
+    libinit2.o(.ARM.Collect$$libinit$$00000029) refers to argv_veneer.o(.text) for __ARM_argv_veneer
+    sys_command.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_command_hlt.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_command_hlt.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    libspace.o(.text) refers to libspace.o(.bss) for __libspace_start
+    __rtentry2.o(.ARM.Collect$$rtentry$$00000008) refers to boardinit2.o(.text) for _platform_post_stackheap_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) refers to libinit.o(.ARM.Collect$$libinit$$00000000) for __rt_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) refers to boardinit3.o(.text) for _platform_post_lib_init
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to main.o(.text.main) for main
+    __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) refers to exit.o(.text) for exit
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000001) for .ARM.Collect$$rtentry$$00000001
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$00000008) for .ARM.Collect$$rtentry$$00000008
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000A) for .ARM.Collect$$rtentry$$0000000A
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000B) for .ARM.Collect$$rtentry$$0000000B
+    __rtentry2.o(.ARM.exidx) refers to __rtentry2.o(.ARM.Collect$$rtentry$$0000000D) for .ARM.Collect$$rtentry$$0000000D
+    __rtentry4.o(.ARM.Collect$$rtentry$$00000004) refers to sys_stackheap_outer.o(.text) for __user_setup_stackheap
+    __rtentry4.o(.ARM.exidx) refers to __rtentry4.o(.ARM.Collect$$rtentry$$00000004) for .ARM.Collect$$rtentry$$00000004
+    rt_div0.o(.text) refers to defsig_fpe_outer.o(.text) for __rt_SIGFPE
+    maybetermalloc2.o(.text) refers (Special) to term_alloc.o(.text) for _terminate_alloc
+    h1_extend.o(.text) refers to h1_free.o(.text) for free
+    h1_extend_threads.o(.text) refers to h1_free_threads.o(.text) for free_internal$concurrent
+    defsig_rtmem_outer.o(.text) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_rtmem_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_rtmem_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    heapauxa.o(.text) refers to heapauxa.o(.data) for .data
+    sys_stackheap_outer.o(.text) refers to libspace.o(.text) for __user_perproc_libspace
+    sys_stackheap_outer.o(.text) refers to startup_stm32c031xx.o(.text) for __user_initial_stackheap
+    sys_stackheap_outer.o(__vectab_stack_and_reset_area) refers to tempstk.o(.text) for __temporary_stack_top
+    sys_stackheap_outer.o(__vectab_stack_and_reset_area) refers to __main.o(!!!main) for __main
+    rt_raise.o(.text) refers to __raise.o(.text) for __raise
+    rt_raise.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    term_alloc.o(.text) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000E) for __rt_lib_shutdown_heap_2
+    term_alloc.o(.text) refers to rt_heap_descriptor_intlibspace.o(.text) for __rt_heap_descriptor
+    exit.o(.text) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for __rt_exit
+    defsig_exit.o(.text) refers to sys_exit.o(.text) for _sys_exit
+    defsig_fpe_outer.o(.text) refers to defsig_fpe_inner.o(.text) for __rt_SIGFPE_inner
+    defsig_fpe_outer.o(.text) refers to defsig_exit.o(.text) for __sig_exit
+    defsig_fpe_formal.o(.text) refers to rt_raise.o(.text) for __rt_raise
+    defsig_rtmem_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    _get_argv_nomalloc.o(.text) refers (Special) to hrguard.o(.text) for __heap_region$guard
+    _get_argv_nomalloc.o(.text) refers to defsig_rtmem_outer.o(.text) for __rt_SIGRTMEM
+    _get_argv_nomalloc.o(.text) refers to sys_command.o(.text) for _sys_command_string
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000030) for __rt_lib_init_alloca_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000002E) for __rt_lib_init_argv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001D) for __rt_lib_init_atexit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000023) for __rt_lib_init_clock_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000034) for __rt_lib_init_cpp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000032) for __rt_lib_init_exceptions_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000002) for __rt_lib_init_fp_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000021) for __rt_lib_init_fp_trap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000025) for __rt_lib_init_getenv_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000C) for __rt_lib_init_heap_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000013) for __rt_lib_init_lc_collate_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000015) for __rt_lib_init_lc_ctype_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000017) for __rt_lib_init_lc_monetary_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000019) for __rt_lib_init_lc_numeric_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001B) for __rt_lib_init_lc_time_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000006) for __rt_lib_init_preinit_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000010) for __rt_lib_init_rand_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000004) for __rt_lib_init_relocate_pie_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000035) for __rt_lib_init_return
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000001F) for __rt_lib_init_signal_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$00000027) for __rt_lib_init_stdio_1
+    libinit.o(.ARM.Collect$$libinit$$00000000) refers (Special) to libinit2.o(.ARM.Collect$$libinit$$0000000E) for __rt_lib_init_user_alloc_1
+    sys_exit.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_exit_hlt.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_exit_hlt.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.Collect$$rtexit$$00000000) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for __rt_exit_exit
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for __rt_exit_ls
+    rtexit.o(.ARM.exidx) refers (Special) to rtexit2.o(.ARM.Collect$$rtexit$$00000002) for __rt_exit_prels_1
+    rtexit.o(.ARM.exidx) refers to rtexit.o(.ARM.Collect$$rtexit$$00000000) for .ARM.Collect$$rtexit$$00000000
+    __raise.o(.text) refers to defsig.o(CL$$defsig) for __default_signal_handler
+    defsig_general.o(.text) refers to sys_wrch.o(.text) for _ttywrch
+    defsig_fpe_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    libshutdown2.o(.ARM.Collect$$libshutdown$$0000000D) refers (Weak) to term_alloc.o(.text) for _terminate_alloc
+    sys_wrch.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    sys_wrch_hlt.o(.text) refers (Special) to use_no_semi.o(.text) for __I$use$semihosting
+    sys_wrch_hlt.o(.text) refers (Special) to indicate_semi.o(.text) for __semihosting_library_function
+    rtexit2.o(.ARM.Collect$$rtexit$$00000003) refers to libshutdown.o(.ARM.Collect$$libshutdown$$00000000) for __rt_lib_shutdown
+    rtexit2.o(.ARM.Collect$$rtexit$$00000004) refers to sys_exit.o(.text) for _sys_exit
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000001) for .ARM.Collect$$rtexit$$00000001
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000003) for .ARM.Collect$$rtexit$$00000003
+    rtexit2.o(.ARM.exidx) refers to rtexit2.o(.ARM.Collect$$rtexit$$00000004) for .ARM.Collect$$rtexit$$00000004
+    defsig.o(CL$$defsig) refers to defsig_fpe_inner.o(.text) for __rt_SIGFPE_inner
+    defsig.o(CL$$defsig) refers to defsig_rtmem_inner.o(.text) for __rt_SIGRTMEM_inner
+    defsig_abrt_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_rtred_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_stak_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_pvfn_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_cppl_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_segv_inner.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    defsig_other.o(.text) refers to defsig_general.o(.text) for __default_signal_display
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000002) for __rt_lib_shutdown_cpp_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000007) for __rt_lib_shutdown_fp_trap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F) for __rt_lib_shutdown_heap_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000010) for __rt_lib_shutdown_return
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A) for __rt_lib_shutdown_signal_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$00000004) for __rt_lib_shutdown_stdio_1
+    libshutdown.o(.ARM.Collect$$libshutdown$$00000000) refers (Special) to libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C) for __rt_lib_shutdown_user_alloc_1
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing bsp.o(.text), (0 bytes).
+    Removing bsp.o(.ARM.exidx.text.assert_failed), (8 bytes).
+    Removing bsp.o(.ARM.exidx.text.SysTick_Handler), (8 bytes).
+    Removing bsp.o(.ARM.exidx.text.EXTI4_15_IRQHandler), (8 bytes).
+    Removing bsp.o(.ARM.exidx.text.BSP_init), (8 bytes).
+    Removing bsp.o(.text.BSP_tickCtr), (24 bytes).
+    Removing bsp.o(.ARM.exidx.text.BSP_tickCtr), (8 bytes).
+    Removing bsp.o(.text.BSP_delay), (36 bytes).
+    Removing bsp.o(.ARM.exidx.text.BSP_delay), (8 bytes).
+    Removing bsp.o(.ARM.exidx.text.BSP_greenLedOn), (8 bytes).
+    Removing bsp.o(.ARM.exidx.text.BSP_greenLedOff), (8 bytes).
+    Removing bsp.o(.text.BSP_blueLedOn), (2 bytes).
+    Removing bsp.o(.ARM.exidx.text.BSP_blueLedOn), (8 bytes).
+    Removing bsp.o(.text.BSP_blueLedOff), (2 bytes).
+    Removing bsp.o(.ARM.exidx.text.BSP_blueLedOff), (8 bytes).
+    Removing bsp.o(.ARM.exidx.text.QF_onStartup), (8 bytes).
+    Removing bsp.o(.ARM.exidx.text.SysTick_Config), (8 bytes).
+    Removing bsp.o(.ARM.exidx.text.__NVIC_SetPriority), (8 bytes).
+    Removing bsp.o(.ARM.exidx.text.__NVIC_EnableIRQ), (8 bytes).
+    Removing bsp.o(.text.QF_onCleanup), (2 bytes).
+    Removing bsp.o(.ARM.exidx.text.QF_onCleanup), (8 bytes).
+    Removing bsp.o(.ARM.exidx.text.QXK_onIdle), (8 bytes).
+    Removing bsp.o(.ARM.exidx.text.Q_onError), (8 bytes).
+    Removing bsp.o(.ARM.exidx.text.__NVIC_SystemReset), (8 bytes).
+    Removing bsp.o(.bss.l_tickCtr), (4 bytes).
+    Removing shape.o(.text), (0 bytes).
+    Removing shape.o(.ARM.exidx.text.Shape_ctor), (8 bytes).
+    Removing shape.o(.ARM.exidx.text.Shape_draw), (8 bytes).
+    Removing shape.o(.ARM.exidx.text.Shape_area), (8 bytes).
+    Removing shape.o(.ARM.exidx.text.Shape_moveBy), (8 bytes).
+    Removing shape.o(.ARM.exidx.text.Shape_distanceTo), (8 bytes).
+    Removing shape.o(.ARM.exidx.text.drawGraph), (8 bytes).
+    Removing shape.o(.ARM.exidx.text.Shape_draw_vcall), (8 bytes).
+    Removing main.o(.text), (0 bytes).
+    Removing main.o(.ARM.exidx.text.main_blinky1), (8 bytes).
+    Removing main.o(.ARM.exidx.text.main_blinky2), (8 bytes).
+    Removing main.o(.text.main_blinky3), (52 bytes).
+    Removing main.o(.ARM.exidx.text.main_blinky3), (8 bytes).
+    Removing main.o(.ARM.exidx.text.main), (8 bytes).
+    Removing main.o(.bss.stack_blinky3), (160 bytes).
+    Removing main.o(.bss.blinky3), (60 bytes).
+    Removing main.o(.bss.stack_idleThread), (160 bytes).
+    Removing main.o(.ARM.use_no_argv), (4 bytes).
+    Removing rectangle.o(.text), (0 bytes).
+    Removing rectangle.o(.ARM.exidx.text.Rectangle_ctor), (8 bytes).
+    Removing rectangle.o(.ARM.exidx.text.Rectangle_draw), (8 bytes).
+    Removing rectangle.o(.ARM.exidx.text.Rectangle_area), (8 bytes).
+    Removing qf_act.o(.text), (0 bytes).
+    Removing qf_act.o(.ARM.exidx.text.QF_bzero_), (8 bytes).
+    Removing qf_actq.o(.text), (0 bytes).
+    Removing qf_actq.o(.ARM.exidx.text.QActive_post_), (8 bytes).
+    Removing qf_actq.o(.ARM.exidx.text.QEvt_verify_), (8 bytes).
+    Removing qf_actq.o(.ARM.exidx.text.QEvt_getPoolId_), (8 bytes).
+    Removing qf_actq.o(.ARM.exidx.text.QEvt_refCtr_inc_), (8 bytes).
+    Removing qf_actq.o(.ARM.exidx.text.QPSet_insert), (8 bytes).
+    Removing qf_actq.o(.ARM.exidx.text.QPSet_update_), (8 bytes).
+    Removing qf_actq.o(.text.QActive_postLIFO_), (288 bytes).
+    Removing qf_actq.o(.ARM.exidx.text.QActive_postLIFO_), (8 bytes).
+    Removing qf_actq.o(.ARM.exidx.text.QActive_get_), (8 bytes).
+    Removing qf_actq.o(.text.QF_getQueueMin), (80 bytes).
+    Removing qf_actq.o(.ARM.exidx.text.QF_getQueueMin), (8 bytes).
+    Removing qf_actq.o(.text.QTicker_ctor), (36 bytes).
+    Removing qf_actq.o(.ARM.exidx.text.QTicker_ctor), (8 bytes).
+    Removing qf_actq.o(.text.QTicker_init_), (32 bytes).
+    Removing qf_actq.o(.ARM.exidx.text.QTicker_init_), (8 bytes).
+    Removing qf_actq.o(.text.QTicker_dispatch_), (76 bytes).
+    Removing qf_actq.o(.ARM.exidx.text.QTicker_dispatch_), (8 bytes).
+    Removing qf_actq.o(.text.QTicker_trig_), (132 bytes).
+    Removing qf_actq.o(.ARM.exidx.text.QTicker_trig_), (8 bytes).
+    Removing qf_actq.o(.rodata.QTicker_ctor.vtable), (8 bytes).
+    Removing qf_actq.o(.rodata.QTicker_trig_.tickEvt), (4 bytes).
+    Removing qf_defer.o(.text), (0 bytes).
+    Removing qf_defer.o(.text.QActive_defer), (42 bytes).
+    Removing qf_defer.o(.ARM.exidx.text.QActive_defer), (8 bytes).
+    Removing qf_defer.o(.text.QActive_recall), (124 bytes).
+    Removing qf_defer.o(.ARM.exidx.text.QActive_recall), (8 bytes).
+    Removing qf_defer.o(.text.QEvt_getPoolId_), (16 bytes).
+    Removing qf_defer.o(.ARM.exidx.text.QEvt_getPoolId_), (8 bytes).
+    Removing qf_defer.o(.text.QEvt_refCtr_dec_), (16 bytes).
+    Removing qf_defer.o(.ARM.exidx.text.QEvt_refCtr_dec_), (8 bytes).
+    Removing qf_defer.o(.text.QActive_flushDeferred), (72 bytes).
+    Removing qf_defer.o(.ARM.exidx.text.QActive_flushDeferred), (8 bytes).
+    Removing qf_defer.o(.rodata.Q_this_module_), (9 bytes).
+    Removing qf_dyn.o(.text), (0 bytes).
+    Removing qf_dyn.o(.text.QF_poolInit), (128 bytes).
+    Removing qf_dyn.o(.ARM.exidx.text.QF_poolInit), (8 bytes).
+    Removing qf_dyn.o(.text.QF_poolGetMaxBlockSize), (20 bytes).
+    Removing qf_dyn.o(.ARM.exidx.text.QF_poolGetMaxBlockSize), (8 bytes).
+    Removing qf_dyn.o(.text.QF_getPoolMin), (92 bytes).
+    Removing qf_dyn.o(.ARM.exidx.text.QF_getPoolMin), (8 bytes).
+    Removing qf_dyn.o(.text.QF_newX_), (240 bytes).
+    Removing qf_dyn.o(.ARM.exidx.text.QF_newX_), (8 bytes).
+    Removing qf_dyn.o(.ARM.exidx.text.QF_gc), (8 bytes).
+    Removing qf_dyn.o(.ARM.exidx.text.QEvt_verify_), (8 bytes).
+    Removing qf_dyn.o(.ARM.exidx.text.QEvt_getPoolId_), (8 bytes).
+    Removing qf_dyn.o(.ARM.exidx.text.QEvt_refCtr_dec_), (8 bytes).
+    Removing qf_dyn.o(.text.QF_newRef_), (100 bytes).
+    Removing qf_dyn.o(.ARM.exidx.text.QF_newRef_), (8 bytes).
+    Removing qf_dyn.o(.text.QEvt_refCtr_inc_), (16 bytes).
+    Removing qf_dyn.o(.ARM.exidx.text.QEvt_refCtr_inc_), (8 bytes).
+    Removing qf_dyn.o(.text.QF_deleteRef_), (64 bytes).
+    Removing qf_dyn.o(.ARM.exidx.text.QF_deleteRef_), (8 bytes).
+    Removing qf_mem.o(.text), (0 bytes).
+    Removing qf_mem.o(.text.QMPool_init), (264 bytes).
+    Removing qf_mem.o(.ARM.exidx.text.QMPool_init), (8 bytes).
+    Removing qf_mem.o(.text.QMPool_get), (228 bytes).
+    Removing qf_mem.o(.ARM.exidx.text.QMPool_get), (8 bytes).
+    Removing qf_mem.o(.ARM.exidx.text.QMPool_put), (8 bytes).
+    Removing qf_ps.o(.text), (0 bytes).
+    Removing qf_ps.o(.text.QActive_psInit), (84 bytes).
+    Removing qf_ps.o(.ARM.exidx.text.QActive_psInit), (8 bytes).
+    Removing qf_ps.o(.text.QPSet_setEmpty), (14 bytes).
+    Removing qf_ps.o(.ARM.exidx.text.QPSet_setEmpty), (8 bytes).
+    Removing qf_ps.o(.text.QPSet_update_), (20 bytes).
+    Removing qf_ps.o(.ARM.exidx.text.QPSet_update_), (8 bytes).
+    Removing qf_ps.o(.text.QActive_publish_), (376 bytes).
+    Removing qf_ps.o(.ARM.exidx.text.QActive_publish_), (8 bytes).
+    Removing qf_ps.o(.text.QPSet_verify_), (26 bytes).
+    Removing qf_ps.o(.ARM.exidx.text.QPSet_verify_), (8 bytes).
+    Removing qf_ps.o(.text.QEvt_getPoolId_), (16 bytes).
+    Removing qf_ps.o(.ARM.exidx.text.QEvt_getPoolId_), (8 bytes).
+    Removing qf_ps.o(.text.QEvt_refCtr_inc_), (16 bytes).
+    Removing qf_ps.o(.ARM.exidx.text.QEvt_refCtr_inc_), (8 bytes).
+    Removing qf_ps.o(.text.QPSet_notEmpty), (16 bytes).
+    Removing qf_ps.o(.ARM.exidx.text.QPSet_notEmpty), (8 bytes).
+    Removing qf_ps.o(.text.QPSet_findMax), (18 bytes).
+    Removing qf_ps.o(.ARM.exidx.text.QPSet_findMax), (8 bytes).
+    Removing qf_ps.o(.text.QPSet_remove), (26 bytes).
+    Removing qf_ps.o(.ARM.exidx.text.QPSet_remove), (8 bytes).
+    Removing qf_ps.o(.text.QActive_subscribe), (184 bytes).
+    Removing qf_ps.o(.ARM.exidx.text.QActive_subscribe), (8 bytes).
+    Removing qf_ps.o(.text.QPSet_insert), (26 bytes).
+    Removing qf_ps.o(.ARM.exidx.text.QPSet_insert), (8 bytes).
+    Removing qf_ps.o(.text.QActive_unsubscribe), (184 bytes).
+    Removing qf_ps.o(.ARM.exidx.text.QActive_unsubscribe), (8 bytes).
+    Removing qf_ps.o(.text.QActive_unsubscribeAll), (200 bytes).
+    Removing qf_ps.o(.ARM.exidx.text.QActive_unsubscribeAll), (8 bytes).
+    Removing qf_ps.o(.text.QPSet_hasElement), (24 bytes).
+    Removing qf_ps.o(.ARM.exidx.text.QPSet_hasElement), (8 bytes).
+    Removing qf_ps.o(.bss.QActive_subscrList_), (4 bytes).
+    Removing qf_ps.o(.bss.QActive_maxPubSignal_), (4 bytes).
+    Removing qf_ps.o(.rodata.Q_this_module_), (6 bytes).
+    Removing qf_qact.o(.text), (0 bytes).
+    Removing qf_qact.o(.ARM.exidx.text.QActive_ctor), (8 bytes).
+    Removing qf_qact.o(.ARM.exidx.text.QActive_register_), (8 bytes).
+    Removing qf_qact.o(.text.QActive_unregister_), (96 bytes).
+    Removing qf_qact.o(.ARM.exidx.text.QActive_unregister_), (8 bytes).
+    Removing qf_qeq.o(.text), (0 bytes).
+    Removing qf_qeq.o(.ARM.exidx.text.QEQueue_init), (8 bytes).
+    Removing qf_qeq.o(.text.QEQueue_post), (256 bytes).
+    Removing qf_qeq.o(.ARM.exidx.text.QEQueue_post), (8 bytes).
+    Removing qf_qeq.o(.text.QEvt_getPoolId_), (16 bytes).
+    Removing qf_qeq.o(.ARM.exidx.text.QEvt_getPoolId_), (8 bytes).
+    Removing qf_qeq.o(.text.QEvt_refCtr_inc_), (16 bytes).
+    Removing qf_qeq.o(.ARM.exidx.text.QEvt_refCtr_inc_), (8 bytes).
+    Removing qf_qeq.o(.text.QEQueue_postLIFO), (180 bytes).
+    Removing qf_qeq.o(.ARM.exidx.text.QEQueue_postLIFO), (8 bytes).
+    Removing qf_qeq.o(.text.QEQueue_get), (156 bytes).
+    Removing qf_qeq.o(.ARM.exidx.text.QEQueue_get), (8 bytes).
+    Removing qf_qeq.o(.rodata.Q_this_module_), (7 bytes).
+    Removing qf_qeq.o(.bss.QEQueue_dummy), (16 bytes).
+    Removing qf_time.o(.text), (0 bytes).
+    Removing qf_time.o(.ARM.exidx.text.QTimeEvt_ctorX), (8 bytes).
+    Removing qf_time.o(.ARM.exidx.text.QEvt_ctor), (8 bytes).
+    Removing qf_time.o(.text.QTimeEvt_armX), (172 bytes).
+    Removing qf_time.o(.ARM.exidx.text.QTimeEvt_armX), (8 bytes).
+    Removing qf_time.o(.text.QTimeEvt_disarm), (82 bytes).
+    Removing qf_time.o(.ARM.exidx.text.QTimeEvt_disarm), (8 bytes).
+    Removing qf_time.o(.text.QTimeEvt_rearm), (184 bytes).
+    Removing qf_time.o(.ARM.exidx.text.QTimeEvt_rearm), (8 bytes).
+    Removing qf_time.o(.text.QTimeEvt_wasDisarmed), (48 bytes).
+    Removing qf_time.o(.ARM.exidx.text.QTimeEvt_wasDisarmed), (8 bytes).
+    Removing qf_time.o(.text.QTimeEvt_currCtr), (30 bytes).
+    Removing qf_time.o(.ARM.exidx.text.QTimeEvt_currCtr), (8 bytes).
+    Removing qf_time.o(.ARM.exidx.text.QTimeEvt_tick_), (8 bytes).
+    Removing qf_time.o(.text.QTimeEvt_noActive), (124 bytes).
+    Removing qf_time.o(.ARM.exidx.text.QTimeEvt_noActive), (8 bytes).
+    Removing qxk.o(.text), (0 bytes).
+    Removing qxk.o(.text.QXK_schedLock), (132 bytes).
+    Removing qxk.o(.ARM.exidx.text.QXK_schedLock), (8 bytes).
+    Removing qxk.o(.text.QXK_schedUnlock), (128 bytes).
+    Removing qxk.o(.ARM.exidx.text.QXK_schedUnlock), (8 bytes).
+    Removing qxk.o(.ARM.exidx.text.QXK_sched_), (8 bytes).
+    Removing qxk.o(.ARM.exidx.text.QXK_activate_), (8 bytes).
+    Removing qxk.o(.text.QXK_current), (108 bytes).
+    Removing qxk.o(.ARM.exidx.text.QXK_current), (8 bytes).
+    Removing qxk.o(.ARM.exidx.text.QPSet_verify_), (8 bytes).
+    Removing qxk.o(.ARM.exidx.text.QPSet_isEmpty), (8 bytes).
+    Removing qxk.o(.ARM.exidx.text.QPSet_findMax), (8 bytes).
+    Removing qxk.o(.ARM.exidx.text.QPSet_hasElement), (8 bytes).
+    Removing qxk.o(.ARM.exidx.text.QPSet_remove), (8 bytes).
+    Removing qxk.o(.ARM.exidx.text.QPSet_update_), (8 bytes).
+    Removing qxk.o(.text.QXK_contextSw_), (20 bytes).
+    Removing qxk.o(.ARM.exidx.text.QXK_contextSw_), (8 bytes).
+    Removing qxk.o(.ARM.exidx.text.QXK_threadExit_), (8 bytes).
+    Removing qxk.o(.ARM.exidx.text.QF_init), (8 bytes).
+    Removing qxk.o(.text.QF_stop), (8 bytes).
+    Removing qxk.o(.ARM.exidx.text.QF_stop), (8 bytes).
+    Removing qxk.o(.ARM.exidx.text.QF_run), (8 bytes).
+    Removing qxk.o(.ARM.exidx.text.QActive_start_), (8 bytes).
+    Removing qxk.o(.ARM.exidx.text.QPSet_insert), (8 bytes).
+    Removing qxk_mutex.o(.text), (0 bytes).
+    Removing qxk_mutex.o(.text.QXMutex_init), (80 bytes).
+    Removing qxk_mutex.o(.ARM.exidx.text.QXMutex_init), (8 bytes).
+    Removing qxk_mutex.o(.text.QXMutex_lock), (604 bytes).
+    Removing qxk_mutex.o(.ARM.exidx.text.QXMutex_lock), (8 bytes).
+    Removing qxk_mutex.o(.text.QPSet_remove), (26 bytes).
+    Removing qxk_mutex.o(.ARM.exidx.text.QPSet_remove), (8 bytes).
+    Removing qxk_mutex.o(.text.QPSet_insert), (26 bytes).
+    Removing qxk_mutex.o(.ARM.exidx.text.QPSet_insert), (8 bytes).
+    Removing qxk_mutex.o(.text.QPSet_update_), (20 bytes).
+    Removing qxk_mutex.o(.ARM.exidx.text.QPSet_update_), (8 bytes).
+    Removing qxk_mutex.o(.text.QPSet_hasElement), (24 bytes).
+    Removing qxk_mutex.o(.ARM.exidx.text.QPSet_hasElement), (8 bytes).
+    Removing qxk_mutex.o(.text.QXMutex_tryLock), (420 bytes).
+    Removing qxk_mutex.o(.ARM.exidx.text.QXMutex_tryLock), (8 bytes).
+    Removing qxk_mutex.o(.text.QXMutex_unlock), (540 bytes).
+    Removing qxk_mutex.o(.ARM.exidx.text.QXMutex_unlock), (8 bytes).
+    Removing qxk_mutex.o(.text.QPSet_notEmpty), (16 bytes).
+    Removing qxk_mutex.o(.ARM.exidx.text.QPSet_notEmpty), (8 bytes).
+    Removing qxk_mutex.o(.text.QPSet_findMax), (18 bytes).
+    Removing qxk_mutex.o(.ARM.exidx.text.QPSet_findMax), (8 bytes).
+    Removing qxk_mutex.o(.rodata.Q_this_module_), (10 bytes).
+    Removing qxk_sema.o(.text), (0 bytes).
+    Removing qxk_sema.o(.ARM.exidx.text.QXSemaphore_init), (8 bytes).
+    Removing qxk_sema.o(.ARM.exidx.text.QPSet_setEmpty), (8 bytes).
+    Removing qxk_sema.o(.ARM.exidx.text.QXSemaphore_wait), (8 bytes).
+    Removing qxk_sema.o(.ARM.exidx.text.QPSet_remove), (8 bytes).
+    Removing qxk_sema.o(.ARM.exidx.text.QPSet_update_), (8 bytes).
+    Removing qxk_sema.o(.ARM.exidx.text.QPSet_insert), (8 bytes).
+    Removing qxk_sema.o(.ARM.exidx.text.QPSet_hasElement), (8 bytes).
+    Removing qxk_sema.o(.text.QXSemaphore_tryWait), (92 bytes).
+    Removing qxk_sema.o(.ARM.exidx.text.QXSemaphore_tryWait), (8 bytes).
+    Removing qxk_sema.o(.ARM.exidx.text.QXSemaphore_signal), (8 bytes).
+    Removing qxk_sema.o(.ARM.exidx.text.QPSet_notEmpty), (8 bytes).
+    Removing qxk_sema.o(.ARM.exidx.text.QPSet_findMax), (8 bytes).
+    Removing qxk_xthr.o(.text), (0 bytes).
+    Removing qxk_xthr.o(.ARM.exidx.text.QXThread_ctor), (8 bytes).
+    Removing qxk_xthr.o(.ARM.exidx.text.QXThread_delay), (8 bytes).
+    Removing qxk_xthr.o(.ARM.exidx.text.QXThread_teArm_), (8 bytes).
+    Removing qxk_xthr.o(.ARM.exidx.text.QXThread_block_), (8 bytes).
+    Removing qxk_xthr.o(.text.QXThread_delayCancel), (70 bytes).
+    Removing qxk_xthr.o(.ARM.exidx.text.QXThread_delayCancel), (8 bytes).
+    Removing qxk_xthr.o(.ARM.exidx.text.QXThread_teDisarm_), (8 bytes).
+    Removing qxk_xthr.o(.ARM.exidx.text.QXThread_unblock_), (8 bytes).
+    Removing qxk_xthr.o(.text.QXThread_queueGet), (352 bytes).
+    Removing qxk_xthr.o(.ARM.exidx.text.QXThread_queueGet), (8 bytes).
+    Removing qxk_xthr.o(.ARM.exidx.text.QPSet_remove), (8 bytes).
+    Removing qxk_xthr.o(.ARM.exidx.text.QPSet_update_), (8 bytes).
+    Removing qxk_xthr.o(.ARM.exidx.text.QPSet_insert), (8 bytes).
+    Removing qxk_xthr.o(.ARM.exidx.text.QXThread_timeout_), (8 bytes).
+    Removing qxk_xthr.o(.bss.QXThread_dummy), (4 bytes).
+    Removing qep_hsm.o(.text), (0 bytes).
+    Removing qep_hsm.o(.ARM.exidx.text.QHsm_ctor), (8 bytes).
+    Removing qep_hsm.o(.ARM.exidx.text.QHsm_init_), (8 bytes).
+    Removing qep_hsm.o(.ARM.exidx.text.QHsm_dispatch_), (8 bytes).
+    Removing qep_hsm.o(.ARM.exidx.text.QHsm_top), (8 bytes).
+    Removing qep_hsm.o(.ARM.exidx.text.QEvt_verify_), (8 bytes).
+    Removing qep_hsm.o(.ARM.exidx.text.QHsm_tran_), (8 bytes).
+    Removing qep_hsm.o(.text.QHsm_isIn), (140 bytes).
+    Removing qep_hsm.o(.ARM.exidx.text.QHsm_isIn), (8 bytes).
+    Removing qep_hsm.o(.text.QHsm_childState), (148 bytes).
+    Removing qep_hsm.o(.ARM.exidx.text.QHsm_childState), (8 bytes).
+    Removing qep_hsm.o(.rodata.QP_versionStr), (8 bytes).
+    Removing qxk_port.o(.text), (0 bytes).
+    Removing qxk_port.o(.ARM.exidx.text.QXThread_stackInit_), (8 bytes).
+    Removing qxk_port.o(.ARM.exidx.text.QXK_init), (8 bytes).
+    Removing qxk_port.o(.ARM.exidx.text.PendSV_Handler), (8 bytes).
+    Removing qxk_port.o(.ARM.exidx.text.QXK_thread_ret), (8 bytes).
+    Removing qxk_port.o(.ARM.exidx.text.NMI_Handler), (8 bytes).
+    Removing qxk_port.o(.ARM.exidx.text.QF_qlog2), (8 bytes).
+    Removing system_stm32c0xx.o(.text), (0 bytes).
+    Removing system_stm32c0xx.o(.ARM.exidx.text.SystemInit), (8 bytes).
+    Removing system_stm32c0xx.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
+    Removing system_stm32c0xx.o(.rodata.APBPrescTable), (32 bytes).
+
+275 unused section(s) (total 9566 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_idiv0.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_idiv0_sigfpe.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_heap_descriptor.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_heap_descriptor_intlibspace.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_div0.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
+    ../clib/angel/scatterp.s                 0x00000000   Number         0  __scatter.o ABSOLUTE
+    ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  mutex_dummy.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  tempstk.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command_hlt.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit_hlt.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch_hlt.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
+    ../clib/division.s                       0x00000000   Number         0  aeabi_sdiv.o ABSOLUTE
+    ../clib/division.s                       0x00000000   Number         0  aeabi_sdiv_div0.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_alloc.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_free.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_alloc_threads.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_free_threads.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_init.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_init_threads.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_extend.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_extend_threads.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_final.o ABSOLUTE
+    ../clib/heap1.c                          0x00000000   Number         0  h1_final_threads.o ABSOLUTE
+    ../clib/heap2.c                          0x00000000   Number         0  heap2.o ABSOLUTE
+    ../clib/heap2.c                          0x00000000   Number         0  heap2_threads.o ABSOLUTE
+    ../clib/heap2.c                          0x00000000   Number         0  fdtree.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  malloc.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  free.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  hguard.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  init_alloc.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  heapstubs.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
+    ../clib/heapalloc.c                      0x00000000   Number         0  term_alloc.o ABSOLUTE
+    ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
+    ../clib/heapaux.c                        0x00000000   Number         0  heapauxa.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libinit.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
+    ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
+    ../clib/maybe.s                          0x00000000   Number         0  maybetermalloc1.o ABSOLUTE
+    ../clib/maybe.s                          0x00000000   Number         0  maybetermalloc2.o ABSOLUTE
+    ../clib/memcpset.c                       0x00000000   Number         0  rt_memcpy.o ABSOLUTE
+    ../clib/memcpset.c                       0x00000000   Number         0  rt_memcpy.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
+    ../clib/stdlib.c                         0x00000000   Number         0  exit.o ABSOLUTE
+    ../fplib/cfplib/fpinit.c                 0x00000000   Number         0  fpinit.o ABSOLUTE
+    RTE/Device/STM32C031C6Ux/startup_stm32c031xx.s 0x00000000   Number         0  startup_stm32c031xx.o ABSOLUTE
+    bsp.c                                    0x00000000   Number         0  bsp.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    qep_hsm.c                                0x00000000   Number         0  qep_hsm.o ABSOLUTE
+    qf_act.c                                 0x00000000   Number         0  qf_act.o ABSOLUTE
+    qf_actq.c                                0x00000000   Number         0  qf_actq.o ABSOLUTE
+    qf_defer.c                               0x00000000   Number         0  qf_defer.o ABSOLUTE
+    qf_dyn.c                                 0x00000000   Number         0  qf_dyn.o ABSOLUTE
+    qf_mem.c                                 0x00000000   Number         0  qf_mem.o ABSOLUTE
+    qf_ps.c                                  0x00000000   Number         0  qf_ps.o ABSOLUTE
+    qf_qact.c                                0x00000000   Number         0  qf_qact.o ABSOLUTE
+    qf_qeq.c                                 0x00000000   Number         0  qf_qeq.o ABSOLUTE
+    qf_time.c                                0x00000000   Number         0  qf_time.o ABSOLUTE
+    qxk.c                                    0x00000000   Number         0  qxk.o ABSOLUTE
+    qxk_mutex.c                              0x00000000   Number         0  qxk_mutex.o ABSOLUTE
+    qxk_port.c                               0x00000000   Number         0  qxk_port.o ABSOLUTE
+    qxk_sema.c                               0x00000000   Number         0  qxk_sema.o ABSOLUTE
+    qxk_xthr.c                               0x00000000   Number         0  qxk_xthr.o ABSOLUTE
+    rectangle.c                              0x00000000   Number         0  rectangle.o ABSOLUTE
+    shape.c                                  0x00000000   Number         0  shape.o ABSOLUTE
+    system_stm32c0xx.c                       0x00000000   Number         0  system_stm32c0xx.o ABSOLUTE
+    RESET                                    0x08000000   Section      192  startup_stm32c031xx.o(RESET)
+    !!!main                                  0x080000c0   Section        8  __main.o(!!!main)
+    !!!scatter                               0x080000c8   Section       84  __scatter.o(!!!scatter)
+    !!handler_copy                           0x0800011c   Section       26  __scatter_copy.o(!!handler_copy)
+    !!handler_null                           0x08000138   Section        2  __scatter.o(!!handler_null)
+    !!handler_zi                             0x0800013c   Section       28  __scatter_zi.o(!!handler_zi)
+    .ARM.Collect$$libinit$$00000000          0x08000158   Section        2  libinit.o(.ARM.Collect$$libinit$$00000000)
+    .ARM.Collect$$libinit$$00000002          0x0800015a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    .ARM.Collect$$libinit$$00000004          0x0800015a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    .ARM.Collect$$libinit$$00000006          0x0800015a   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000006)
+    .ARM.Collect$$libinit$$00000007          0x0800015a   Section        8  libinit2.o(.ARM.Collect$$libinit$$00000007)
+    .ARM.Collect$$libinit$$0000000C          0x08000162   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    .ARM.Collect$$libinit$$0000000E          0x08000162   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    .ARM.Collect$$libinit$$00000010          0x08000162   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000010)
+    .ARM.Collect$$libinit$$00000013          0x08000162   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    .ARM.Collect$$libinit$$00000015          0x08000162   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    .ARM.Collect$$libinit$$00000017          0x08000162   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    .ARM.Collect$$libinit$$00000019          0x08000162   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    .ARM.Collect$$libinit$$0000001B          0x08000162   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    .ARM.Collect$$libinit$$0000001D          0x08000162   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    .ARM.Collect$$libinit$$0000001F          0x08000162   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    .ARM.Collect$$libinit$$00000021          0x08000162   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    .ARM.Collect$$libinit$$00000023          0x08000162   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    .ARM.Collect$$libinit$$00000025          0x08000162   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    .ARM.Collect$$libinit$$00000027          0x08000162   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000027)
+    .ARM.Collect$$libinit$$0000002E          0x08000162   Section        0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    .ARM.Collect$$libinit$$00000030          0x08000162   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    .ARM.Collect$$libinit$$00000032          0x08000162   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    .ARM.Collect$$libinit$$00000034          0x08000162   Section        0  libinit2.o(.ARM.Collect$$libinit$$00000034)
+    .ARM.Collect$$libinit$$00000035          0x08000162   Section        2  libinit2.o(.ARM.Collect$$libinit$$00000035)
+    .ARM.Collect$$libshutdown$$00000000      0x08000164   Section        2  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    .ARM.Collect$$libshutdown$$00000002      0x08000166   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    .ARM.Collect$$libshutdown$$00000004      0x08000166   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    .ARM.Collect$$libshutdown$$00000007      0x08000166   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    .ARM.Collect$$libshutdown$$0000000A      0x08000166   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    .ARM.Collect$$libshutdown$$0000000C      0x08000166   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    .ARM.Collect$$libshutdown$$0000000F      0x08000166   Section        0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    .ARM.Collect$$libshutdown$$00000010      0x08000166   Section        2  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    .ARM.Collect$$rtentry$$00000000          0x08000168   Section        0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    .ARM.Collect$$rtentry$$00000002          0x08000168   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    .ARM.Collect$$rtentry$$00000004          0x08000168   Section        6  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    .ARM.Collect$$rtentry$$00000009          0x0800016e   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    .ARM.Collect$$rtentry$$0000000A          0x0800016e   Section        4  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    .ARM.Collect$$rtentry$$0000000C          0x08000172   Section        0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    .ARM.Collect$$rtentry$$0000000D          0x08000172   Section        8  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    .ARM.Collect$$rtexit$$00000000           0x0800017a   Section        2  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    .ARM.Collect$$rtexit$$00000002           0x0800017c   Section        0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    .ARM.Collect$$rtexit$$00000003           0x0800017c   Section        4  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    .ARM.Collect$$rtexit$$00000004           0x08000180   Section        6  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    .text                                    0x08000188   Section      108  startup_stm32c031xx.o(.text)
+    str_NMI                                  0x0800019c   Data           0  startup_stm32c031xx.o(.text)
+    str_HardFault                            0x080001ac   Data           0  startup_stm32c031xx.o(.text)
+    .text                                    0x080001f4   Section        0  h1_alloc.o(.text)
+    .text                                    0x08000256   Section        0  h1_free.o(.text)
+    .text                                    0x080002a4   Section      364  aeabi_sdiv.o(.text)
+    .text                                    0x08000410   Section        0  heapauxi.o(.text)
+    .text                                    0x08000418   Section        8  rt_heap_descriptor_intlibspace.o(.text)
+    .text                                    0x08000420   Section        0  hguard.o(.text)
+    .text                                    0x08000424   Section        0  init_alloc.o(.text)
+    .text                                    0x080004ac   Section        0  h1_init.o(.text)
+    .text                                    0x080004b8   Section        8  libspace.o(.text)
+    .text                                    0x080004c0   Section        0  maybetermalloc1.o(.text)
+    .text                                    0x080004c0   Section        0  h1_extend.o(.text)
+    .text                                    0x080004f4   Section        0  defsig_rtmem_outer.o(.text)
+    .text                                    0x08000500   Section        2  use_no_semi.o(.text)
+    .text                                    0x08000502   Section        0  indicate_semi.o(.text)
+    .text                                    0x08000502   Section       62  sys_stackheap_outer.o(.text)
+    .text                                    0x08000540   Section        0  exit.o(.text)
+    .text                                    0x08000550   Section        0  defsig_exit.o(.text)
+    .text                                    0x0800055c   Section        0  defsig_rtmem_inner.o(.text)
+    .text                                    0x080005ac   Section        0  sys_exit.o(.text)
+    .text                                    0x080005b8   Section        0  defsig_general.o(.text)
+    .text                                    0x080005ec   Section        0  sys_wrch.o(.text)
+    [Anonymous Symbol]                       0x080005f8   Section        0  bsp.o(.text.BSP_greenLedOff)
+    [Anonymous Symbol]                       0x08000608   Section        0  bsp.o(.text.BSP_greenLedOn)
+    __arm_cp.6_0                             0x08000614   Number         4  bsp.o(.text.BSP_greenLedOn)
+    [Anonymous Symbol]                       0x08000618   Section        0  bsp.o(.text.BSP_init)
+    __arm_cp.3_0                             0x080006a0   Number         4  bsp.o(.text.BSP_init)
+    __arm_cp.3_1                             0x080006a4   Number         4  bsp.o(.text.BSP_init)
+    __arm_cp.3_2                             0x080006a8   Number         4  bsp.o(.text.BSP_init)
+    __arm_cp.3_3                             0x080006ac   Number         4  bsp.o(.text.BSP_init)
+    __arm_cp.3_4                             0x080006b0   Number         4  bsp.o(.text.BSP_init)
+    __arm_cp.3_5                             0x080006b4   Number         4  bsp.o(.text.BSP_init)
+    __arm_cp.3_6                             0x080006b8   Number         4  bsp.o(.text.BSP_init)
+    __arm_cp.3_7                             0x080006bc   Number         4  bsp.o(.text.BSP_init)
+    __arm_cp.3_8                             0x080006c0   Number         4  bsp.o(.text.BSP_init)
+    __arm_cp.3_9                             0x080006c4   Number         4  bsp.o(.text.BSP_init)
+    __arm_cp.3_10                            0x080006c8   Number         4  bsp.o(.text.BSP_init)
+    __arm_cp.3_11                            0x080006cc   Number         4  bsp.o(.text.BSP_init)
+    __arm_cp.3_12                            0x080006d0   Number         4  bsp.o(.text.BSP_init)
+    [Anonymous Symbol]                       0x080006d4   Section        0  bsp.o(.text.EXTI4_15_IRQHandler)
+    __arm_cp.2_0                             0x08000714   Number         4  bsp.o(.text.EXTI4_15_IRQHandler)
+    __arm_cp.2_1                             0x08000718   Number         4  bsp.o(.text.EXTI4_15_IRQHandler)
+    __arm_cp.2_2                             0x0800071c   Number         4  bsp.o(.text.EXTI4_15_IRQHandler)
+    [Anonymous Symbol]                       0x08000720   Section        0  qxk_port.o(.text.NMI_Handler)
+    [Anonymous Symbol]                       0x08000728   Section        0  qxk_port.o(.text.PendSV_Handler)
+    PendSV_activate                          0x08000748   Number         0  qxk_port.o(.text.PendSV_Handler)
+    PendSV_save_ao                           0x0800075e   Number         0  qxk_port.o(.text.PendSV_Handler)
+    PendSV_restore_ao                        0x08000774   Number         0  qxk_port.o(.text.PendSV_Handler)
+    PendSV_return                            0x080007a0   Number         0  qxk_port.o(.text.PendSV_Handler)
+    PendSV_save_ex                           0x080007a4   Number         0  qxk_port.o(.text.PendSV_Handler)
+    PendSV_restore_ex                        0x080007c2   Number         0  qxk_port.o(.text.PendSV_Handler)
+    [Anonymous Symbol]                       0x080007f8   Section        0  qf_qact.o(.text.QActive_ctor)
+    __arm_cp.0_0                             0x0800081c   Number         4  qf_qact.o(.text.QActive_ctor)
+    [Anonymous Symbol]                       0x08000820   Section        0  qf_actq.o(.text.QActive_get_)
+    [Anonymous Symbol]                       0x080008c0   Section        0  qf_actq.o(.text.QActive_post_)
+    __arm_cp.0_0                             0x08000a74   Number         4  qf_actq.o(.text.QActive_post_)
+    __arm_cp.0_1                             0x08000a78   Number         4  qf_actq.o(.text.QActive_post_)
+    [Anonymous Symbol]                       0x08000a7c   Section        0  qf_qact.o(.text.QActive_register_)
+    __arm_cp.1_0                             0x08000bb4   Number         4  qf_qact.o(.text.QActive_register_)
+    __arm_cp.1_1                             0x08000bb8   Number         4  qf_qact.o(.text.QActive_register_)
+    [Anonymous Symbol]                       0x08000bbc   Section        0  qxk.o(.text.QActive_start_)
+    __arm_cp.16_0                            0x08000cd8   Number         4  qxk.o(.text.QActive_start_)
+    __arm_cp.16_1                            0x08000cdc   Number         4  qxk.o(.text.QActive_start_)
+    [Anonymous Symbol]                       0x08000ce0   Section        0  qf_qeq.o(.text.QEQueue_init)
+    QEvt_ctor                                0x08000d23   Thumb Code    40  qf_time.o(.text.QEvt_ctor)
+    [Anonymous Symbol]                       0x08000d22   Section        0  qf_time.o(.text.QEvt_ctor)
+    QEvt_getPoolId_                          0x08000d4b   Thumb Code    16  qf_actq.o(.text.QEvt_getPoolId_)
+    [Anonymous Symbol]                       0x08000d4a   Section        0  qf_actq.o(.text.QEvt_getPoolId_)
+    QEvt_getPoolId_                          0x08000d5b   Thumb Code    16  qf_dyn.o(.text.QEvt_getPoolId_)
+    [Anonymous Symbol]                       0x08000d5a   Section        0  qf_dyn.o(.text.QEvt_getPoolId_)
+    QEvt_refCtr_dec_                         0x08000d6b   Thumb Code    16  qf_dyn.o(.text.QEvt_refCtr_dec_)
+    [Anonymous Symbol]                       0x08000d6a   Section        0  qf_dyn.o(.text.QEvt_refCtr_dec_)
+    QEvt_refCtr_inc_                         0x08000d7b   Thumb Code    16  qf_actq.o(.text.QEvt_refCtr_inc_)
+    [Anonymous Symbol]                       0x08000d7a   Section        0  qf_actq.o(.text.QEvt_refCtr_inc_)
+    QEvt_verify_                             0x08000d8b   Thumb Code    44  qf_actq.o(.text.QEvt_verify_)
+    [Anonymous Symbol]                       0x08000d8a   Section        0  qf_actq.o(.text.QEvt_verify_)
+    QEvt_verify_                             0x08000db7   Thumb Code    44  qf_dyn.o(.text.QEvt_verify_)
+    [Anonymous Symbol]                       0x08000db6   Section        0  qf_dyn.o(.text.QEvt_verify_)
+    QEvt_verify_                             0x08000de3   Thumb Code    44  qep_hsm.o(.text.QEvt_verify_)
+    [Anonymous Symbol]                       0x08000de2   Section        0  qep_hsm.o(.text.QEvt_verify_)
+    [Anonymous Symbol]                       0x08000e0e   Section        0  qf_act.o(.text.QF_bzero_)
+    [Anonymous Symbol]                       0x08000e40   Section        0  qf_dyn.o(.text.QF_gc)
+    __arm_cp.4_0                             0x08000ed8   Number         4  qf_dyn.o(.text.QF_gc)
+    [Anonymous Symbol]                       0x08000edc   Section        0  qxk.o(.text.QF_init)
+    __arm_cp.13_0                            0x08000f28   Number         4  qxk.o(.text.QF_init)
+    __arm_cp.13_2                            0x08000f2c   Number         4  qxk.o(.text.QF_init)
+    __arm_cp.13_3                            0x08000f30   Number         4  qxk.o(.text.QF_init)
+    __arm_cp.13_4                            0x08000f34   Number         4  qxk.o(.text.QF_init)
+    [Anonymous Symbol]                       0x08000f38   Section        0  bsp.o(.text.QF_onStartup)
+    __arm_cp.10_0                            0x08000f70   Number         4  bsp.o(.text.QF_onStartup)
+    [Anonymous Symbol]                       0x08000f74   Section        0  qxk_port.o(.text.QF_qlog2)
+    QF_qlog2_1                               0x08000f7e   Number         0  qxk_port.o(.text.QF_qlog2)
+    QF_qlog2_2                               0x08000f86   Number         0  qxk_port.o(.text.QF_qlog2)
+    QF_qlog2_3                               0x08000f8e   Number         0  qxk_port.o(.text.QF_qlog2)
+    QF_qlog2_LUT                             0x08000f98   Number         0  qxk_port.o(.text.QF_qlog2)
+    [Anonymous Symbol]                       0x08000fac   Section        0  qxk.o(.text.QF_run)
+    __arm_cp.15_0                            0x08000fd4   Number         4  qxk.o(.text.QF_run)
+    [Anonymous Symbol]                       0x08000fd8   Section        0  qep_hsm.o(.text.QHsm_ctor)
+    __arm_cp.0_0                             0x08000ff4   Number         4  qep_hsm.o(.text.QHsm_ctor)
+    [Anonymous Symbol]                       0x08000ff8   Section        0  qep_hsm.o(.text.QHsm_dispatch_)
+    [Anonymous Symbol]                       0x080011d8   Section        0  qep_hsm.o(.text.QHsm_init_)
+    __arm_cp.1_0                             0x0800130c   Number         4  qep_hsm.o(.text.QHsm_init_)
+    __arm_cp.1_1                             0x08001310   Number         4  qep_hsm.o(.text.QHsm_init_)
+    __arm_cp.1_2                             0x08001314   Number         4  qep_hsm.o(.text.QHsm_init_)
+    [Anonymous Symbol]                       0x08001318   Section        0  qep_hsm.o(.text.QHsm_top)
+    [Anonymous Symbol]                       0x08001324   Section        0  qep_hsm.o(.text.QHsm_tran_)
+    __arm_cp.5_0                             0x08001568   Number         4  qep_hsm.o(.text.QHsm_tran_)
+    __arm_cp.5_1                             0x0800156c   Number         4  qep_hsm.o(.text.QHsm_tran_)
+    [Anonymous Symbol]                       0x08001570   Section        0  qf_mem.o(.text.QMPool_put)
+    __arm_cp.2_0                             0x080015e0   Number         4  qf_mem.o(.text.QMPool_put)
+    QPSet_findMax                            0x080015e5   Thumb Code    18  qxk.o(.text.QPSet_findMax)
+    [Anonymous Symbol]                       0x080015e4   Section        0  qxk.o(.text.QPSet_findMax)
+    QPSet_findMax                            0x080015f7   Thumb Code    18  qxk_sema.o(.text.QPSet_findMax)
+    [Anonymous Symbol]                       0x080015f6   Section        0  qxk_sema.o(.text.QPSet_findMax)
+    QPSet_hasElement                         0x08001609   Thumb Code    24  qxk.o(.text.QPSet_hasElement)
+    [Anonymous Symbol]                       0x08001608   Section        0  qxk.o(.text.QPSet_hasElement)
+    QPSet_hasElement                         0x08001621   Thumb Code    24  qxk_sema.o(.text.QPSet_hasElement)
+    [Anonymous Symbol]                       0x08001620   Section        0  qxk_sema.o(.text.QPSet_hasElement)
+    QPSet_insert                             0x08001639   Thumb Code    26  qf_actq.o(.text.QPSet_insert)
+    [Anonymous Symbol]                       0x08001638   Section        0  qf_actq.o(.text.QPSet_insert)
+    QPSet_insert                             0x08001653   Thumb Code    26  qxk.o(.text.QPSet_insert)
+    [Anonymous Symbol]                       0x08001652   Section        0  qxk.o(.text.QPSet_insert)
+    QPSet_insert                             0x0800166d   Thumb Code    26  qxk_sema.o(.text.QPSet_insert)
+    [Anonymous Symbol]                       0x0800166c   Section        0  qxk_sema.o(.text.QPSet_insert)
+    QPSet_insert                             0x08001687   Thumb Code    26  qxk_xthr.o(.text.QPSet_insert)
+    [Anonymous Symbol]                       0x08001686   Section        0  qxk_xthr.o(.text.QPSet_insert)
+    QPSet_isEmpty                            0x080016a1   Thumb Code    16  qxk.o(.text.QPSet_isEmpty)
+    [Anonymous Symbol]                       0x080016a0   Section        0  qxk.o(.text.QPSet_isEmpty)
+    QPSet_notEmpty                           0x080016b1   Thumb Code    16  qxk_sema.o(.text.QPSet_notEmpty)
+    [Anonymous Symbol]                       0x080016b0   Section        0  qxk_sema.o(.text.QPSet_notEmpty)
+    QPSet_remove                             0x080016c1   Thumb Code    26  qxk.o(.text.QPSet_remove)
+    [Anonymous Symbol]                       0x080016c0   Section        0  qxk.o(.text.QPSet_remove)
+    QPSet_remove                             0x080016db   Thumb Code    26  qxk_sema.o(.text.QPSet_remove)
+    [Anonymous Symbol]                       0x080016da   Section        0  qxk_sema.o(.text.QPSet_remove)
+    QPSet_remove                             0x080016f5   Thumb Code    26  qxk_xthr.o(.text.QPSet_remove)
+    [Anonymous Symbol]                       0x080016f4   Section        0  qxk_xthr.o(.text.QPSet_remove)
+    QPSet_setEmpty                           0x0800170f   Thumb Code    14  qxk_sema.o(.text.QPSet_setEmpty)
+    [Anonymous Symbol]                       0x0800170e   Section        0  qxk_sema.o(.text.QPSet_setEmpty)
+    QPSet_update_                            0x0800171d   Thumb Code    20  qf_actq.o(.text.QPSet_update_)
+    [Anonymous Symbol]                       0x0800171c   Section        0  qf_actq.o(.text.QPSet_update_)
+    QPSet_update_                            0x08001731   Thumb Code    20  qxk.o(.text.QPSet_update_)
+    [Anonymous Symbol]                       0x08001730   Section        0  qxk.o(.text.QPSet_update_)
+    QPSet_update_                            0x08001745   Thumb Code    20  qxk_sema.o(.text.QPSet_update_)
+    [Anonymous Symbol]                       0x08001744   Section        0  qxk_sema.o(.text.QPSet_update_)
+    QPSet_update_                            0x08001759   Thumb Code    20  qxk_xthr.o(.text.QPSet_update_)
+    [Anonymous Symbol]                       0x08001758   Section        0  qxk_xthr.o(.text.QPSet_update_)
+    QPSet_verify_                            0x0800176d   Thumb Code    26  qxk.o(.text.QPSet_verify_)
+    [Anonymous Symbol]                       0x0800176c   Section        0  qxk.o(.text.QPSet_verify_)
+    [Anonymous Symbol]                       0x08001788   Section        0  qf_time.o(.text.QTimeEvt_ctorX)
+    [Anonymous Symbol]                       0x080017e4   Section        0  qf_time.o(.text.QTimeEvt_tick_)
+    __arm_cp.7_0                             0x08001914   Number         4  qf_time.o(.text.QTimeEvt_tick_)
+    __arm_cp.7_1                             0x08001918   Number         4  qf_time.o(.text.QTimeEvt_tick_)
+    __arm_cp.7_2                             0x0800191c   Number         4  qf_time.o(.text.QTimeEvt_tick_)
+    [Anonymous Symbol]                       0x08001920   Section        0  qxk.o(.text.QXK_activate_)
+    [Anonymous Symbol]                       0x08001aa4   Section        0  qxk_port.o(.text.QXK_init)
+    __arm_cp.1_0                             0x08001ab4   Number         4  qxk_port.o(.text.QXK_init)
+    [Anonymous Symbol]                       0x08001ab8   Section        0  bsp.o(.text.QXK_onIdle)
+    [Anonymous Symbol]                       0x08001abc   Section        0  qxk.o(.text.QXK_sched_)
+    __arm_cp.2_3                             0x08001bd8   Number         4  qxk.o(.text.QXK_sched_)
+    [Anonymous Symbol]                       0x08001bdc   Section        0  qxk.o(.text.QXK_threadExit_)
+    __arm_cp.12_0                            0x08001c64   Number         4  qxk.o(.text.QXK_threadExit_)
+    __arm_cp.12_1                            0x08001c68   Number         4  qxk.o(.text.QXK_threadExit_)
+    __arm_cp.12_2                            0x08001c6c   Number         4  qxk.o(.text.QXK_threadExit_)
+    __arm_cp.12_3                            0x08001c70   Number         4  qxk.o(.text.QXK_threadExit_)
+    __tagsym$$used.0                         0x08001c74   Number         0  qxk_port.o(.text.QXK_thread_ret)
+    [Anonymous Symbol]                       0x08001c74   Section        0  qxk_port.o(.text.QXK_thread_ret)
+    [Anonymous Symbol]                       0x08001c84   Section        0  qxk_sema.o(.text.QXSemaphore_init)
+    [Anonymous Symbol]                       0x08001cd8   Section        0  qxk_sema.o(.text.QXSemaphore_signal)
+    __arm_cp.8_1                             0x08001dbc   Number         4  qxk_sema.o(.text.QXSemaphore_signal)
+    __arm_cp.8_2                             0x08001dc0   Number         4  qxk_sema.o(.text.QXSemaphore_signal)
+    [Anonymous Symbol]                       0x08001dc4   Section        0  qxk_sema.o(.text.QXSemaphore_wait)
+    __arm_cp.2_0                             0x08001f04   Number         4  qxk_sema.o(.text.QXSemaphore_wait)
+    __arm_cp.2_1                             0x08001f08   Number         4  qxk_sema.o(.text.QXSemaphore_wait)
+    [Anonymous Symbol]                       0x08001f0c   Section        0  qxk_xthr.o(.text.QXThread_block_)
+    __arm_cp.3_0                             0x08001f54   Number         4  qxk_xthr.o(.text.QXThread_block_)
+    [Anonymous Symbol]                       0x08001f58   Section        0  qxk_xthr.o(.text.QXThread_ctor)
+    [Anonymous Symbol]                       0x08001f88   Section        0  qxk_xthr.o(.text.QXThread_delay)
+    __arm_cp.1_0                             0x08002044   Number         4  qxk_xthr.o(.text.QXThread_delay)
+    __arm_cp.1_2                             0x08002048   Number         4  qxk_xthr.o(.text.QXThread_delay)
+    __arm_cp.1_3                             0x0800204c   Number         4  qxk_xthr.o(.text.QXThread_delay)
+    [Anonymous Symbol]                       0x08002050   Section        0  qxk_port.o(.text.QXThread_stackInit_)
+    __arm_cp.0_0                             0x08002138   Number         4  qxk_port.o(.text.QXThread_stackInit_)
+    __arm_cp.0_1                             0x0800213c   Number         4  qxk_port.o(.text.QXThread_stackInit_)
+    [Anonymous Symbol]                       0x08002140   Section        0  qxk_xthr.o(.text.QXThread_teArm_)
+    __arm_cp.2_0                             0x080021d8   Number         4  qxk_xthr.o(.text.QXThread_teArm_)
+    __arm_cp.2_1                             0x080021dc   Number         4  qxk_xthr.o(.text.QXThread_teArm_)
+    __arm_cp.2_2                             0x080021e0   Number         4  qxk_xthr.o(.text.QXThread_teArm_)
+    [Anonymous Symbol]                       0x080021e4   Section        0  qxk_xthr.o(.text.QXThread_teDisarm_)
+    [Anonymous Symbol]                       0x08002214   Section        0  qxk_xthr.o(.text.QXThread_timeout_)
+    [Anonymous Symbol]                       0x0800222c   Section        0  qxk_xthr.o(.text.QXThread_unblock_)
+    __arm_cp.6_0                             0x08002270   Number         4  qxk_xthr.o(.text.QXThread_unblock_)
+    __arm_cp.6_1                             0x08002274   Number         4  qxk_xthr.o(.text.QXThread_unblock_)
+    [Anonymous Symbol]                       0x08002278   Section        0  bsp.o(.text.Q_onError)
+    [Anonymous Symbol]                       0x08002282   Section        0  rectangle.o(.text.Rectangle_area)
+    [Anonymous Symbol]                       0x08002298   Section        0  rectangle.o(.text.Rectangle_ctor)
+    __arm_cp.0_0                             0x080022d8   Number         4  rectangle.o(.text.Rectangle_ctor)
+    [Anonymous Symbol]                       0x080022dc   Section        0  rectangle.o(.text.Rectangle_draw)
+    Shape_area                               0x080022e5   Thumb Code    10  shape.o(.text.Shape_area)
+    [Anonymous Symbol]                       0x080022e4   Section        0  shape.o(.text.Shape_area)
+    [Anonymous Symbol]                       0x080022f0   Section        0  shape.o(.text.Shape_ctor)
+    __arm_cp.0_0                             0x08002314   Number         4  shape.o(.text.Shape_ctor)
+    [Anonymous Symbol]                       0x08002318   Section        0  shape.o(.text.Shape_distanceTo)
+    Shape_draw                               0x08002371   Thumb Code     8  shape.o(.text.Shape_draw)
+    [Anonymous Symbol]                       0x08002370   Section        0  shape.o(.text.Shape_draw)
+    Shape_draw_vcall                         0x08002379   Thumb Code    18  shape.o(.text.Shape_draw_vcall)
+    [Anonymous Symbol]                       0x08002378   Section        0  shape.o(.text.Shape_draw_vcall)
+    [Anonymous Symbol]                       0x0800238a   Section        0  shape.o(.text.Shape_moveBy)
+    SysTick_Config                           0x080023b1   Thumb Code    68  bsp.o(.text.SysTick_Config)
+    [Anonymous Symbol]                       0x080023b0   Section        0  bsp.o(.text.SysTick_Config)
+    __arm_cp.11_0                            0x080023f4   Number         4  bsp.o(.text.SysTick_Config)
+    __arm_cp.11_1                            0x080023f8   Number         4  bsp.o(.text.SysTick_Config)
+    __arm_cp.11_2                            0x080023fc   Number         4  bsp.o(.text.SysTick_Config)
+    [Anonymous Symbol]                       0x08002400   Section        0  bsp.o(.text.SysTick_Handler)
+    __arm_cp.1_0                             0x08002428   Number         4  bsp.o(.text.SysTick_Handler)
+    [Anonymous Symbol]                       0x0800242c   Section        0  system_stm32c0xx.o(.text.SystemCoreClockUpdate)
+    __arm_cp.1_0                             0x0800252c   Number         4  system_stm32c0xx.o(.text.SystemCoreClockUpdate)
+    __arm_cp.1_1                             0x08002530   Number         4  system_stm32c0xx.o(.text.SystemCoreClockUpdate)
+    __arm_cp.1_2                             0x08002534   Number         4  system_stm32c0xx.o(.text.SystemCoreClockUpdate)
+    __arm_cp.1_3                             0x08002538   Number         4  system_stm32c0xx.o(.text.SystemCoreClockUpdate)
+    __arm_cp.1_4                             0x0800253c   Number         4  system_stm32c0xx.o(.text.SystemCoreClockUpdate)
+    [Anonymous Symbol]                       0x08002540   Section        0  system_stm32c0xx.o(.text.SystemInit)
+    __arm_cp.0_0                             0x0800254c   Number         4  system_stm32c0xx.o(.text.SystemInit)
+    __NVIC_EnableIRQ                         0x08002551   Thumb Code    40  bsp.o(.text.__NVIC_EnableIRQ)
+    [Anonymous Symbol]                       0x08002550   Section        0  bsp.o(.text.__NVIC_EnableIRQ)
+    __arm_cp.13_0                            0x08002578   Number         4  bsp.o(.text.__NVIC_EnableIRQ)
+    __NVIC_SetPriority                       0x0800257d   Thumb Code   124  bsp.o(.text.__NVIC_SetPriority)
+    [Anonymous Symbol]                       0x0800257c   Section        0  bsp.o(.text.__NVIC_SetPriority)
+    __arm_cp.12_0                            0x080025f8   Number         4  bsp.o(.text.__NVIC_SetPriority)
+    __arm_cp.12_1                            0x080025fc   Number         4  bsp.o(.text.__NVIC_SetPriority)
+    __NVIC_SystemReset                       0x08002601   Thumb Code    20  bsp.o(.text.__NVIC_SystemReset)
+    [Anonymous Symbol]                       0x08002600   Section        0  bsp.o(.text.__NVIC_SystemReset)
+    __arm_cp.17_0                            0x08002614   Number         4  bsp.o(.text.__NVIC_SystemReset)
+    __arm_cp.17_1                            0x08002618   Number         4  bsp.o(.text.__NVIC_SystemReset)
+    [Anonymous Symbol]                       0x0800261c   Section        0  bsp.o(.text.assert_failed)
+    [Anonymous Symbol]                       0x08002624   Section        0  shape.o(.text.drawGraph)
+    [Anonymous Symbol]                       0x08002660   Section        0  main.o(.text.main)
+    __arm_cp.3_0                             0x0800285c   Number         4  main.o(.text.main)
+    __arm_cp.3_1                             0x08002860   Number         4  main.o(.text.main)
+    __arm_cp.3_2                             0x08002864   Number         4  main.o(.text.main)
+    __arm_cp.3_3                             0x08002868   Number         4  main.o(.text.main)
+    __arm_cp.3_5                             0x0800286c   Number         4  main.o(.text.main)
+    __arm_cp.3_6                             0x08002870   Number         4  main.o(.text.main)
+    __arm_cp.3_7                             0x08002874   Number         4  main.o(.text.main)
+    __arm_cp.3_8                             0x08002878   Number         4  main.o(.text.main)
+    __arm_cp.3_9                             0x0800287c   Number         4  main.o(.text.main)
+    __arm_cp.3_10                            0x08002880   Number         4  main.o(.text.main)
+    [Anonymous Symbol]                       0x08002884   Section        0  main.o(.text.main_blinky1)
+    __arm_cp.0_0                             0x080028b4   Number         4  main.o(.text.main_blinky1)
+    [Anonymous Symbol]                       0x080028b8   Section        0  main.o(.text.main_blinky2)
+    __arm_cp.1_0                             0x080028ec   Number         4  main.o(.text.main_blinky2)
+    __arm_cp.1_1                             0x080028f0   Number         4  main.o(.text.main_blinky2)
+    QActive_ctor.vtable                      0x08002934   Data           8  qf_qact.o(.rodata.QActive_ctor.vtable)
+    [Anonymous Symbol]                       0x08002934   Section        0  qf_qact.o(.rodata.QActive_ctor.vtable)
+    QF_init.idle_ao                          0x0800294c   Data          40  qxk.o(.rodata.QF_init.idle_ao)
+    [Anonymous Symbol]                       0x0800294c   Section        0  qxk.o(.rodata.QF_init.idle_ao)
+    QHsm_ctor.vtable                         0x08002974   Data           8  qep_hsm.o(.rodata.QHsm_ctor.vtable)
+    [Anonymous Symbol]                       0x08002974   Section        0  qep_hsm.o(.rodata.QHsm_ctor.vtable)
+    Q_this_module_                           0x0800297c   Data           7  main.o(.rodata.Q_this_module_)
+    [Anonymous Symbol]                       0x0800297c   Section        0  main.o(.rodata.Q_this_module_)
+    Q_this_module_                           0x08002983   Data           8  qf_actq.o(.rodata.Q_this_module_)
+    [Anonymous Symbol]                       0x08002983   Section        0  qf_actq.o(.rodata.Q_this_module_)
+    Q_this_module_                           0x0800298b   Data           7  qf_dyn.o(.rodata.Q_this_module_)
+    [Anonymous Symbol]                       0x0800298b   Section        0  qf_dyn.o(.rodata.Q_this_module_)
+    Q_this_module_                           0x08002992   Data           7  qf_mem.o(.rodata.Q_this_module_)
+    [Anonymous Symbol]                       0x08002992   Section        0  qf_mem.o(.rodata.Q_this_module_)
+    Q_this_module_                           0x08002999   Data           8  qf_qact.o(.rodata.Q_this_module_)
+    [Anonymous Symbol]                       0x08002999   Section        0  qf_qact.o(.rodata.Q_this_module_)
+    Q_this_module_                           0x080029a1   Data           8  qf_time.o(.rodata.Q_this_module_)
+    [Anonymous Symbol]                       0x080029a1   Section        0  qf_time.o(.rodata.Q_this_module_)
+    Q_this_module_                           0x080029a9   Data           4  qxk.o(.rodata.Q_this_module_)
+    [Anonymous Symbol]                       0x080029a9   Section        0  qxk.o(.rodata.Q_this_module_)
+    Q_this_module_                           0x080029ad   Data           9  qxk_sema.o(.rodata.Q_this_module_)
+    [Anonymous Symbol]                       0x080029ad   Section        0  qxk_sema.o(.rodata.Q_this_module_)
+    Q_this_module_                           0x080029b6   Data           9  qxk_xthr.o(.rodata.Q_this_module_)
+    [Anonymous Symbol]                       0x080029b6   Section        0  qxk_xthr.o(.rodata.Q_this_module_)
+    Q_this_module_                           0x080029bf   Data           8  qep_hsm.o(.rodata.Q_this_module_)
+    [Anonymous Symbol]                       0x080029bf   Section        0  qep_hsm.o(.rodata.Q_this_module_)
+    Rectangle_ctor.vtable                    0x080029c8   Data           8  rectangle.o(.rodata.Rectangle_ctor.vtable)
+    [Anonymous Symbol]                       0x080029c8   Section        0  rectangle.o(.rodata.Rectangle_ctor.vtable)
+    Shape_ctor.vtable                        0x080029d0   Data           8  shape.o(.rodata.Shape_ctor.vtable)
+    [Anonymous Symbol]                       0x080029d0   Section        0  shape.o(.rodata.Shape_ctor.vtable)
+    .bss                                     0x20000008   Section       96  libspace.o(.bss)
+    Heap_Mem                                 0x20000338   Data        1024  startup_stm32c031xx.o(HEAP)
+    HEAP                                     0x20000338   Section     1024  startup_stm32c031xx.o(HEAP)
+    Stack_Mem                                0x20000738   Data        1024  startup_stm32c031xx.o(STACK)
+    STACK                                    0x20000738   Section     1024  startup_stm32c031xx.o(STACK)
+    __initial_sp                             0x20000b38   Data           0  startup_stm32c031xx.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$UX$STANDARDLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __ARM_exceptions_init                     - Undefined Weak Reference
+    __alloca_initialize                       - Undefined Weak Reference
+    __arm_preinit_                            - Undefined Weak Reference
+    __arm_relocate_pie_                       - Undefined Weak Reference
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __rt_locale                               - Undefined Weak Reference
+    __sigvec_lookup                           - Undefined Weak Reference
+    __user_heap_extent                        - Undefined Weak Reference
+    _atexit_init                              - Undefined Weak Reference
+    _call_atexit_fns                          - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _fp_trap_init                             - Undefined Weak Reference
+    _fp_trap_shutdown                         - Undefined Weak Reference
+    _get_lc_collate                           - Undefined Weak Reference
+    _get_lc_ctype                             - Undefined Weak Reference
+    _get_lc_monetary                          - Undefined Weak Reference
+    _get_lc_numeric                           - Undefined Weak Reference
+    _get_lc_time                              - Undefined Weak Reference
+    _getenv_init                              - Undefined Weak Reference
+    _handle_redirection                       - Undefined Weak Reference
+    _initio                                   - Undefined Weak Reference
+    _mutex_acquire                            - Undefined Weak Reference
+    _mutex_free                               - Undefined Weak Reference
+    _mutex_release                            - Undefined Weak Reference
+    _rand_init                                - Undefined Weak Reference
+    _signal_finish                            - Undefined Weak Reference
+    _signal_init                              - Undefined Weak Reference
+    _terminateio                              - Undefined Weak Reference
+    __Vectors_Size                           0x000000c0   Number         0  startup_stm32c031xx.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  startup_stm32c031xx.o(RESET)
+    __Vectors_End                            0x080000c0   Data           0  startup_stm32c031xx.o(RESET)
+    __main                                   0x080000c1   Thumb Code     8  __main.o(!!!main)
+    __scatterload                            0x080000c9   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_rt2                        0x080000c9   Thumb Code    74  __scatter.o(!!!scatter)
+    __scatterload_rt2_thumb_only             0x080000c9   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_loop                       0x080000d3   Thumb Code     0  __scatter.o(!!!scatter)
+    __scatterload_copy                       0x0800011d   Thumb Code    26  __scatter_copy.o(!!handler_copy)
+    __scatterload_null                       0x08000139   Thumb Code     2  __scatter.o(!!handler_null)
+    __scatterload_zeroinit                   0x0800013d   Thumb Code    28  __scatter_zi.o(!!handler_zi)
+    __rt_lib_init                            0x08000159   Thumb Code     0  libinit.o(.ARM.Collect$$libinit$$00000000)
+    __rt_lib_init_fp_1                       0x0800015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000002)
+    __rt_lib_init_heap_2                     0x0800015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000007)
+    __rt_lib_init_preinit_1                  0x0800015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000006)
+    __rt_lib_init_relocate_pie_1             0x0800015b   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000004)
+    __rt_lib_init_alloca_1                   0x08000163   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000030)
+    __rt_lib_init_argv_1                     0x08000163   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000002E)
+    __rt_lib_init_atexit_1                   0x08000163   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001D)
+    __rt_lib_init_clock_1                    0x08000163   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000023)
+    __rt_lib_init_cpp_1                      0x08000163   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000034)
+    __rt_lib_init_exceptions_1               0x08000163   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000032)
+    __rt_lib_init_fp_trap_1                  0x08000163   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000021)
+    __rt_lib_init_getenv_1                   0x08000163   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000025)
+    __rt_lib_init_heap_1                     0x08000163   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000C)
+    __rt_lib_init_lc_collate_1               0x08000163   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000013)
+    __rt_lib_init_lc_ctype_1                 0x08000163   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000015)
+    __rt_lib_init_lc_monetary_1              0x08000163   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000017)
+    __rt_lib_init_lc_numeric_1               0x08000163   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000019)
+    __rt_lib_init_lc_time_1                  0x08000163   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001B)
+    __rt_lib_init_rand_1                     0x08000163   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000010)
+    __rt_lib_init_return                     0x08000163   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000035)
+    __rt_lib_init_signal_1                   0x08000163   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000001F)
+    __rt_lib_init_stdio_1                    0x08000163   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$00000027)
+    __rt_lib_init_user_alloc_1               0x08000163   Thumb Code     0  libinit2.o(.ARM.Collect$$libinit$$0000000E)
+    __rt_lib_shutdown                        0x08000165   Thumb Code     0  libshutdown.o(.ARM.Collect$$libshutdown$$00000000)
+    __rt_lib_shutdown_cpp_1                  0x08000167   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000002)
+    __rt_lib_shutdown_fp_trap_1              0x08000167   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000007)
+    __rt_lib_shutdown_heap_1                 0x08000167   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000F)
+    __rt_lib_shutdown_return                 0x08000167   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000010)
+    __rt_lib_shutdown_signal_1               0x08000167   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000A)
+    __rt_lib_shutdown_stdio_1                0x08000167   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$00000004)
+    __rt_lib_shutdown_user_alloc_1           0x08000167   Thumb Code     0  libshutdown2.o(.ARM.Collect$$libshutdown$$0000000C)
+    __rt_entry                               0x08000169   Thumb Code     0  __rtentry.o(.ARM.Collect$$rtentry$$00000000)
+    __rt_entry_presh_1                       0x08000169   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000002)
+    __rt_entry_sh                            0x08000169   Thumb Code     0  __rtentry4.o(.ARM.Collect$$rtentry$$00000004)
+    __rt_entry_li                            0x0800016f   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000A)
+    __rt_entry_postsh_1                      0x0800016f   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$00000009)
+    __rt_entry_main                          0x08000173   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000D)
+    __rt_entry_postli_1                      0x08000173   Thumb Code     0  __rtentry2.o(.ARM.Collect$$rtentry$$0000000C)
+    __rt_exit                                0x0800017b   Thumb Code     0  rtexit.o(.ARM.Collect$$rtexit$$00000000)
+    __rt_exit_ls                             0x0800017d   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000003)
+    __rt_exit_prels_1                        0x0800017d   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000002)
+    __rt_exit_exit                           0x08000181   Thumb Code     0  rtexit2.o(.ARM.Collect$$rtexit$$00000004)
+    Reset_Handler                            0x08000189   Thumb Code     8  startup_stm32c031xx.o(.text)
+    HardFault_Handler                        0x080001a1   Thumb Code    24  startup_stm32c031xx.o(.text)
+    SVC_Handler                              0x080001b9   Thumb Code     2  startup_stm32c031xx.o(.text)
+    ADC1_IRQHandler                          0x080001bf   Thumb Code     0  startup_stm32c031xx.o(.text)
+    DMA1_Channel1_IRQHandler                 0x080001bf   Thumb Code     0  startup_stm32c031xx.o(.text)
+    DMA1_Channel2_3_IRQHandler               0x080001bf   Thumb Code     0  startup_stm32c031xx.o(.text)
+    DMAMUX1_IRQHandler                       0x080001bf   Thumb Code     0  startup_stm32c031xx.o(.text)
+    EXTI0_1_IRQHandler                       0x080001bf   Thumb Code     0  startup_stm32c031xx.o(.text)
+    EXTI2_3_IRQHandler                       0x080001bf   Thumb Code     0  startup_stm32c031xx.o(.text)
+    FLASH_IRQHandler                         0x080001bf   Thumb Code     0  startup_stm32c031xx.o(.text)
+    I2C1_IRQHandler                          0x080001bf   Thumb Code     0  startup_stm32c031xx.o(.text)
+    RCC_IRQHandler                           0x080001bf   Thumb Code     0  startup_stm32c031xx.o(.text)
+    RTC_IRQHandler                           0x080001bf   Thumb Code     0  startup_stm32c031xx.o(.text)
+    SPI1_IRQHandler                          0x080001bf   Thumb Code     0  startup_stm32c031xx.o(.text)
+    TIM14_IRQHandler                         0x080001bf   Thumb Code     0  startup_stm32c031xx.o(.text)
+    TIM16_IRQHandler                         0x080001bf   Thumb Code     0  startup_stm32c031xx.o(.text)
+    TIM17_IRQHandler                         0x080001bf   Thumb Code     0  startup_stm32c031xx.o(.text)
+    TIM1_BRK_UP_TRG_COM_IRQHandler           0x080001bf   Thumb Code     0  startup_stm32c031xx.o(.text)
+    TIM1_CC_IRQHandler                       0x080001bf   Thumb Code     0  startup_stm32c031xx.o(.text)
+    TIM3_IRQHandler                          0x080001bf   Thumb Code     0  startup_stm32c031xx.o(.text)
+    USART1_IRQHandler                        0x080001bf   Thumb Code     0  startup_stm32c031xx.o(.text)
+    USART2_IRQHandler                        0x080001bf   Thumb Code     0  startup_stm32c031xx.o(.text)
+    WWDG_IRQHandler                          0x080001bf   Thumb Code     0  startup_stm32c031xx.o(.text)
+    __user_initial_stackheap                 0x080001c1   Thumb Code     0  startup_stm32c031xx.o(.text)
+    malloc                                   0x080001f5   Thumb Code    98  h1_alloc.o(.text)
+    free                                     0x08000257   Thumb Code    76  h1_free.o(.text)
+    __aeabi_uidiv                            0x080002a5   Thumb Code     0  aeabi_sdiv.o(.text)
+    __aeabi_uidivmod                         0x080002a5   Thumb Code    20  aeabi_sdiv.o(.text)
+    __aeabi_idiv                             0x080002b9   Thumb Code     0  aeabi_sdiv.o(.text)
+    __aeabi_idivmod                          0x080002b9   Thumb Code   338  aeabi_sdiv.o(.text)
+    __use_two_region_memory                  0x08000411   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow                         0x08000413   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand                         0x08000415   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_descriptor                     0x08000419   Thumb Code     8  rt_heap_descriptor_intlibspace.o(.text)
+    __use_no_heap                            0x08000421   Thumb Code     2  hguard.o(.text)
+    __heap$guard                             0x08000423   Thumb Code     2  hguard.o(.text)
+    _terminate_user_alloc                    0x08000425   Thumb Code     2  init_alloc.o(.text)
+    _init_user_alloc                         0x08000427   Thumb Code     2  init_alloc.o(.text)
+    __Heap_Full                              0x08000429   Thumb Code    32  init_alloc.o(.text)
+    __Heap_Broken                            0x08000449   Thumb Code    10  init_alloc.o(.text)
+    _init_alloc                              0x08000453   Thumb Code    90  init_alloc.o(.text)
+    __Heap_Initialize                        0x080004ad   Thumb Code     8  h1_init.o(.text)
+    __Heap_DescSize                          0x080004b5   Thumb Code     4  h1_init.o(.text)
+    __user_libspace                          0x080004b9   Thumb Code     8  libspace.o(.text)
+    __user_perproc_libspace                  0x080004b9   Thumb Code     0  libspace.o(.text)
+    __user_perthread_libspace                0x080004b9   Thumb Code     0  libspace.o(.text)
+    __Heap_ProvideMemory                     0x080004c1   Thumb Code    52  h1_extend.o(.text)
+    _maybe_terminate_alloc                   0x080004c1   Thumb Code     0  maybetermalloc1.o(.text)
+    __rt_SIGRTMEM                            0x080004f5   Thumb Code    12  defsig_rtmem_outer.o(.text)
+    __I$use$semihosting                      0x08000501   Thumb Code     0  use_no_semi.o(.text)
+    __use_no_semihosting_swi                 0x08000501   Thumb Code     2  use_no_semi.o(.text)
+    __semihosting_library_function           0x08000503   Thumb Code     0  indicate_semi.o(.text)
+    __user_setup_stackheap                   0x08000503   Thumb Code    62  sys_stackheap_outer.o(.text)
+    exit                                     0x08000541   Thumb Code    16  exit.o(.text)
+    __sig_exit                               0x08000551   Thumb Code    12  defsig_exit.o(.text)
+    __rt_SIGRTMEM_inner                      0x0800055d   Thumb Code    22  defsig_rtmem_inner.o(.text)
+    _sys_exit                                0x080005ad   Thumb Code     8  sys_exit.o(.text)
+    __default_signal_display                 0x080005b9   Thumb Code    52  defsig_general.o(.text)
+    _ttywrch                                 0x080005ed   Thumb Code    12  sys_wrch.o(.text)
+    BSP_greenLedOff                          0x080005f9   Thumb Code    16  bsp.o(.text.BSP_greenLedOff)
+    BSP_greenLedOn                           0x08000609   Thumb Code    12  bsp.o(.text.BSP_greenLedOn)
+    BSP_init                                 0x08000619   Thumb Code   136  bsp.o(.text.BSP_init)
+    EXTI4_15_IRQHandler                      0x080006d5   Thumb Code    64  bsp.o(.text.EXTI4_15_IRQHandler)
+    NMI_Handler                              0x08000721   Thumb Code     6  qxk_port.o(.text.NMI_Handler)
+    PendSV_Handler                           0x08000729   Thumb Code   192  qxk_port.o(.text.PendSV_Handler)
+    QActive_ctor                             0x080007f9   Thumb Code    36  qf_qact.o(.text.QActive_ctor)
+    QActive_get_                             0x08000821   Thumb Code   160  qf_actq.o(.text.QActive_get_)
+    QActive_post_                            0x080008c1   Thumb Code   436  qf_actq.o(.text.QActive_post_)
+    QActive_register_                        0x08000a7d   Thumb Code   312  qf_qact.o(.text.QActive_register_)
+    QActive_start_                           0x08000bbd   Thumb Code   284  qxk.o(.text.QActive_start_)
+    QEQueue_init                             0x08000ce1   Thumb Code    66  qf_qeq.o(.text.QEQueue_init)
+    QF_bzero_                                0x08000e0f   Thumb Code    50  qf_act.o(.text.QF_bzero_)
+    QF_gc                                    0x08000e41   Thumb Code   152  qf_dyn.o(.text.QF_gc)
+    QF_init                                  0x08000edd   Thumb Code    76  qxk.o(.text.QF_init)
+    QF_onStartup                             0x08000f39   Thumb Code    56  bsp.o(.text.QF_onStartup)
+    QF_qlog2                                 0x08000f75   Thumb Code    52  qxk_port.o(.text.QF_qlog2)
+    QF_run                                   0x08000fad   Thumb Code    40  qxk.o(.text.QF_run)
+    QHsm_ctor                                0x08000fd9   Thumb Code    28  qep_hsm.o(.text.QHsm_ctor)
+    QHsm_dispatch_                           0x08000ff9   Thumb Code   480  qep_hsm.o(.text.QHsm_dispatch_)
+    QHsm_init_                               0x080011d9   Thumb Code   308  qep_hsm.o(.text.QHsm_init_)
+    QHsm_top                                 0x08001319   Thumb Code    12  qep_hsm.o(.text.QHsm_top)
+    QHsm_tran_                               0x08001325   Thumb Code   580  qep_hsm.o(.text.QHsm_tran_)
+    QMPool_put                               0x08001571   Thumb Code   112  qf_mem.o(.text.QMPool_put)
+    QTimeEvt_ctorX                           0x08001789   Thumb Code    92  qf_time.o(.text.QTimeEvt_ctorX)
+    QTimeEvt_tick_                           0x080017e5   Thumb Code   304  qf_time.o(.text.QTimeEvt_tick_)
+    QXK_activate_                            0x08001921   Thumb Code   388  qxk.o(.text.QXK_activate_)
+    QXK_init                                 0x08001aa5   Thumb Code    16  qxk_port.o(.text.QXK_init)
+    QXK_onIdle                               0x08001ab9   Thumb Code     2  bsp.o(.text.QXK_onIdle)
+    QXK_sched_                               0x08001abd   Thumb Code   284  qxk.o(.text.QXK_sched_)
+    QXK_threadExit_                          0x08001bdd   Thumb Code   136  qxk.o(.text.QXK_threadExit_)
+    QXK_thread_ret                           0x08001c75   Thumb Code    10  qxk_port.o(.text.QXK_thread_ret)
+    QXSemaphore_init                         0x08001c85   Thumb Code    84  qxk_sema.o(.text.QXSemaphore_init)
+    QXSemaphore_signal                       0x08001cd9   Thumb Code   228  qxk_sema.o(.text.QXSemaphore_signal)
+    QXSemaphore_wait                         0x08001dc5   Thumb Code   320  qxk_sema.o(.text.QXSemaphore_wait)
+    QXThread_block_                          0x08001f0d   Thumb Code    72  qxk_xthr.o(.text.QXThread_block_)
+    QXThread_ctor                            0x08001f59   Thumb Code    46  qxk_xthr.o(.text.QXThread_ctor)
+    QXThread_delay                           0x08001f89   Thumb Code   188  qxk_xthr.o(.text.QXThread_delay)
+    QXThread_stackInit_                      0x08002051   Thumb Code   232  qxk_port.o(.text.QXThread_stackInit_)
+    QXThread_teArm_                          0x08002141   Thumb Code   152  qxk_xthr.o(.text.QXThread_teArm_)
+    QXThread_teDisarm_                       0x080021e5   Thumb Code    48  qxk_xthr.o(.text.QXThread_teDisarm_)
+    QXThread_timeout_                        0x08002215   Thumb Code    22  qxk_xthr.o(.text.QXThread_timeout_)
+    QXThread_unblock_                        0x0800222d   Thumb Code    68  qxk_xthr.o(.text.QXThread_unblock_)
+    Q_onError                                0x08002279   Thumb Code    10  bsp.o(.text.Q_onError)
+    Rectangle_area                           0x08002283   Thumb Code    20  rectangle.o(.text.Rectangle_area)
+    Rectangle_ctor                           0x08002299   Thumb Code    64  rectangle.o(.text.Rectangle_ctor)
+    Rectangle_draw                           0x080022dd   Thumb Code     8  rectangle.o(.text.Rectangle_draw)
+    Shape_ctor                               0x080022f1   Thumb Code    36  shape.o(.text.Shape_ctor)
+    Shape_distanceTo                         0x08002319   Thumb Code    88  shape.o(.text.Shape_distanceTo)
+    Shape_moveBy                             0x0800238b   Thumb Code    36  shape.o(.text.Shape_moveBy)
+    SysTick_Handler                          0x08002401   Thumb Code    40  bsp.o(.text.SysTick_Handler)
+    SystemCoreClockUpdate                    0x0800242d   Thumb Code   256  system_stm32c0xx.o(.text.SystemCoreClockUpdate)
+    SystemInit                               0x08002541   Thumb Code    12  system_stm32c0xx.o(.text.SystemInit)
+    assert_failed                            0x0800261d   Thumb Code     8  bsp.o(.text.assert_failed)
+    drawGraph                                0x08002625   Thumb Code    60  shape.o(.text.drawGraph)
+    main                                     0x08002661   Thumb Code   508  main.o(.text.main)
+    main_blinky1                             0x08002885   Thumb Code    48  main.o(.text.main_blinky1)
+    main_blinky2                             0x080028b9   Thumb Code    52  main.o(.text.main_blinky2)
+    AHBPrescTable                            0x080028f4   Data          64  system_stm32c0xx.o(.rodata.AHBPrescTable)
+    QEvt_reserved_                           0x0800293c   Data          16  qep_hsm.o(.rodata.QEvt_reserved_)
+    Region$$Table$$Base                      0x080029d8   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x080029f8   Number         0  anon$$obj.o(Region$$Table)
+    SystemCoreClock                          0x20000000   Data           4  system_stm32c0xx.o(.data.SystemCoreClock)
+    __libspace_start                         0x20000008   Data          96  libspace.o(.bss)
+    B1_sema                                  0x20000068   Data           8  main.o(.bss.B1_sema)
+    __temporary_stack_top$libspace           0x20000068   Data           0  libspace.o(.bss)
+    QActive_registry_                        0x20000070   Data         132  qf_act.o(.bss.QActive_registry_)
+    QF_priv_                                 0x200000f4   Data          64  qf_act.o(.bss.QF_priv_)
+    QTimeEvt_timeEvtHead_                    0x20000134   Data          20  qf_time.o(.bss.QTimeEvt_timeEvtHead_)
+    QXK_priv_                                0x20000148   Data          32  qxk.o(.bss.QXK_priv_)
+    a                                        0x20000168   Data           4  main.o(.bss.a)
+    blinky1                                  0x2000016c   Data          60  main.o(.bss.blinky1)
+    blinky2                                  0x200001a8   Data          60  main.o(.bss.blinky2)
+    r1                                       0x200001e4   Data          12  main.o(.bss.r1)
+    s1                                       0x200001f0   Data           8  main.o(.bss.s1)
+    stack_blinky1                            0x200001f8   Data         160  main.o(.bss.stack_blinky1)
+    stack_blinky2                            0x20000298   Data         160  main.o(.bss.stack_blinky2)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x08000189
+
+  Load Region LR_1 (Base: 0x08000000, Size: 0x000029fc, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000029f8, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x000000c0   Data   RO          505    RESET               startup_stm32c031xx.o
+    0x080000c0   0x080000c0   0x00000008   Code   RO          596  * !!!main             c_p.l(__main.o)
+    0x080000c8   0x080000c8   0x00000054   Code   RO          819    !!!scatter          c_p.l(__scatter.o)
+    0x0800011c   0x0800011c   0x0000001a   Code   RO          823    !!handler_copy      c_p.l(__scatter_copy.o)
+    0x08000136   0x08000136   0x00000002   PAD
+    0x08000138   0x08000138   0x00000002   Code   RO          820    !!handler_null      c_p.l(__scatter.o)
+    0x0800013a   0x0800013a   0x00000002   PAD
+    0x0800013c   0x0800013c   0x0000001c   Code   RO          825    !!handler_zi        c_p.l(__scatter_zi.o)
+    0x08000158   0x08000158   0x00000002   Code   RO          753    .ARM.Collect$$libinit$$00000000  c_p.l(libinit.o)
+    0x0800015a   0x0800015a   0x00000000   Code   RO          635    .ARM.Collect$$libinit$$00000002  c_p.l(libinit2.o)
+    0x0800015a   0x0800015a   0x00000000   Code   RO          637    .ARM.Collect$$libinit$$00000004  c_p.l(libinit2.o)
+    0x0800015a   0x0800015a   0x00000000   Code   RO          639    .ARM.Collect$$libinit$$00000006  c_p.l(libinit2.o)
+    0x0800015a   0x0800015a   0x00000008   Code   RO          640    .ARM.Collect$$libinit$$00000007  c_p.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          642    .ARM.Collect$$libinit$$0000000C  c_p.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          644    .ARM.Collect$$libinit$$0000000E  c_p.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          646    .ARM.Collect$$libinit$$00000010  c_p.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          649    .ARM.Collect$$libinit$$00000013  c_p.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          651    .ARM.Collect$$libinit$$00000015  c_p.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          653    .ARM.Collect$$libinit$$00000017  c_p.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          655    .ARM.Collect$$libinit$$00000019  c_p.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          657    .ARM.Collect$$libinit$$0000001B  c_p.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          659    .ARM.Collect$$libinit$$0000001D  c_p.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          661    .ARM.Collect$$libinit$$0000001F  c_p.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          663    .ARM.Collect$$libinit$$00000021  c_p.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          665    .ARM.Collect$$libinit$$00000023  c_p.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          667    .ARM.Collect$$libinit$$00000025  c_p.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          669    .ARM.Collect$$libinit$$00000027  c_p.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          673    .ARM.Collect$$libinit$$0000002E  c_p.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          675    .ARM.Collect$$libinit$$00000030  c_p.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          677    .ARM.Collect$$libinit$$00000032  c_p.l(libinit2.o)
+    0x08000162   0x08000162   0x00000000   Code   RO          679    .ARM.Collect$$libinit$$00000034  c_p.l(libinit2.o)
+    0x08000162   0x08000162   0x00000002   Code   RO          680    .ARM.Collect$$libinit$$00000035  c_p.l(libinit2.o)
+    0x08000164   0x08000164   0x00000002   Code   RO          816    .ARM.Collect$$libshutdown$$00000000  c_p.l(libshutdown.o)
+    0x08000166   0x08000166   0x00000000   Code   RO          772    .ARM.Collect$$libshutdown$$00000002  c_p.l(libshutdown2.o)
+    0x08000166   0x08000166   0x00000000   Code   RO          774    .ARM.Collect$$libshutdown$$00000004  c_p.l(libshutdown2.o)
+    0x08000166   0x08000166   0x00000000   Code   RO          777    .ARM.Collect$$libshutdown$$00000007  c_p.l(libshutdown2.o)
+    0x08000166   0x08000166   0x00000000   Code   RO          780    .ARM.Collect$$libshutdown$$0000000A  c_p.l(libshutdown2.o)
+    0x08000166   0x08000166   0x00000000   Code   RO          782    .ARM.Collect$$libshutdown$$0000000C  c_p.l(libshutdown2.o)
+    0x08000166   0x08000166   0x00000000   Code   RO          785    .ARM.Collect$$libshutdown$$0000000F  c_p.l(libshutdown2.o)
+    0x08000166   0x08000166   0x00000002   Code   RO          786    .ARM.Collect$$libshutdown$$00000010  c_p.l(libshutdown2.o)
+    0x08000168   0x08000168   0x00000000   Code   RO          600    .ARM.Collect$$rtentry$$00000000  c_p.l(__rtentry.o)
+    0x08000168   0x08000168   0x00000000   Code   RO          689    .ARM.Collect$$rtentry$$00000002  c_p.l(__rtentry2.o)
+    0x08000168   0x08000168   0x00000006   Code   RO          701    .ARM.Collect$$rtentry$$00000004  c_p.l(__rtentry4.o)
+    0x0800016e   0x0800016e   0x00000000   Code   RO          691    .ARM.Collect$$rtentry$$00000009  c_p.l(__rtentry2.o)
+    0x0800016e   0x0800016e   0x00000004   Code   RO          692    .ARM.Collect$$rtentry$$0000000A  c_p.l(__rtentry2.o)
+    0x08000172   0x08000172   0x00000000   Code   RO          694    .ARM.Collect$$rtentry$$0000000C  c_p.l(__rtentry2.o)
+    0x08000172   0x08000172   0x00000008   Code   RO          695    .ARM.Collect$$rtentry$$0000000D  c_p.l(__rtentry2.o)
+    0x0800017a   0x0800017a   0x00000002   Code   RO          759    .ARM.Collect$$rtexit$$00000000  c_p.l(rtexit.o)
+    0x0800017c   0x0800017c   0x00000000   Code   RO          792    .ARM.Collect$$rtexit$$00000002  c_p.l(rtexit2.o)
+    0x0800017c   0x0800017c   0x00000004   Code   RO          793    .ARM.Collect$$rtexit$$00000003  c_p.l(rtexit2.o)
+    0x08000180   0x08000180   0x00000006   Code   RO          794    .ARM.Collect$$rtexit$$00000004  c_p.l(rtexit2.o)
+    0x08000186   0x08000186   0x00000002   PAD
+    0x08000188   0x08000188   0x0000006c   Code   RO          506  * .text               startup_stm32c031xx.o
+    0x080001f4   0x080001f4   0x00000062   Code   RO          532    .text               c_p.l(h1_alloc.o)
+    0x08000256   0x08000256   0x0000004c   Code   RO          534    .text               c_p.l(h1_free.o)
+    0x080002a2   0x080002a2   0x00000002   PAD
+    0x080002a4   0x080002a4   0x0000016c   Code   RO          590    .text               c_p.l(aeabi_sdiv.o)
+    0x08000410   0x08000410   0x00000006   Code   RO          594    .text               c_p.l(heapauxi.o)
+    0x08000416   0x08000416   0x00000002   PAD
+    0x08000418   0x08000418   0x00000008   Code   RO          608    .text               c_p.l(rt_heap_descriptor_intlibspace.o)
+    0x08000420   0x08000420   0x00000004   Code   RO          610    .text               c_p.l(hguard.o)
+    0x08000424   0x08000424   0x00000088   Code   RO          612    .text               c_p.l(init_alloc.o)
+    0x080004ac   0x080004ac   0x0000000c   Code   RO          616    .text               c_p.l(h1_init.o)
+    0x080004b8   0x080004b8   0x00000008   Code   RO          685    .text               c_p.l(libspace.o)
+    0x080004c0   0x080004c0   0x00000000   Code   RO          707    .text               c_p.l(maybetermalloc1.o)
+    0x080004c0   0x080004c0   0x00000034   Code   RO          709    .text               c_p.l(h1_extend.o)
+    0x080004f4   0x080004f4   0x0000000c   Code   RO          713    .text               c_p.l(defsig_rtmem_outer.o)
+    0x08000500   0x08000500   0x00000002   Code   RO          724    .text               c_p.l(use_no_semi.o)
+    0x08000502   0x08000502   0x00000000   Code   RO          726    .text               c_p.l(indicate_semi.o)
+    0x08000502   0x08000502   0x0000003e   Code   RO          727    .text               c_p.l(sys_stackheap_outer.o)
+    0x08000540   0x08000540   0x00000010   Code   RO          734    .text               c_p.l(exit.o)
+    0x08000550   0x08000550   0x0000000c   Code   RO          736    .text               c_p.l(defsig_exit.o)
+    0x0800055c   0x0800055c   0x00000050   Code   RO          742    .text               c_p.l(defsig_rtmem_inner.o)
+    0x080005ac   0x080005ac   0x0000000c   Code   RO          754    .text               c_p.l(sys_exit.o)
+    0x080005b8   0x080005b8   0x00000034   Code   RO          767    .text               c_p.l(defsig_general.o)
+    0x080005ec   0x080005ec   0x0000000c   Code   RO          787    .text               c_p.l(sys_wrch.o)
+    0x080005f8   0x080005f8   0x00000010   Code   RO           16    .text.BSP_greenLedOff  bsp.o
+    0x08000608   0x08000608   0x00000010   Code   RO           14    .text.BSP_greenLedOn  bsp.o
+    0x08000618   0x08000618   0x000000bc   Code   RO            8    .text.BSP_init      bsp.o
+    0x080006d4   0x080006d4   0x0000004c   Code   RO            6    .text.EXTI4_15_IRQHandler  bsp.o
+    0x08000720   0x08000720   0x00000006   Code   RO          493    .text.NMI_Handler   qxk_port.o
+    0x08000726   0x08000726   0x00000002   PAD
+    0x08000728   0x08000728   0x000000d0   Code   RO          489    .text.PendSV_Handler  qxk_port.o
+    0x080007f8   0x080007f8   0x00000028   Code   RO          258    .text.QActive_ctor  qf_qact.o
+    0x08000820   0x08000820   0x000000a0   Code   RO          134    .text.QActive_get_  qf_actq.o
+    0x080008c0   0x080008c0   0x000001bc   Code   RO          120    .text.QActive_post_  qf_actq.o
+    0x08000a7c   0x08000a7c   0x00000140   Code   RO          260    .text.QActive_register_  qf_qact.o
+    0x08000bbc   0x08000bbc   0x00000124   Code   RO          353    .text.QActive_start_  qxk.o
+    0x08000ce0   0x08000ce0   0x00000042   Code   RO          273    .text.QEQueue_init  qf_qeq.o
+    0x08000d22   0x08000d22   0x00000028   Code   RO          296    .text.QEvt_ctor     qf_time.o
+    0x08000d4a   0x08000d4a   0x00000010   Code   RO          124    .text.QEvt_getPoolId_  qf_actq.o
+    0x08000d5a   0x08000d5a   0x00000010   Code   RO          186    .text.QEvt_getPoolId_  qf_dyn.o
+    0x08000d6a   0x08000d6a   0x00000010   Code   RO          188    .text.QEvt_refCtr_dec_  qf_dyn.o
+    0x08000d7a   0x08000d7a   0x00000010   Code   RO          126    .text.QEvt_refCtr_inc_  qf_actq.o
+    0x08000d8a   0x08000d8a   0x0000002c   Code   RO          122    .text.QEvt_verify_  qf_actq.o
+    0x08000db6   0x08000db6   0x0000002c   Code   RO          184    .text.QEvt_verify_  qf_dyn.o
+    0x08000de2   0x08000de2   0x0000002c   Code   RO          466    .text.QEvt_verify_  qep_hsm.o
+    0x08000e0e   0x08000e0e   0x00000032   Code   RO          110    .text.QF_bzero_     qf_act.o
+    0x08000e40   0x08000e40   0x0000009c   Code   RO          182    .text.QF_gc         qf_dyn.o
+    0x08000edc   0x08000edc   0x0000005c   Code   RO          347    .text.QF_init       qxk.o
+    0x08000f38   0x08000f38   0x0000003c   Code   RO           22    .text.QF_onStartup  bsp.o
+    0x08000f74   0x08000f74   0x00000038   Code   RO          495    .text.QF_qlog2      qxk_port.o
+    0x08000fac   0x08000fac   0x0000002c   Code   RO          351    .text.QF_run        qxk.o
+    0x08000fd8   0x08000fd8   0x00000020   Code   RO          458    .text.QHsm_ctor     qep_hsm.o
+    0x08000ff8   0x08000ff8   0x000001e0   Code   RO          462    .text.QHsm_dispatch_  qep_hsm.o
+    0x080011d8   0x080011d8   0x00000140   Code   RO          460    .text.QHsm_init_    qep_hsm.o
+    0x08001318   0x08001318   0x0000000c   Code   RO          464    .text.QHsm_top      qep_hsm.o
+    0x08001324   0x08001324   0x0000024c   Code   RO          468    .text.QHsm_tran_    qep_hsm.o
+    0x08001570   0x08001570   0x00000074   Code   RO          208    .text.QMPool_put    qf_mem.o
+    0x080015e4   0x080015e4   0x00000012   Code   RO          335    .text.QPSet_findMax  qxk.o
+    0x080015f6   0x080015f6   0x00000012   Code   RO          415    .text.QPSet_findMax  qxk_sema.o
+    0x08001608   0x08001608   0x00000018   Code   RO          337    .text.QPSet_hasElement  qxk.o
+    0x08001620   0x08001620   0x00000018   Code   RO          407    .text.QPSet_hasElement  qxk_sema.o
+    0x08001638   0x08001638   0x0000001a   Code   RO          128    .text.QPSet_insert  qf_actq.o
+    0x08001652   0x08001652   0x0000001a   Code   RO          355    .text.QPSet_insert  qxk.o
+    0x0800166c   0x0800166c   0x0000001a   Code   RO          405    .text.QPSet_insert  qxk_sema.o
+    0x08001686   0x08001686   0x0000001a   Code   RO          445    .text.QPSet_insert  qxk_xthr.o
+    0x080016a0   0x080016a0   0x00000010   Code   RO          333    .text.QPSet_isEmpty  qxk.o
+    0x080016b0   0x080016b0   0x00000010   Code   RO          413    .text.QPSet_notEmpty  qxk_sema.o
+    0x080016c0   0x080016c0   0x0000001a   Code   RO          339    .text.QPSet_remove  qxk.o
+    0x080016da   0x080016da   0x0000001a   Code   RO          401    .text.QPSet_remove  qxk_sema.o
+    0x080016f4   0x080016f4   0x0000001a   Code   RO          441    .text.QPSet_remove  qxk_xthr.o
+    0x0800170e   0x0800170e   0x0000000e   Code   RO          397    .text.QPSet_setEmpty  qxk_sema.o
+    0x0800171c   0x0800171c   0x00000014   Code   RO          130    .text.QPSet_update_  qf_actq.o
+    0x08001730   0x08001730   0x00000014   Code   RO          341    .text.QPSet_update_  qxk.o
+    0x08001744   0x08001744   0x00000014   Code   RO          403    .text.QPSet_update_  qxk_sema.o
+    0x08001758   0x08001758   0x00000014   Code   RO          443    .text.QPSet_update_  qxk_xthr.o
+    0x0800176c   0x0800176c   0x0000001a   Code   RO          331    .text.QPSet_verify_  qxk.o
+    0x08001786   0x08001786   0x00000002   PAD
+    0x08001788   0x08001788   0x0000005c   Code   RO          294    .text.QTimeEvt_ctorX  qf_time.o
+    0x080017e4   0x080017e4   0x0000013c   Code   RO          308    .text.QTimeEvt_tick_  qf_time.o
+    0x08001920   0x08001920   0x00000184   Code   RO          327    .text.QXK_activate_  qxk.o
+    0x08001aa4   0x08001aa4   0x00000014   Code   RO          487    .text.QXK_init      qxk_port.o
+    0x08001ab8   0x08001ab8   0x00000002   Code   RO           32    .text.QXK_onIdle    bsp.o
+    0x08001aba   0x08001aba   0x00000002   PAD
+    0x08001abc   0x08001abc   0x00000120   Code   RO          325    .text.QXK_sched_    qxk.o
+    0x08001bdc   0x08001bdc   0x00000098   Code   RO          345    .text.QXK_threadExit_  qxk.o
+    0x08001c74   0x08001c74   0x00000010   Code   RO          491    .text.QXK_thread_ret  qxk_port.o
+    0x08001c84   0x08001c84   0x00000054   Code   RO          395    .text.QXSemaphore_init  qxk_sema.o
+    0x08001cd8   0x08001cd8   0x000000ec   Code   RO          411    .text.QXSemaphore_signal  qxk_sema.o
+    0x08001dc4   0x08001dc4   0x00000148   Code   RO          399    .text.QXSemaphore_wait  qxk_sema.o
+    0x08001f0c   0x08001f0c   0x0000004c   Code   RO          431    .text.QXThread_block_  qxk_xthr.o
+    0x08001f58   0x08001f58   0x0000002e   Code   RO          425    .text.QXThread_ctor  qxk_xthr.o
+    0x08001f86   0x08001f86   0x00000002   PAD
+    0x08001f88   0x08001f88   0x000000c8   Code   RO          427    .text.QXThread_delay  qxk_xthr.o
+    0x08002050   0x08002050   0x000000f0   Code   RO          485    .text.QXThread_stackInit_  qxk_port.o
+    0x08002140   0x08002140   0x000000a4   Code   RO          429    .text.QXThread_teArm_  qxk_xthr.o
+    0x080021e4   0x080021e4   0x00000030   Code   RO          435    .text.QXThread_teDisarm_  qxk_xthr.o
+    0x08002214   0x08002214   0x00000016   Code   RO          447    .text.QXThread_timeout_  qxk_xthr.o
+    0x0800222a   0x0800222a   0x00000002   PAD
+    0x0800222c   0x0800222c   0x0000004c   Code   RO          437    .text.QXThread_unblock_  qxk_xthr.o
+    0x08002278   0x08002278   0x0000000a   Code   RO           34    .text.Q_onError     bsp.o
+    0x08002282   0x08002282   0x00000014   Code   RO          100    .text.Rectangle_area  rectangle.o
+    0x08002296   0x08002296   0x00000002   PAD
+    0x08002298   0x08002298   0x00000044   Code   RO           96    .text.Rectangle_ctor  rectangle.o
+    0x080022dc   0x080022dc   0x00000008   Code   RO           98    .text.Rectangle_draw  rectangle.o
+    0x080022e4   0x080022e4   0x0000000a   Code   RO           50    .text.Shape_area    shape.o
+    0x080022ee   0x080022ee   0x00000002   PAD
+    0x080022f0   0x080022f0   0x00000028   Code   RO           46    .text.Shape_ctor    shape.o
+    0x08002318   0x08002318   0x00000058   Code   RO           54    .text.Shape_distanceTo  shape.o
+    0x08002370   0x08002370   0x00000008   Code   RO           48    .text.Shape_draw    shape.o
+    0x08002378   0x08002378   0x00000012   Code   RO           58    .text.Shape_draw_vcall  shape.o
+    0x0800238a   0x0800238a   0x00000024   Code   RO           52    .text.Shape_moveBy  shape.o
+    0x080023ae   0x080023ae   0x00000002   PAD
+    0x080023b0   0x080023b0   0x00000050   Code   RO           24    .text.SysTick_Config  bsp.o
+    0x08002400   0x08002400   0x0000002c   Code   RO            4    .text.SysTick_Handler  bsp.o
+    0x0800242c   0x0800242c   0x00000114   Code   RO          515    .text.SystemCoreClockUpdate  system_stm32c0xx.o
+    0x08002540   0x08002540   0x00000010   Code   RO          513    .text.SystemInit    system_stm32c0xx.o
+    0x08002550   0x08002550   0x0000002c   Code   RO           28    .text.__NVIC_EnableIRQ  bsp.o
+    0x0800257c   0x0800257c   0x00000084   Code   RO           26    .text.__NVIC_SetPriority  bsp.o
+    0x08002600   0x08002600   0x0000001c   Code   RO           36    .text.__NVIC_SystemReset  bsp.o
+    0x0800261c   0x0800261c   0x00000008   Code   RO            2    .text.assert_failed  bsp.o
+    0x08002624   0x08002624   0x0000003c   Code   RO           56    .text.drawGraph     shape.o
+    0x08002660   0x08002660   0x00000224   Code   RO           74    .text.main          main.o
+    0x08002884   0x08002884   0x00000034   Code   RO           68    .text.main_blinky1  main.o
+    0x080028b8   0x080028b8   0x0000003c   Code   RO           70    .text.main_blinky2  main.o
+    0x080028f4   0x080028f4   0x00000040   Data   RO          518    .rodata.AHBPrescTable  system_stm32c0xx.o
+    0x08002934   0x08002934   0x00000008   Data   RO          264    .rodata.QActive_ctor.vtable  qf_qact.o
+    0x0800293c   0x0800293c   0x00000010   Data   RO          475    .rodata.QEvt_reserved_  qep_hsm.o
+    0x0800294c   0x0800294c   0x00000028   Data   RO          359    .rodata.QF_init.idle_ao  qxk.o
+    0x08002974   0x08002974   0x00000008   Data   RO          476    .rodata.QHsm_ctor.vtable  qep_hsm.o
+    0x0800297c   0x0800297c   0x00000007   Data   RO           80    .rodata.Q_this_module_  main.o
+    0x08002983   0x08002983   0x00000008   Data   RO          146    .rodata.Q_this_module_  qf_actq.o
+    0x0800298b   0x0800298b   0x00000007   Data   RO          196    .rodata.Q_this_module_  qf_dyn.o
+    0x08002992   0x08002992   0x00000007   Data   RO          210    .rodata.Q_this_module_  qf_mem.o
+    0x08002999   0x08002999   0x00000008   Data   RO          265    .rodata.Q_this_module_  qf_qact.o
+    0x080029a1   0x080029a1   0x00000008   Data   RO          312    .rodata.Q_this_module_  qf_time.o
+    0x080029a9   0x080029a9   0x00000004   Data   RO          357    .rodata.Q_this_module_  qxk.o
+    0x080029ad   0x080029ad   0x00000009   Data   RO          417    .rodata.Q_this_module_  qxk_sema.o
+    0x080029b6   0x080029b6   0x00000009   Data   RO          449    .rodata.Q_this_module_  qxk_xthr.o
+    0x080029bf   0x080029bf   0x00000008   Data   RO          477    .rodata.Q_this_module_  qep_hsm.o
+    0x080029c7   0x080029c7   0x00000001   PAD
+    0x080029c8   0x080029c8   0x00000008   Data   RO          102    .rodata.Rectangle_ctor.vtable  rectangle.o
+    0x080029d0   0x080029d0   0x00000008   Data   RO           60    .rodata.Shape_ctor.vtable  shape.o
+    0x080029d8   0x080029d8   0x00000020   Data   RO          818    Region$$Table       anon$$obj.o
+
+
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x080029f8, Size: 0x00000004, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x080029f8   0x00000004   Data   RW          517    .data.SystemCoreClock  system_stm32c0xx.o
+
+
+    Execution Region ER_ZI (Exec base: 0x20000008, Load base: 0x080029fc, Size: 0x00000b30, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000008        -       0x00000060   Zero   RW          686    .bss                c_p.l(libspace.o)
+    0x20000068        -       0x00000008   Zero   RW           76    .bss.B1_sema        main.o
+    0x20000070        -       0x00000084   Zero   RW          112    .bss.QActive_registry_  qf_act.o
+    0x200000f4        -       0x00000040   Zero   RW          113    .bss.QF_priv_       qf_act.o
+    0x20000134        -       0x00000014   Zero   RW          313    .bss.QTimeEvt_timeEvtHead_  qf_time.o
+    0x20000148        -       0x00000020   Zero   RW          358    .bss.QXK_priv_      qxk.o
+    0x20000168        -       0x00000004   Zero   RW           79    .bss.a              main.o
+    0x2000016c        -       0x0000003c   Zero   RW           81    .bss.blinky1        main.o
+    0x200001a8        -       0x0000003c   Zero   RW           83    .bss.blinky2        main.o
+    0x200001e4        -       0x0000000c   Zero   RW           78    .bss.r1             main.o
+    0x200001f0        -       0x00000008   Zero   RW           77    .bss.s1             main.o
+    0x200001f8        -       0x000000a0   Zero   RW           82    .bss.stack_blinky1  main.o
+    0x20000298        -       0x000000a0   Zero   RW           84    .bss.stack_blinky2  main.o
+    0x20000338        -       0x00000400   Zero   RW          504    HEAP                startup_stm32c031xx.o
+    0x20000738        -       0x00000400   Zero   RW          503    STACK               startup_stm32c031xx.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       704        108          0          0          0       5475   bsp.o
+       660         52          7          0        472       4417   main.o
+      1476         24         32          0          0       6081   qep_hsm.o
+        50          0          0          0        196       3314   qf_act.o
+       726          8          8          0          0       6279   qf_actq.o
+       232          4          7          0          0       3052   qf_dyn.o
+       116          4          7          0          0       2296   qf_mem.o
+       360         12         16          0          0       3505   qf_qact.o
+        66          0          0          0          0       2901   qf_qeq.o
+       448         12          8          0         20       5407   qf_time.o
+      1412         48         44          0         32       7221   qxk.o
+       546         52          0          0          0       3609   qxk_port.o
+       792         16          9          0          0       5376   qxk_sema.o
+       704         36          9          0          0       5783   qxk_xthr.o
+        96          4          8          0          0       1363   rectangle.o
+       260          4          8          0          0       1975   shape.o
+       108         58        192          0       2048        732   startup_stm32c031xx.o
+       292        156         64          4          0       2076   system_stm32c0xx.o
+
+    ----------------------------------------------------------------------
+      9064        598        452          4       2768      70862   Object Totals
+         0          0         32          0          0          0   (incl. Generated)
+        16          0          1          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         8          0          0          0          0         68   __main.o
+         0          0          0          0          0          0   __rtentry.o
+        12          0          0          0          0          0   __rtentry2.o
+         6          0          0          0          0          0   __rtentry4.o
+        86         10          0          0          0          0   __scatter.o
+        26          0          0          0          0          0   __scatter_copy.o
+        28          0          0          0          0          0   __scatter_zi.o
+       364          4          0          0          0         92   aeabi_sdiv.o
+        12          0          0          0          0         68   defsig_exit.o
+        52          0          0          0          0         72   defsig_general.o
+        80         58          0          0          0         68   defsig_rtmem_inner.o
+        12          0          0          0          0         68   defsig_rtmem_outer.o
+        16          0          0          0          0         68   exit.o
+        98          0          0          0          0         72   h1_alloc.o
+        52          0          0          0          0         68   h1_extend.o
+        76          0          0          0          0         72   h1_free.o
+        12          0          0          0          0         76   h1_init.o
+         6          0          0          0          0        136   heapauxi.o
+         4          0          0          0          0        120   hguard.o
+         0          0          0          0          0          0   indicate_semi.o
+       136          0          0          0          0        160   init_alloc.o
+         2          0          0          0          0          0   libinit.o
+        10          0          0          0          0          0   libinit2.o
+         2          0          0          0          0          0   libshutdown.o
+         2          0          0          0          0          0   libshutdown2.o
+         8          4          0          0         96         68   libspace.o
+         0          0          0          0          0          0   maybetermalloc1.o
+         8          4          0          0          0         68   rt_heap_descriptor_intlibspace.o
+         2          0          0          0          0          0   rtexit.o
+        10          0          0          0          0          0   rtexit2.o
+        12          4          0          0          0         60   sys_exit.o
+        62          0          0          0          0         80   sys_stackheap_outer.o
+        12          0          0          0          0         68   sys_wrch.o
+         2          0          0          0          0         68   use_no_semi.o
+
+    ----------------------------------------------------------------------
+      1228         84          0          0         96       1620   Library Totals
+        10          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+      1218         84          0          0         96       1620   c_p.l
+
+    ----------------------------------------------------------------------
+      1228         84          0          0         96       1620   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     10292        682        452          4       2864      71506   Grand Totals
+     10292        682        452          4       2864      71506   ELF Image Totals
+     10292        682        452          4          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                10744 (  10.49kB)
+    Total RW  Size (RW Data + ZI Data)              2868 (   2.80kB)
+    Total ROM Size (Code + RO Data + RW Data)      10748 (  10.50kB)
+
+==============================================================================
+

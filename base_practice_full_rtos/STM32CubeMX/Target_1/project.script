@@ -1,0 +1,5 @@
+load STM32C031C6Ux
+project name STM32CubeMX
+project toolchain "MDK-ARM V5"
+project path "C:\Users\Sam\Documents\CodingProjects\EmbeddedC\base_practice\STM32CubeMX\Target_1"
+SetCopyLibrary "copy only"
