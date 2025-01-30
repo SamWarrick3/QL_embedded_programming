@@ -14,52 +14,81 @@ typedef struct {
 	Active super; /* inherit active base class */
 	/* private data for the AO */
 	TimeEvent te;
-	bool isLedOn;
+	enum {
+		ON_STATE,
+		OFF_STATE
+	} state;
 	uint32_t blink_time;
 } BlinkyButton;
 
 static void BlinkyButton_dispatch(BlinkyButton * const me, Event const * const e) {
-	switch(e->sig){
-		case INIT_SIG:
-			BSP_ledGreenOff();
-			/* intentionally fall through */
-		case TIMEOUT_SIG: {
-			if (me->isLedOn) { /* Led is on */
-				BSP_ledGreenOff();
-				me->isLedOn = false;
-				TimeEvent_arm(&me->te, me->blink_time * 3U, 0U);
-			}
-			else { /* Led is off */
-				BSP_ledGreenOn();
-				me->isLedOn = true;
-				TimeEvent_arm(&me->te, me->blink_time, 0U);
+	if (e->sig == INIT_SIG) {
+		BSP_ledGreenOff();
+		me->state = OFF_STATE;
+		TimeEvent_arm(&me->te, me->blink_time * 3U, 0U);
+	}
+	
+	switch(me->state) {
+		case OFF_STATE: {
+			switch (e->sig) {
+				case TIMEOUT_SIG: {
+					BSP_ledGreenOn();
+					TimeEvent_arm(&me->te, me->blink_time, 0U);
+					me->state = ON_STATE;
+					break;
+				}
+				case BUTTON_PRESSED_SIG: {
+					BSP_ledBlueOn();
+					
+					/* update the blink time for the 'blink' thread */
+					me->blink_time >>= 1; /* shorten the blink time by factor of 2 */
+					if (me->blink_time == 0U) {
+							me->blink_time = INITIAL_BLINK_TIME;
+					}	
+					break;
+				}
+				case BUTTON_RELEASED_SIG: {
+					BSP_ledBlueOff();
+					break;
+				}
 			}
 			break;
 		}
-		case BUTTON_PRESSED_SIG: {
-			BSP_ledBlueOn();
-			
-			/* update the blink time for the 'blink' thread */
-			me->blink_time >>= 1; /* shorten the blink time by factor of 2 */
-			if (me->blink_time == 0U) {
-					me->blink_time = INITIAL_BLINK_TIME;
-			}	
-			break;
-		}
-		case BUTTON_RELEASED_SIG: {
-			BSP_ledBlueOff();
+		case ON_STATE: {
+			switch (e->sig) {
+				case TIMEOUT_SIG: {
+					BSP_ledGreenOff();
+					TimeEvent_arm(&me->te, me->blink_time * 3U, 0U);
+					me->state = OFF_STATE;
+					break;
+				}
+				case BUTTON_PRESSED_SIG: {
+					BSP_ledBlueOn();
+					
+					/* update the blink time for the 'blink' thread */
+					me->blink_time >>= 1; /* shorten the blink time by factor of 2 */
+					if (me->blink_time == 0U) {
+							me->blink_time = INITIAL_BLINK_TIME;
+					}	
+					break;
+				}
+				case BUTTON_RELEASED_SIG: {
+					BSP_ledBlueOff();
+					break;
+				}
+			}
 			break;
 		}
 		default: {
-			break;
-		}
+			Q_ASSERT(0); /* should never be in this state */
+			break;			
+		}	
 	}
 }
 
 void BlinkyButton_ctor(BlinkyButton * const me) {
 	Active_ctor(&me->super, (DispatchHandler)&BlinkyButton_dispatch);
 	TimeEvent_ctor(&me->te, TIMEOUT_SIG, &me->super);
-	me->isLedOn = false;
 	me->blink_time = INITIAL_BLINK_TIME;
 }
 
