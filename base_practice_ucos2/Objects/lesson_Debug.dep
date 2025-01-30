@@ -1,125 +1,0 @@
-Dependencies for Project 'lesson', Target 'Debug': (DO NOT MODIFY !)
-CompilerVersion: 6220000::V6.22::ARMCLANG
-F (.\main.c)(0x679A50DE)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I . -I ../ucos2/Source -I ../ucos2/Ports/ARM-Cortex-M/ARMv6-M/ARM -I ../nucleo-c031c6 -I ../CMSIS/Include -Wno-declaration-after-statement-IC:/Users/Sam/AppData/Local/Arm/Packs/Keil/STM32C0xx_DFP/2.0.0/Drivers/CMSIS/Device/ST/STM32C0xx/Include-D__UVISION_VERSION="541" -DSTM32C031xx-o ./objects/main.o -MMD)
-I (uc_ao.h)(0x6720F8FC)
-I (..\ucos2\Source\ucos_ii.h)(0x6720F8FC)
-I (app_cfg.h)(0x6720F8FC)
-I (os_cfg.h)(0x6720F8FC)
-I (..\ucos2\Ports\ARM-Cortex-M\ARMv6-M\ARM\os_cpu.h)(0x6720F8FC)
-I (..\ucos2\Source\os_trace.h)(0x6720F8FC)
-I (qassert.h)(0x6720F8FC)
-I (bsp.h)(0x679A5008)
-F (.\bsp.c)(0x679A5DF4)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I . -I ../ucos2/Source -I ../ucos2/Ports/ARM-Cortex-M/ARMv6-M/ARM -I ../nucleo-c031c6 -I ../CMSIS/Include -Wno-declaration-after-statement-IC:/Users/Sam/AppData/Local/Arm/Packs/Keil/STM32C0xx_DFP/2.0.0/Drivers/CMSIS/Device/ST/STM32C0xx/Include-D__UVISION_VERSION="541" -DSTM32C031xx-o ./objects/bsp.o -MMD)
-I (uc_ao.h)(0x6720F8FC)
-I (..\ucos2\Source\ucos_ii.h)(0x6720F8FC)
-I (app_cfg.h)(0x6720F8FC)
-I (os_cfg.h)(0x6720F8FC)
-I (..\ucos2\Ports\ARM-Cortex-M\ARMv6-M\ARM\os_cpu.h)(0x6720F8FC)
-I (..\ucos2\Source\os_trace.h)(0x6720F8FC)
-I (qassert.h)(0x6720F8FC)
-I (bsp.h)(0x679A5008)
-I (..\nucleo-c031c6\stm32c0xx.h)(0x6720F8FC)
-I (..\nucleo-c031c6\stm32c031xx.h)(0x6720F8FC)
-I (..\CMSIS\Include\core_cm0plus.h)(0x6720F8FC)
-I (..\nucleo-c031c6\system_stm32c0xx.h)(0x6720F8FC)
-F (.\bsp.h)(0x679A5008)()
-F (.\uc_ao.c)(0x6720F8FC)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I . -I ../ucos2/Source -I ../ucos2/Ports/ARM-Cortex-M/ARMv6-M/ARM -I ../nucleo-c031c6 -I ../CMSIS/Include -Wno-declaration-after-statement-IC:/Users/Sam/AppData/Local/Arm/Packs/Keil/STM32C0xx_DFP/2.0.0/Drivers/CMSIS/Device/ST/STM32C0xx/Include-D__UVISION_VERSION="541" -DSTM32C031xx-o ./objects/uc_ao.o -MMD)
-I (uc_ao.h)(0x6720F8FC)
-I (..\ucos2\Source\ucos_ii.h)(0x6720F8FC)
-I (app_cfg.h)(0x6720F8FC)
-I (os_cfg.h)(0x6720F8FC)
-I (..\ucos2\Ports\ARM-Cortex-M\ARMv6-M\ARM\os_cpu.h)(0x6720F8FC)
-I (..\ucos2\Source\os_trace.h)(0x6720F8FC)
-I (qassert.h)(0x6720F8FC)
-F (.\uc_ao.h)(0x6720F8FC)()
-F (.\app_cfg.h)(0x6720F8FC)()
-F (.\os_cfg.h)(0x6720F8FC)()
-F (..\nucleo-c031c6\README.txt)(0x6720F8FC)()
-F (..\nucleo-c031c6\stm32c0xx.h)(0x6720F8FC)()
-F (..\nucleo-c031c6\stm32c031xx.h)(0x6720F8FC)()
-F (..\nucleo-c031c6\system_stm32c0xx.c)(0x6720F8FC)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I . -I ../ucos2/Source -I ../ucos2/Ports/ARM-Cortex-M/ARMv6-M/ARM -I ../nucleo-c031c6 -I ../CMSIS/Include -Wno-declaration-after-statement-IC:/Users/Sam/AppData/Local/Arm/Packs/Keil/STM32C0xx_DFP/2.0.0/Drivers/CMSIS/Device/ST/STM32C0xx/Include-D__UVISION_VERSION="541" -DSTM32C031xx-o ./objects/system_stm32c0xx.o -MMD)
-I (..\nucleo-c031c6\stm32c0xx.h)(0x6720F8FC)
-I (..\nucleo-c031c6\stm32c031xx.h)(0x6720F8FC)
-I (..\CMSIS\Include\core_cm0plus.h)(0x6720F8FC)
-I (..\nucleo-c031c6\system_stm32c0xx.h)(0x6720F8FC)
-F (..\nucleo-c031c6\system_stm32c0xx.h)(0x6720F8FC)()
-F (..\nucleo-c031c6\arm\startup_stm32c031xx.s)(0x6720F8FC)(--target=arm-arm-none-eabi -mcpu=cortex-m0plus -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -Wa,armasm,--pd,"__EVAL SETA 1"-IC:/Users/Sam/AppData/Local/Arm/Packs/Keil/STM32C0xx_DFP/2.0.0/Drivers/CMSIS/Device/ST/STM32C0xx/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 541" -Wa,armasm,--pd,"STM32C031xx SETA 1" -Wa,armasm,--pd,"Stack_Size SETA 2048" -Wa,armasm,--pd,"Heap_Size SETA 0"-o ./objects/startup_stm32c031xx.o)
-F (..\CMSIS\Include\cmsis_armclang.h)(0x6720F8FC)()
-F (..\CMSIS\Include\cmsis_compiler.h)(0x6720F8FC)()
-F (..\CMSIS\Include\cmsis_version.h)(0x6720F8FC)()
-F (..\CMSIS\Include\core_cm0plus.h)(0x6720F8FC)()
-F (..\ucos2\Source\os.h)(0x6720F8FC)()
-F (..\ucos2\Source\os_core.c)(0x6720F8FC)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I . -I ../ucos2/Source -I ../ucos2/Ports/ARM-Cortex-M/ARMv6-M/ARM -I ../nucleo-c031c6 -I ../CMSIS/Include -Wno-declaration-after-statement-IC:/Users/Sam/AppData/Local/Arm/Packs/Keil/STM32C0xx_DFP/2.0.0/Drivers/CMSIS/Device/ST/STM32C0xx/Include-D__UVISION_VERSION="541" -DSTM32C031xx-o ./objects/os_core.o -MMD)
-I (..\ucos2\Source\ucos_ii.h)(0x6720F8FC)
-I (app_cfg.h)(0x6720F8FC)
-I (os_cfg.h)(0x6720F8FC)
-I (..\ucos2\Ports\ARM-Cortex-M\ARMv6-M\ARM\os_cpu.h)(0x6720F8FC)
-I (..\ucos2\Source\os_trace.h)(0x6720F8FC)
-F (..\ucos2\Source\os_flag.c)(0x6798F3C8)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I . -I ../ucos2/Source -I ../ucos2/Ports/ARM-Cortex-M/ARMv6-M/ARM -I ../nucleo-c031c6 -I ../CMSIS/Include -Wno-declaration-after-statement-IC:/Users/Sam/AppData/Local/Arm/Packs/Keil/STM32C0xx_DFP/2.0.0/Drivers/CMSIS/Device/ST/STM32C0xx/Include-D__UVISION_VERSION="541" -DSTM32C031xx-o ./objects/os_flag.o -MMD)
-I (..\ucos2\Source\ucos_ii.h)(0x6720F8FC)
-I (app_cfg.h)(0x6720F8FC)
-I (os_cfg.h)(0x6720F8FC)
-I (..\ucos2\Ports\ARM-Cortex-M\ARMv6-M\ARM\os_cpu.h)(0x6720F8FC)
-I (..\ucos2\Source\os_trace.h)(0x6720F8FC)
-F (..\ucos2\Source\os_mbox.c)(0x6720F8FC)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I . -I ../ucos2/Source -I ../ucos2/Ports/ARM-Cortex-M/ARMv6-M/ARM -I ../nucleo-c031c6 -I ../CMSIS/Include -Wno-declaration-after-statement-IC:/Users/Sam/AppData/Local/Arm/Packs/Keil/STM32C0xx_DFP/2.0.0/Drivers/CMSIS/Device/ST/STM32C0xx/Include-D__UVISION_VERSION="541" -DSTM32C031xx-o ./objects/os_mbox.o -MMD)
-I (..\ucos2\Source\ucos_ii.h)(0x6720F8FC)
-I (app_cfg.h)(0x6720F8FC)
-I (os_cfg.h)(0x6720F8FC)
-I (..\ucos2\Ports\ARM-Cortex-M\ARMv6-M\ARM\os_cpu.h)(0x6720F8FC)
-I (..\ucos2\Source\os_trace.h)(0x6720F8FC)
-F (..\ucos2\Source\os_mem.c)(0x6720F8FC)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I . -I ../ucos2/Source -I ../ucos2/Ports/ARM-Cortex-M/ARMv6-M/ARM -I ../nucleo-c031c6 -I ../CMSIS/Include -Wno-declaration-after-statement-IC:/Users/Sam/AppData/Local/Arm/Packs/Keil/STM32C0xx_DFP/2.0.0/Drivers/CMSIS/Device/ST/STM32C0xx/Include-D__UVISION_VERSION="541" -DSTM32C031xx-o ./objects/os_mem.o -MMD)
-I (..\ucos2\Source\ucos_ii.h)(0x6720F8FC)
-I (app_cfg.h)(0x6720F8FC)
-I (os_cfg.h)(0x6720F8FC)
-I (..\ucos2\Ports\ARM-Cortex-M\ARMv6-M\ARM\os_cpu.h)(0x6720F8FC)
-I (..\ucos2\Source\os_trace.h)(0x6720F8FC)
-F (..\ucos2\Source\os_mutex.c)(0x6720F8FC)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I . -I ../ucos2/Source -I ../ucos2/Ports/ARM-Cortex-M/ARMv6-M/ARM -I ../nucleo-c031c6 -I ../CMSIS/Include -Wno-declaration-after-statement-IC:/Users/Sam/AppData/Local/Arm/Packs/Keil/STM32C0xx_DFP/2.0.0/Drivers/CMSIS/Device/ST/STM32C0xx/Include-D__UVISION_VERSION="541" -DSTM32C031xx-o ./objects/os_mutex.o -MMD)
-I (..\ucos2\Source\ucos_ii.h)(0x6720F8FC)
-I (app_cfg.h)(0x6720F8FC)
-I (os_cfg.h)(0x6720F8FC)
-I (..\ucos2\Ports\ARM-Cortex-M\ARMv6-M\ARM\os_cpu.h)(0x6720F8FC)
-I (..\ucos2\Source\os_trace.h)(0x6720F8FC)
-F (..\ucos2\Source\os_q.c)(0x6720F8FC)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I . -I ../ucos2/Source -I ../ucos2/Ports/ARM-Cortex-M/ARMv6-M/ARM -I ../nucleo-c031c6 -I ../CMSIS/Include -Wno-declaration-after-statement-IC:/Users/Sam/AppData/Local/Arm/Packs/Keil/STM32C0xx_DFP/2.0.0/Drivers/CMSIS/Device/ST/STM32C0xx/Include-D__UVISION_VERSION="541" -DSTM32C031xx-o ./objects/os_q.o -MMD)
-I (..\ucos2\Source\ucos_ii.h)(0x6720F8FC)
-I (app_cfg.h)(0x6720F8FC)
-I (os_cfg.h)(0x6720F8FC)
-I (..\ucos2\Ports\ARM-Cortex-M\ARMv6-M\ARM\os_cpu.h)(0x6720F8FC)
-I (..\ucos2\Source\os_trace.h)(0x6720F8FC)
-F (..\ucos2\Source\os_sem.c)(0x6720F8FC)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I . -I ../ucos2/Source -I ../ucos2/Ports/ARM-Cortex-M/ARMv6-M/ARM -I ../nucleo-c031c6 -I ../CMSIS/Include -Wno-declaration-after-statement-IC:/Users/Sam/AppData/Local/Arm/Packs/Keil/STM32C0xx_DFP/2.0.0/Drivers/CMSIS/Device/ST/STM32C0xx/Include-D__UVISION_VERSION="541" -DSTM32C031xx-o ./objects/os_sem.o -MMD)
-I (..\ucos2\Source\ucos_ii.h)(0x6720F8FC)
-I (app_cfg.h)(0x6720F8FC)
-I (os_cfg.h)(0x6720F8FC)
-I (..\ucos2\Ports\ARM-Cortex-M\ARMv6-M\ARM\os_cpu.h)(0x6720F8FC)
-I (..\ucos2\Source\os_trace.h)(0x6720F8FC)
-F (..\ucos2\Source\os_task.c)(0x6720F8FC)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I . -I ../ucos2/Source -I ../ucos2/Ports/ARM-Cortex-M/ARMv6-M/ARM -I ../nucleo-c031c6 -I ../CMSIS/Include -Wno-declaration-after-statement-IC:/Users/Sam/AppData/Local/Arm/Packs/Keil/STM32C0xx_DFP/2.0.0/Drivers/CMSIS/Device/ST/STM32C0xx/Include-D__UVISION_VERSION="541" -DSTM32C031xx-o ./objects/os_task.o -MMD)
-I (..\ucos2\Source\ucos_ii.h)(0x6720F8FC)
-I (app_cfg.h)(0x6720F8FC)
-I (os_cfg.h)(0x6720F8FC)
-I (..\ucos2\Ports\ARM-Cortex-M\ARMv6-M\ARM\os_cpu.h)(0x6720F8FC)
-I (..\ucos2\Source\os_trace.h)(0x6720F8FC)
-F (..\ucos2\Source\os_time.c)(0x6720F8FC)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I . -I ../ucos2/Source -I ../ucos2/Ports/ARM-Cortex-M/ARMv6-M/ARM -I ../nucleo-c031c6 -I ../CMSIS/Include -Wno-declaration-after-statement-IC:/Users/Sam/AppData/Local/Arm/Packs/Keil/STM32C0xx_DFP/2.0.0/Drivers/CMSIS/Device/ST/STM32C0xx/Include-D__UVISION_VERSION="541" -DSTM32C031xx-o ./objects/os_time.o -MMD)
-I (..\ucos2\Source\ucos_ii.h)(0x6720F8FC)
-I (app_cfg.h)(0x6720F8FC)
-I (os_cfg.h)(0x6720F8FC)
-I (..\ucos2\Ports\ARM-Cortex-M\ARMv6-M\ARM\os_cpu.h)(0x6720F8FC)
-I (..\ucos2\Source\os_trace.h)(0x6720F8FC)
-F (..\ucos2\Source\os_tmr.c)(0x6720F8FC)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I . -I ../ucos2/Source -I ../ucos2/Ports/ARM-Cortex-M/ARMv6-M/ARM -I ../nucleo-c031c6 -I ../CMSIS/Include -Wno-declaration-after-statement-IC:/Users/Sam/AppData/Local/Arm/Packs/Keil/STM32C0xx_DFP/2.0.0/Drivers/CMSIS/Device/ST/STM32C0xx/Include-D__UVISION_VERSION="541" -DSTM32C031xx-o ./objects/os_tmr.o -MMD)
-I (..\ucos2\Source\ucos_ii.h)(0x6720F8FC)
-I (app_cfg.h)(0x6720F8FC)
-I (os_cfg.h)(0x6720F8FC)
-I (..\ucos2\Ports\ARM-Cortex-M\ARMv6-M\ARM\os_cpu.h)(0x6720F8FC)
-I (..\ucos2\Source\os_trace.h)(0x6720F8FC)
-F (..\ucos2\Ports\ARM-Cortex-M\ARMv6-M\ARM\os_cpu.h)(0x6720F8FC)()
-F (..\ucos2\Ports\ARM-Cortex-M\ARMv6-M\ARM\os_cpu_a.asm)(0x6720F8FC)(--target=arm-arm-none-eabi -mcpu=cortex-m0plus -masm=auto  -Wa,armasm,--diag_suppress=A1950W -c-gdwarf-4 -D__EVAL-IC:/Users/Sam/AppData/Local/Arm/Packs/Keil/STM32C0xx_DFP/2.0.0/Drivers/CMSIS/Device/ST/STM32C0xx/Include-D__UVISION_VERSION=541 -DSTM32C031xx -DStack_Size=2048 -DHeap_Size=0-o ./objects/os_cpu_a.o)
-F (..\ucos2\Ports\ARM-Cortex-M\ARMv6-M\ARM\os_dbg.c)(0x6720F8FC)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I . -I ../ucos2/Source -I ../ucos2/Ports/ARM-Cortex-M/ARMv6-M/ARM -I ../nucleo-c031c6 -I ../CMSIS/Include -Wno-declaration-after-statement-IC:/Users/Sam/AppData/Local/Arm/Packs/Keil/STM32C0xx_DFP/2.0.0/Drivers/CMSIS/Device/ST/STM32C0xx/Include-D__UVISION_VERSION="541" -DSTM32C031xx-o ./objects/os_dbg.o -MMD)
-I (..\ucos2\Source\ucos_ii.h)(0x6720F8FC)
-I (app_cfg.h)(0x6720F8FC)
-I (os_cfg.h)(0x6720F8FC)
-I (..\ucos2\Ports\ARM-Cortex-M\ARMv6-M\ARM\os_cpu.h)(0x6720F8FC)
-I (..\ucos2\Source\os_trace.h)(0x6720F8FC)
-F (..\ucos2\Ports\ARM-Cortex-M\ARMv6-M\os_cpu_c.c)(0x6720F8FC)(-xc -std=c11 --target=arm-arm-none-eabi -mcpu=cortex-m0plus -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I . -I ../ucos2/Source -I ../ucos2/Ports/ARM-Cortex-M/ARMv6-M/ARM -I ../nucleo-c031c6 -I ../CMSIS/Include -Wno-declaration-after-statement-IC:/Users/Sam/AppData/Local/Arm/Packs/Keil/STM32C0xx_DFP/2.0.0/Drivers/CMSIS/Device/ST/STM32C0xx/Include-D__UVISION_VERSION="541" -DSTM32C031xx-o ./objects/os_cpu_c.o -MMD)
-I (..\ucos2\Source\ucos_ii.h)(0x6720F8FC)
-I (app_cfg.h)(0x6720F8FC)
-I (os_cfg.h)(0x6720F8FC)
-I (..\ucos2\Ports\ARM-Cortex-M\ARMv6-M\ARM\os_cpu.h)(0x6720F8FC)
-I (..\ucos2\Source\os_trace.h)(0x6720F8FC)
