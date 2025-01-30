@@ -2,7 +2,7 @@
 This repository holds my course work for the Quantum Leaps Modern Embedded Systems Programming course found at https://www.state-machine.com/video-course and https://github.com/QuantumLeaps/modern-embedded-programming-course.
 
 A large part of the code base is from the examples in this course, the qpc embedded framework provided at the same site, and the uC/OS-II embedded OS maintained by Weston Embedded Solutions at https://github.com/weston-embedded/uC-OS2.
-Please refer to both sites for their licensing of thier products.
+Please refer to both sites for their licensing of their products.
 
 For a quick overview of the course please read the following excerpt from the course README.md file (the full file is provided on the main branch under quantum_leaps_readme.md)
 
