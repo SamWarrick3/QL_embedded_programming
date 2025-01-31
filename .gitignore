@@ -1,3 +1,5 @@
-.\base_practice_ucos2\DebugConfig\
-.\base_practice_ucos2\Listings\
-.\base_practice_ucos2\Objects\
+.\base_practice\DebugConfig\
+.\base_practice\Listings\
+.\base_practice\Objects\
+.\base_practice\RTE\
+.\base_practice\STM32CubeMX\

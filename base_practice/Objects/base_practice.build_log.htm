@@ -1,0 +1,73 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.41.0.0
+Copyright (C) 2024 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Samuel Warrick, unemployed, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.41.0.0
+Toolchain Path:  C:\Users\Sam\AppData\Local\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.22
+Assembler:       Armasm.exe V6.22
+Linker/Locator:  ArmLink.exe V6.22
+Library Manager: ArmAr.exe V6.22
+Hex Converter:   FromElf.exe V6.22
+CPU DLL:         SARMCM3.DLL V5.41.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.6.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.3.0.0
+Dialog DLL:      TARMCM1.DLL V1.14.6.0
+ 
+<h2>Project:</h2>
+C:\Users\Sam\Documents\CodingProjects\EmbeddedC\base_practice\base_practice.uvprojx
+Project File Date:  11/22/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.22', folder: 'C:\Users\Sam\AppData\Local\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target_1'
+Validate Run Time Environment: errors/warnings detected:
+'Keil::Device:Startup@1.0.0': warning #515: Additional software components required
+ require Device:STM32Cube Framework: Select component from list
+    'Keil::Device:STM32Cube Framework:STM32CubeMX'
+assembling startup_stm32c031xx.s...
+compiling main.c...
+compiling system_stm32c0xx.c...
+compiling bsp.c...
+compiling miros.c...
+linking...
+Program Size: Code=2680 RO-data=368 RW-data=4 ZI-data=2296  
+".\Objects\base_practice.axf" - 0 Error(s), 0 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.1.0.pack
+                ARM::CMSIS@6.1.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.1.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32C0xx_DFP.1.0.0.pack
+                Keil::STM32C0xx_DFP@1.0.0
+                STMicroelectronics STM32C0 Series Device Support
+   * Component: Startup Version: 1.0.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/Sam/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include
+  C:/Users/Sam/AppData/Local/Arm/Packs/Keil/STM32C0xx_DFP/1.0.0/Drivers/CMSIS/Device/ST/STM32C0xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@6.1.0
+
+   * Component: Keil::Device:Startup@1.0.0
+      Include file:  Drivers/CMSIS/Device/ST/STM32C0xx/Include/stm32c0xx.h
+      Source file:   Drivers/CMSIS/Device/ST/STM32C0xx/Source/Templates/arm/startup_stm32c031xx.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32C0xx/Source/Templates/system_stm32c0xx.c
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>
