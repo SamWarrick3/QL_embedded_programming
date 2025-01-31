@@ -1,5 +1,8 @@
+.\base_practice\
 .\base_practice_full_rtos\DebugConfig\
 .\base_practice_full_rtos\Listings\
 .\base_practice_full_rtos\Objects\
 .\base_practice_full_rtos\RTE\
 .\base_practice_full_rtos\STM32CubeMX\
+.\base_practice_full_rtos_cpp\
+.\base_practice_ucos2\
