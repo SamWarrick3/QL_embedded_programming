@@ -30,6 +30,8 @@ typedef uint16_t Signal; /* event signal */
 
 enum ReservedSignals {
     INIT_SIG, /* dispatched to AO before entering event-loop */
+		ENTRY_SIG, /* for triggering the entry actions in a state */
+		EXIT_SIG, /* for triggering the exit actions in a state */
     USER_SIG  /* first signal available to the users */
 };
 

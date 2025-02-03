@@ -27,55 +27,100 @@ typedef struct {
 	uint8_t blink_ctr;
 } TimeBomb;
 
-static void TimeBomb_init(TimeBomb * const me, Event const * const e) {
+typedef enum { TRAN_STATUS, HANDLED_STATUS, IGNORED_STATUS, INIT_STATUS } Status;
+
+/* TimeBomb waitforbutton state ================================================== */
+static Status TimeBomb_init(TimeBomb * const me, Event const * const e) {
 	BSP_ledGreenOff();
 	me->state = WAITFORBUTTON_STATE;
 	me->blink_time = INITIAL_BLINK_TIME * 3U;
+	return INIT_STATUS;
+}
+static Status TimeBomb_waitforbutton_ENTRY(TimeBomb * const me, Event const * const e) {
+	BSP_ledGreenOff();
+	return HANDLED_STATUS;
 }
 
-static void TimeBomb_waitforbutton_PRESSED(TimeBomb * const me, Event const * const e) {
+static Status TimeBomb_waitforbutton_PRESSED(TimeBomb * const me, Event const * const e) {
 	BSP_ledGreenOn();
 	/* start the countdown */
 	me->blink_ctr = 3U;
-	TimeEvent_arm(&me->te, me->blink_time, 0U);
 	me->state = BLINK_STATE;
+	return TRAN_STATUS;
+}
+
+/* TimeBomb blink state ================================================== */
+static Status TimeBomb_blink_ENTRY(TimeBomb * const me, Event const * const e) {
+	BSP_ledGreenOn();
+	TimeEvent_arm(&me->te, me->blink_time, 0U);
+	return HANDLED_STATUS;
 }
 	
-static void TimeBomb_blink_TIMEOUT(TimeBomb * const me, Event const * const e) {
+static Status TimeBomb_blink_EXIT(TimeBomb * const me, Event const * const e) {
+	BSP_ledGreenOff();
+	return HANDLED_STATUS;
+}
+
+static Status TimeBomb_blink_TIMEOUT(TimeBomb * const me, Event const * const e) {
+	me->state = PAUSE_STATE;
+	return TRAN_STATUS;
+}
+
+/* TimeBomb pause state ================================================== */
+static Status TimeBomb_pause_ENTRY(TimeBomb * const me, Event const * const e) {
 	BSP_ledGreenOff();
 	TimeEvent_arm(&me->te, me->blink_time, 0U);
-	me->state = PAUSE_STATE;
-}
-	
-static void TimeBomb_pause_TIMEOUT(TimeBomb * const me, Event const * const e) {
-	BSP_ledGreenOn();
+	return HANDLED_STATUS;
+}	
+
+static Status TimeBomb_pause_TIMEOUT(TimeBomb * const me, Event const * const e) {
 	me->blink_ctr--;
 	if (me->blink_ctr > 0U) {
-		TimeEvent_arm(&me->te, me->blink_time, 0U);
 		me->state = BLINK_STATE;
 	}
 	else {
 		me->state = BOOM_STATE;
 	}
+	return TRAN_STATUS;
 }
 	
-static void TimeBomb_ignore(TimeBomb * const me, Event const * const e) {
+/* TimeBomb boom state ================================================== */
+static Status TimeBomb_boom_ENTRY(TimeBomb * const me, Event const * const e) {
+	BSP_ledGreenOn();
+	return HANDLED_STATUS;
+}
+	
+/* TimeBomb ignore base case ================================================== */
+static Status TimeBomb_ignore(TimeBomb * const me, Event const * const e) {
 	/* pass */
+	return IGNORED_STATUS;
 }
 
-typedef void (*TimeBombAction)(TimeBomb * const me, Event const * const e);
+typedef Status (*TimeBombAction)(TimeBomb * const me, Event const * const e);
 
 TimeBombAction const TimeBomb_table[MAX_STATE][MAX_SIG] = {
-                 /* INIT               | BUTTON_PRESSED                 | BUTTON_RELEASED | TIMEOUT             | */
-/* waitforbutton */ {&TimeBomb_init,   &TimeBomb_waitforbutton_PRESSED, &TimeBomb_ignore, &TimeBomb_ignore},
-/* blink         */ {&TimeBomb_ignore, &TimeBomb_ignore,                &TimeBomb_ignore, &TimeBomb_blink_TIMEOUT},
-/* pause         */ {&TimeBomb_ignore, &TimeBomb_ignore,                &TimeBomb_ignore, &TimeBomb_pause_TIMEOUT},
-/* boom          */ {&TimeBomb_ignore, &TimeBomb_ignore,                &TimeBomb_ignore, &TimeBomb_ignore}
+                 /* INIT               | ENTRY                        | EXIT                | BUTTON_PRESSED                 | BUTTON_RELEASED | TIMEOUT                | */
+/* waitforbutton */ {&TimeBomb_init,   &TimeBomb_waitforbutton_ENTRY, &TimeBomb_ignore,     &TimeBomb_waitforbutton_PRESSED, &TimeBomb_ignore, &TimeBomb_ignore},
+/* blink         */ {&TimeBomb_ignore, &TimeBomb_blink_ENTRY,         &TimeBomb_blink_EXIT, &TimeBomb_ignore,                &TimeBomb_ignore, &TimeBomb_blink_TIMEOUT},
+/* pause         */ {&TimeBomb_ignore, &TimeBomb_pause_ENTRY,         &TimeBomb_ignore,     &TimeBomb_ignore,                &TimeBomb_ignore, &TimeBomb_pause_TIMEOUT},
+/* boom          */ {&TimeBomb_ignore, &TimeBomb_boom_ENTRY,          &TimeBomb_ignore,     &TimeBomb_ignore,                &TimeBomb_ignore, &TimeBomb_ignore}
 };
 
 static void TimeBomb_dispatch(TimeBomb * const me, Event const * const e) {
+	Status stat;
+	int prev_state = me->state;
+	
 	Q_ASSERT((me->state < MAX_STATE) && (e->sig < MAX_SIG));
-	(*TimeBomb_table[me->state][e->sig])(me, e);
+	stat = (*TimeBomb_table[me->state][e->sig])(me, e);
+	
+	if (stat == TRAN_STATUS) { /* just executed a transition state? */
+		Q_ASSERT(me->state < MAX_STATE);
+		(*TimeBomb_table[prev_state][EXIT_SIG])(me, (Event *)0); /* exit action of prev state */
+		(*TimeBomb_table[me->state][ENTRY_SIG])(me, (Event *)0); /* entry action of new state */
+	}
+	else if (stat == INIT_STATUS) { /* init entry case */
+		(*TimeBomb_table[me->state][ENTRY_SIG])(me, (Event *)0);
+	}
 }
 
 void TimeBomb_ctor(TimeBomb * const me) {
