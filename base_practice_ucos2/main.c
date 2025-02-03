@@ -14,78 +14,74 @@ typedef struct {
 	Active super; /* inherit active base class */
 	/* private data for the AO */
 	TimeEvent te;
+	/* note enumerated constants are automatically assigned numerical values based on positioning in the enum struct */
 	enum {
-		WAITFORBUTTON_STATE,
-		BLINK_STATE,
-		PAUSE_STATE,
-		BOOM_STATE
-	} state;
+		WAITFORBUTTON_STATE, /* 0 */
+		BLINK_STATE,         /* 1 */
+		PAUSE_STATE,         /* 2 */
+		BOOM_STATE,          /* 3 */
+		/* ... */
+		MAX_STATE            /* 4 */
+	} state; 
 	uint32_t blink_time;
 	uint8_t blink_ctr;
 } TimeBomb;
 
-static void TimeBomb_dispatch(TimeBomb * const me, Event const * const e) {
-	if (e->sig == INIT_SIG) {
-		BSP_ledGreenOff();
-		me->state = WAITFORBUTTON_STATE;
-		me->blink_time = INITIAL_BLINK_TIME * 3U;
-	}
+static void TimeBomb_init(TimeBomb * const me, Event const * const e) {
+	BSP_ledGreenOff();
+	me->state = WAITFORBUTTON_STATE;
+	me->blink_time = INITIAL_BLINK_TIME * 3U;
+}
+
+static void TimeBomb_waitforbutton_PRESSED(TimeBomb * const me, Event const * const e) {
+	BSP_ledGreenOn();
+	/* start the countdown */
+	me->blink_ctr = 3U;
+	TimeEvent_arm(&me->te, me->blink_time, 0U);
+	me->state = BLINK_STATE;
+}
 	
-	switch(me->state) {
-		case WAITFORBUTTON_STATE: {
-			switch (e->sig) {
-				case BUTTON_PRESSED_SIG: {
-					BSP_ledGreenOn();
-					/* start the countdown */
-					me->blink_ctr = 3U;
-					TimeEvent_arm(&me->te, me->blink_time, 0U);
-					me->state = BLINK_STATE;
-					break;
-				}
-			}
-			break;
-		}
-		case BLINK_STATE: {
-			switch (e->sig) {
-				case TIMEOUT_SIG: {
-					BSP_ledGreenOff();
-					TimeEvent_arm(&me->te, me->blink_time, 0U);
-					me->state = PAUSE_STATE;
-					break;
-				}
-			}
-			break;
-		}
-		case PAUSE_STATE: {
-			switch (e->sig) {
-				case TIMEOUT_SIG: {
-					BSP_ledGreenOn();
-					me->blink_ctr--;
-					if (me->blink_ctr > 0U) {
-						TimeEvent_arm(&me->te, me->blink_time, 0U);
-						me->state = BLINK_STATE;
-					}
-					else {
-						me->state = BOOM_STATE;
-					}
-					break;
-				}
-			}
-		}
-		case BOOM_STATE: {
-			break;
-		}
-		default: {
-			Q_ASSERT(0); /* should never be in this state */
-			break;			
-		}	
+static void TimeBomb_blink_TIMEOUT(TimeBomb * const me, Event const * const e) {
+	BSP_ledGreenOff();
+	TimeEvent_arm(&me->te, me->blink_time, 0U);
+	me->state = PAUSE_STATE;
+}
+	
+static void TimeBomb_pause_TIMEOUT(TimeBomb * const me, Event const * const e) {
+	BSP_ledGreenOn();
+	me->blink_ctr--;
+	if (me->blink_ctr > 0U) {
+		TimeEvent_arm(&me->te, me->blink_time, 0U);
+		me->state = BLINK_STATE;
 	}
+	else {
+		me->state = BOOM_STATE;
+	}
+}
+	
+static void TimeBomb_ignore(TimeBomb * const me, Event const * const e) {
+	/* pass */
+}
+
+typedef void (*TimeBombAction)(TimeBomb * const me, Event const * const e);
+
+TimeBombAction const TimeBomb_table[MAX_STATE][MAX_SIG] = {
+                 /* INIT               | BUTTON_PRESSED                 | BUTTON_RELEASED | TIMEOUT             | */
+/* waitforbutton */ {&TimeBomb_init,   &TimeBomb_waitforbutton_PRESSED, &TimeBomb_ignore, &TimeBomb_ignore},
+/* blink         */ {&TimeBomb_ignore, &TimeBomb_ignore,                &TimeBomb_ignore, &TimeBomb_blink_TIMEOUT},
+/* pause         */ {&TimeBomb_ignore, &TimeBomb_ignore,                &TimeBomb_ignore, &TimeBomb_pause_TIMEOUT},
+/* boom          */ {&TimeBomb_ignore, &TimeBomb_ignore,                &TimeBomb_ignore, &TimeBomb_ignore}
+};
+
+static void TimeBomb_dispatch(TimeBomb * const me, Event const * const e) {
+	Q_ASSERT((me->state < MAX_STATE) && (e->sig < MAX_SIG));
+	(*TimeBomb_table[me->state][e->sig])(me, e);
 }
 
 void TimeBomb_ctor(TimeBomb * const me) {
 	Active_ctor(&me->super, (DispatchHandler)&TimeBomb_dispatch);
 	TimeEvent_ctor(&me->te, TIMEOUT_SIG, &me->super);
-	me->blink_time = INITIAL_BLINK_TIME;
+	me->state = WAITFORBUTTON_STATE;
 }
 
 OS_STK timeBomb_stack[100]; /* task stack */
